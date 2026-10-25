@@ -1,0 +1,73 @@
+{
+  "total_blueprints": 5,
+  "last_updated": "2026-10-25",
+  "version": "1.0.0",
+  "blueprints": [
+    {
+      "id": "BP-AI-AGENT-01",
+      "name": "Production Autonomous AI Agent & Swarm Stack",
+      "domain": "Artificial Intelligence & Multi-Agent Systems",
+      "file": "blueprints/production_ai_agent_stack.json",
+      "primary_repos": [
+        "stanfordnlp/dspy",
+        "langchain-ai/langgraph",
+        "qdrant/qdrant",
+        "langfuse/langfuse"
+      ],
+      "tags": ["ai", "agent", "swarm", "langgraph", "qdrant", "dspy", "langfuse", "observability"]
+    },
+    {
+      "id": "BP-SAAS-MVP-02",
+      "name": "High-Velocity Startup Full-Stack SaaS MVP Stack",
+      "domain": "Modern Web Applications & SaaS Architecture",
+      "file": "blueprints/startup_saas_mvp_stack.json",
+      "primary_repos": [
+        "vercel/next.js",
+        "fastapi/fastapi",
+        "supabase/supabase",
+        "better-auth/better-auth",
+        "coollabsio/coolify"
+      ],
+      "tags": ["saas", "mvp", "nextjs", "fastapi", "supabase", "better-auth", "coolify", "startup"]
+    },
+    {
+      "id": "BP-EDGE-AI-03",
+      "name": "Local-First, Offline-Capable Edge AI & Desktop Stack",
+      "domain": "Local-First Architecture, Edge Computing & Desktop AI",
+      "file": "blueprints/local_first_edge_ai_stack.json",
+      "primary_repos": [
+        "ggml-org/llama.cpp",
+        "tursodatabase/libsql",
+        "tauri-apps/tauri"
+      ],
+      "tags": ["local-first", "edge-ai", "offline", "llama.cpp", "tauri", "libsql", "duckdb", "desktop"]
+    },
+    {
+      "id": "BP-DATA-PIPELINE-04",
+      "name": "High-Throughput Enterprise Lakehouse & Data Engineering Pipeline",
+      "domain": "Data Engineering, Lakehouse Architecture & Distributed Analytics",
+      "file": "blueprints/enterprise_data_pipeline_stack.json",
+      "primary_repos": [
+        "apache/kafka",
+        "apache/iceberg",
+        "dbt-labs/dbt",
+        "apache/airflow"
+      ],
+      "tags": ["data-engineering", "lakehouse", "kafka", "iceberg", "dbt", "spark", "airflow", "clickhouse"]
+    },
+    {
+      "id": "BP-CYBER-PENTEST-05",
+      "name": "Enterprise Cybersecurity Defense, Attack Simulation & Penetration Testing Lab",
+      "domain": "Cybersecurity, Threat Hunting & Offensive/Defensive Engineering",
+      "file": "blueprints/cybersecurity_pentest_lab_stack.json",
+      "primary_repos": [
+        "projectdiscovery/subfinder",
+        "projectdiscovery/nuclei",
+        "rapid7/metasploit-framework",
+        "NationalSecurityAgency/ghidra",
+        "wazuh/wazuh"
+      ],
+      "tags": ["cybersecurity", "pentest", "nuclei", "metasploit", "ghidra", "wazuh", "subfinder", "redteam"]
+    }
+  ]
+}

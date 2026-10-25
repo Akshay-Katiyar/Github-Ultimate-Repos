@@ -14,6 +14,8 @@ jobs:
   sync-audit:
     name: Verify Registry Consistency
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -32,3 +34,7 @@ jobs:
           print(f'Verified master catalog row count: {len(rows):,}')
           assert len(rows) == 11730, f'Expected 11730 rows, got {len(rows)}'
           "
+
+      - name: Verify SQLite FTS5 Database Compilation
+        run: |
+          python scripts/inventory/build_sqlite_registry.py

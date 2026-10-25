@@ -1,15 +1,59 @@
+# EditorConfig configuration for Github-Ultimate-Repos
+# https://editorconfig.org
+
 root = true
 
+# Global defaults
 [*]
+charset = utf-8
+end_of_line = lf
 indent_style = space
 indent_size = 2
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
 insert_final_newline = true
+trim_trailing_whitespace = true
 
+# Python source files
 [*.py]
 indent_size = 4
+max_line_length = 100
 
+# Markdown documentation (preserve trailing spaces for line breaks)
 [*.md]
+indent_size = 2
 trim_trailing_whitespace = false
+max_line_length = off
+
+# JSON schemas and configurations
+[*.json]
+indent_size = 2
+
+# YAML configuration & GitHub Actions workflows
+[*.{yml,yaml}]
+indent_size = 2
+
+# Shell scripts
+[*.sh]
+end_of_line = lf
+indent_size = 4
+
+# PowerShell scripts
+[*.ps1]
+end_of_line = lf
+indent_size = 4
+
+# Tabular datasets & CSV catalogs (preserve trailing empty fields)
+[*.{csv,tsv}]
+indent_style = space
+trim_trailing_whitespace = false
+
+# Web assets (standalone explorer)
+[*.{html,css,js}]
+indent_size = 2
+
+# SQL queries & database migrations
+[*.sql]
+indent_size = 4
+
+# Makefiles (require hard tabs)
+[Makefile]
+indent_style = tab

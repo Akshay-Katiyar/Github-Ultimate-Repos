@@ -1,0 +1,183 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WorkflowSpecification",
+  "description": "Schema definition for an enterprise end-to-end software development and agentic workflow",
+  "type": "object",
+  "required": [
+    "workflow_id",
+    "name",
+    "domain",
+    "description",
+    "total_stages",
+    "stages",
+    "governance"
+  ],
+  "properties": {
+    "workflow_id": {
+      "type": "string",
+      "pattern": "^WORKFLOW-[0-9]{3}$",
+      "description": "Unique enterprise workflow identifier (e.g., WORKFLOW-001)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable workflow title"
+    },
+    "domain": {
+      "type": "string",
+      "description": "High-level domain category"
+    },
+    "description": {
+      "type": "string",
+      "description": "Comprehensive synopsis of the workflow lifecycle"
+    },
+    "total_stages": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Total number of linear or DAG execution stages"
+    },
+    "governance": {
+      "type": "object",
+      "required": ["quality_gate_standard", "audit_status"],
+      "properties": {
+        "quality_gate_standard": {
+          "type": "string",
+          "description": "Enforced governance gate standard (e.g. 7-Gate Enterprise)"
+        },
+        "audit_status": {
+          "type": "string",
+          "enum": ["VERIFIED", "CERTIFIED", "PRODUCTION_READY"],
+          "default": "PRODUCTION_READY"
+        }
+      }
+    },
+    "stages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "stage_id",
+          "stage_name",
+          "purpose",
+          "recommended_repositories",
+          "input_handoff",
+          "output_handoff",
+          "dependencies",
+          "alternatives",
+          "quality_gate"
+        ],
+        "properties": {
+          "stage_id": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Sequential stage position in the lifecycle"
+          },
+          "stage_name": {
+            "type": "string",
+            "description": "Descriptive title of this stage"
+          },
+          "purpose": {
+            "type": "string",
+            "description": "Core technical objective of the stage"
+          },
+          "recommended_repositories": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["name", "stars", "category", "url", "workflow_pipeline"],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "pattern": "^[^/]+/[^/]+$",
+                  "description": "Full GitHub repository handle (owner/repo)"
+                },
+                "stars": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "description": "Stargazer count at audit baseline"
+                },
+                "category": {
+                  "type": "string",
+                  "description": "Assigned discipline category"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "Canonical HTTPS URL to repository"
+                },
+                "workflow_pipeline": {
+                  "type": "string",
+                  "description": "Verified 1-line architectural workflow pipeline"
+                },
+                "role_in_stage": {
+                  "type": "string",
+                  "description": "Specific functional responsibility in this stage"
+                }
+              }
+            }
+          },
+          "input_handoff": {
+            "type": "object",
+            "required": ["source_stage", "artifacts", "format"],
+            "properties": {
+              "source_stage": {
+                "type": "string",
+                "description": "Prior stage or external trigger providing inputs"
+              },
+              "artifacts": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "List of received artifacts, schemas, or configs"
+              },
+              "format": {
+                "type": "string",
+                "description": "Data serialization protocol or specification format"
+              }
+            }
+          },
+          "output_handoff": {
+            "type": "object",
+            "required": ["next_stage", "artifacts", "format"],
+            "properties": {
+              "next_stage": {
+                "type": "string",
+                "description": "Downstream stage receiving outputs"
+              },
+              "artifacts": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "List of produced deliverables, models, or deployments"
+              },
+              "format": {
+                "type": "string",
+                "description": "Exported data structure or communication standard"
+              }
+            }
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Hardware, runtime, network, or prerequisite specifications"
+          },
+          "alternatives": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "tradeoff"],
+              "properties": {
+                "name": {"type": "string"},
+                "tradeoff": {"type": "string"}
+              }
+            },
+            "description": "Viable open-source or commercial alternatives with trade-off analysis"
+          },
+          "quality_gate": {
+            "type": "string",
+            "description": "Criteria required to pass this stage before handoff"
+          }
+        }
+      }
+    }
+  }
+}

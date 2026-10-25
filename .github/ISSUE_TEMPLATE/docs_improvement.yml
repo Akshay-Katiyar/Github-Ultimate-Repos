@@ -1,0 +1,42 @@
+name: "📚 Documentation Improvement"
+description: "Suggest improvements, clarifications, or new tutorials for guides, docs, or README"
+title: "[DOCS]: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Improve Developer & Contributor Documentation
+        High quality, clear documentation makes open source accessible to everyone.
+        Thank you for helping us polish guides, CLI documentation, and architecture diagrams!
+  - type: input
+    id: doc_target
+    attributes:
+      label: Target Document or File
+      description: Which markdown document or guide is affected?
+      placeholder: "e.g. docs/getting-started.md, README.md, CONTRIBUTING.md, or docs/architecture.md"
+    validations:
+      required: true
+  - type: textarea
+    id: issue_description
+    attributes:
+      label: What needs improvement?
+      description: Describe what is unclear, missing, outdated, or confusing.
+      placeholder: "The instructions in Section 3 are missing details about..."
+    validations:
+      required: true
+  - type: textarea
+    id: suggested_changes
+    attributes:
+      label: Suggested Solution or Replacement Content
+      description: Provide proposed phrasing, examples, or code blocks.
+      placeholder: "I propose updating the command snippet to..."
+    validations:
+      required: true
+  - type: checkboxes
+    id: ready_for_pr
+    attributes:
+      label: Contribution Intent
+      options:
+        - label: "I would like to submit a Pull Request to implement this improvement."
+          required: false

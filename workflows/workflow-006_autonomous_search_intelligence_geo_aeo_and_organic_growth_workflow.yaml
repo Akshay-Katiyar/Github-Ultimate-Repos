@@ -1,0 +1,337 @@
+workflow_id: WORKFLOW-006
+name: Autonomous Search Intelligence, GEO/AEO & Organic Growth Workflow
+domain: Search Engine Optimization, Generative Engine Optimization & Growth Automation
+description: Comprehensive 6-stage algorithmic growth workflow combining headless
+  crawling and DOM extraction, search intent mining and keyword clustering, LLM citability
+  optimization and schema structuring, programmatic content compilation, real-time
+  search engine submission, and privacy-first conversion analytics.
+total_stages: 6
+governance:
+  quality_gate_standard: OmniSearch Growth Dual-Optimization (Traditional SEO + GEO
+    + AEO)
+  audit_status: PRODUCTION_READY
+stages:
+- stage_id: 1
+  stage_name: Deep Web Crawling, DOM Extraction & Technical SEO Audit
+  purpose: Crawl entire website architectures, execute client-side JavaScript, extract
+    clean Markdown and structured metadata, and detect indexing blockers (4xx/5xx,
+    canonical conflicts, robots.txt exclusions).
+  recommended_repositories:
+  - name: firecrawl/firecrawl
+    stars: 195117
+    category: Multi-Agent Systems, Autonomous Swarms, AI Orchestration & MCP Tools
+    url: https://github.com/firecrawl/firecrawl
+    workflow_pipeline: Goal decomposition DAG -> dynamic tool routing (MCP JSON-RPC)
+      -> state graph & shared memory scratchpad -> multi-agent execution swarm ->
+      critic-refiner consensus loop.
+    role_in_stage: Turn entire websites into clean LLM-ready markdown or structured
+      data with intelligent web crawling
+  - name: scrapy/scrapy
+    stars: 65004
+    category: Data Engineering, Distributed Analytics, Stream Processing (Kafka/Spark)
+      & ETL
+    url: https://github.com/scrapy/scrapy
+    workflow_pipeline: Distributed partition streaming -> fault-tolerant DAG task
+      mapping -> columnar serialization (Parquet/Arrow) -> shuffle hash joins -> idempotent
+      sink export.
+    role_in_stage: High-level fast web crawling and screen scraping framework for
+      asynchronous data extraction
+  - name: apify/crawlee
+    stars: 26259
+    category: Artificial Intelligence, Large Language Models, Foundation Models &
+      Quantization
+    url: https://github.com/apify/crawlee
+    workflow_pipeline: BPE/SentencePiece tokenization -> RoPE positional rotation
+      -> FlashAttention-2 KV-cache -> fused quantized GEMM execution -> Softmax top-p
+      sampling.
+    role_in_stage: Web scraping and browser automation library for Node.js with headless
+      Chrome, anti-fingerprinting and proxy rotation
+  input_handoff:
+    source_stage: Target Domain URL / Sitemaps
+    artifacts:
+    - Root Domain URL
+    - XML Sitemap URLs
+    - Crawl Depth & Rate Limits
+    format: URL / Robots.txt
+  output_handoff:
+    next_stage: 'Stage 2: Search Intent Mining & Keyword Research'
+    artifacts:
+    - Clean Markdown DOM Dumps
+    - Crawl Graph & Internal Link Map
+    - Technical Error Inventory (broken links, redirect chains)
+    format: JSON Lines / Markdown
+  dependencies:
+  - Node.js 20+ / Python 3.11+
+  - Headless Chromium / Playwright
+  - Firecrawl API or Self-Hosted Docker Container
+  alternatives:
+  - name: colly/colly
+    tradeoff: Fast and elegant scraping framework for Golang, extreme memory efficiency,
+      requires custom JS rendering integration
+  - name: gocolly/colly
+    tradeoff: Lightweight scraping without headless browser rendering
+  quality_gate: 'Gate 1: 100% Crawl Completion without Rate-Limit Bans, Sub-200ms
+    DOM Parse Speed, and Complete Link Graph Extraction'
+- stage_id: 2
+  stage_name: Search Intent Mining & Keyword Research
+  purpose: Extract high-opportunity search queries, classify query intent (informational,
+    commercial, navigational, transactional), compute SERP overlap, and cluster keywords
+    into topic hubs.
+  recommended_repositories:
+  - name: coreyhaines31/marketingskills
+    stars: 56419
+    category: Multi-Agent Systems, Autonomous Swarms, AI Orchestration & MCP Tools
+    url: https://github.com/coreyhaines31/marketingskills
+    workflow_pipeline: Goal decomposition DAG -> dynamic tool routing (MCP JSON-RPC)
+      -> state graph & shared memory scratchpad -> multi-agent execution swarm ->
+      critic-refiner consensus loop.
+    role_in_stage: Full-stack marketing skills suite covering conversion copywriting,
+      positioning, SEO, and growth loops
+  - name: AgriciDaniel/claude-seo
+    stars: 20138
+    category: Artificial Intelligence, Large Language Models, Foundation Models &
+      Quantization
+    url: https://github.com/AgriciDaniel/claude-seo
+    workflow_pipeline: BPE/SentencePiece tokenization -> RoPE positional rotation
+      -> FlashAttention-2 KV-cache -> fused quantized GEMM execution -> Softmax top-p
+      sampling.
+    role_in_stage: Claude-optimized prompt engineering and workflows for autonomous
+      SEO analysis and search clustering
+  input_handoff:
+    source_stage: 'Stage 1: Deep Web Crawling, DOM Extraction & Technical SEO Audit'
+    artifacts:
+    - Domain Topic Seed Words
+    - Competitor Landing Page URLs
+    - Existing Page Inventory
+    format: JSON / CSV
+  output_handoff:
+    next_stage: 'Stage 3: Semantic Optimization, AEO & LLM Citability Engineering'
+    artifacts:
+    - Clustered Topic Architecture (Hub-and-Spoke)
+    - Target Keyword-to-URL Mapping
+    - Content Gap Priority Matrix
+    format: CSV / JSON
+  dependencies:
+  - Google Search Console API / Bing Webmaster API
+  - Python Pandas for TF-IDF / Embeddings Clustering
+  alternatives:
+  - name: eliasdabbas/advertools
+    tradeoff: Comprehensive online marketing productivity and analysis Python package
+      with SERP tracking
+  - name: GeneralMills/pytrends
+    tradeoff: Unofficial API for Google Trends for historical search interest tracking
+  quality_gate: 'Gate 2: Topic Clusters Exceed 75% SERP Overlap Threshold and Target
+    Keywords Align 1:1 with Single Search Intent'
+- stage_id: 3
+  stage_name: Semantic Optimization, AEO & LLM Citability Engineering
+  purpose: Structure content for direct Answer Engine Optimization (AEO - 40-60 word
+    definitive summaries), generate rich Schema.org JSON-LD entities, and produce
+    standardized llms.txt files for AI engine discovery.
+  recommended_repositories:
+  - name: coreyhaines31/marketingskills
+    stars: 56419
+    category: Multi-Agent Systems, Autonomous Swarms, AI Orchestration & MCP Tools
+    url: https://github.com/coreyhaines31/marketingskills
+    workflow_pipeline: Goal decomposition DAG -> dynamic tool routing (MCP JSON-RPC)
+      -> state graph & shared memory scratchpad -> multi-agent execution swarm ->
+      critic-refiner consensus loop.
+    role_in_stage: High-converting editorial copy frameworks, value proposition positioning,
+      and headline optimization
+  - name: AgriciDaniel/claude-seo
+    stars: 20138
+    category: Artificial Intelligence, Large Language Models, Foundation Models &
+      Quantization
+    url: https://github.com/AgriciDaniel/claude-seo
+    workflow_pipeline: BPE/SentencePiece tokenization -> RoPE positional rotation
+      -> FlashAttention-2 KV-cache -> fused quantized GEMM execution -> Softmax top-p
+      sampling.
+    role_in_stage: Automated E-E-A-T scoring, citability passages, and AI overview
+      optimization prompt chains
+  - name: every-app/open-seo
+    stars: 24858
+    category: Modern Frontend Frameworks, Reactive Web Engines (React/Vue/Svelte)
+      & Bundlers
+    url: https://github.com/every-app/open-seo
+    workflow_pipeline: Declarative component IR -> Fiber lanes / fine-grained topological
+      signals -> progressive streaming SSR hydration -> Rust Oxide AST utility CSS
+      compilation -> DOM patch.
+    role_in_stage: Open-source SEO tooling and automated metadata optimization framework
+  input_handoff:
+    source_stage: 'Stage 2: Search Intent Mining & Keyword Research'
+    artifacts:
+    - Target Keyword Cluster
+    - Competitor Outlines
+    - Primary Domain Entity Attributes
+    format: JSON Specification
+  output_handoff:
+    next_stage: 'Stage 4: Programmatic Content Engine & Rich Asset Generation'
+    artifacts:
+    - Validated Schema.org JSON-LD Markup
+    - 40-60 Word Direct Answer Snippets
+    - llms.txt Specification File
+    - Optimized Heading Hierarchy (H1-H3)
+    format: JSON-LD / Markdown
+  dependencies:
+  - JSON-LD Validator / Schema.org Vocabulary
+  - Python / TypeScript Markdown Processors
+  alternatives:
+  - name: schema-org/schemaorg
+    tradeoff: Authoritative schema.org repository, reference schema schemas rather
+      than automated code generator
+  - name: ahrefs/seo-toolbar
+    tradeoff: Browser extension for on-page audit, manual workflow rather than autonomous
+      programmatic execution
+  quality_gate: 'Gate 3: 100% Schema.org Rich Result Validation Without Errors and
+    Verified AI Citability Score >= 85/100'
+- stage_id: 4
+  stage_name: Programmatic Content Engine & Rich Asset Generation
+  purpose: Generate authoritative, non-templated, answer-first articles, comparison
+    tables, and interactive widgets with verified statistics and internal cross-linking.
+  recommended_repositories:
+  - name: coreyhaines31/marketingskills
+    stars: 56419
+    category: Multi-Agent Systems, Autonomous Swarms, AI Orchestration & MCP Tools
+    url: https://github.com/coreyhaines31/marketingskills
+    workflow_pipeline: Goal decomposition DAG -> dynamic tool routing (MCP JSON-RPC)
+      -> state graph & shared memory scratchpad -> multi-agent execution swarm ->
+      critic-refiner consensus loop.
+    role_in_stage: Editorial tone calibration, conversion-focused copywriting, and
+      humanized readability guidelines
+  - name: AgriciDaniel/claude-seo
+    stars: 20138
+    category: Artificial Intelligence, Large Language Models, Foundation Models &
+      Quantization
+    url: https://github.com/AgriciDaniel/claude-seo
+    workflow_pipeline: BPE/SentencePiece tokenization -> RoPE positional rotation
+      -> FlashAttention-2 KV-cache -> fused quantized GEMM execution -> Softmax top-p
+      sampling.
+    role_in_stage: Structured content generation pipelines adhering strictly to dual
+      search engine optimization standards
+  input_handoff:
+    source_stage: 'Stage 3: Semantic Optimization, AEO & LLM Citability Engineering'
+    artifacts:
+    - Content Briefs
+    - Schema Metadata
+    - Direct Answers
+    - Internal Link Target Graph
+    format: JSON Content Brief
+  output_handoff:
+    next_stage: 'Stage 5: Real-Time Indexation, Sitemaps & Search Engine Ingestion'
+    artifacts:
+    - Production Markdown / MDX Articles
+    - Optimized WebP Image Variants
+    - Structured Data Embeds
+    - Static HTML Builds
+    format: Markdown / MDX / HTML
+  dependencies:
+  - Markdown Engine (markdown-it / remark)
+  - Image Optimization Pipeline (Sharp / Libvips)
+  - Git Commit Pipeline
+  alternatives:
+  - name: gohugoio/hugo
+    tradeoff: Fastest static site generator written in Go, compiles thousands of pages
+      in milliseconds
+  - name: astro-build/astro
+    tradeoff: Component islands web framework, zero client JS by default, excellent
+      for content-driven SEO sites
+  quality_gate: 'Gate 4: Flesch-Kincaid Readability Grade 8-10, Zero AI Watermarks,
+    and 100% Valid Internal Anchor Link Graph'
+- stage_id: 5
+  stage_name: Real-Time Indexation, Sitemaps & Search Engine Ingestion
+  purpose: Generate dynamic XML sitemaps, notify search engines instantaneously via
+    IndexNow protocol, and monitor indexation status via Google Search Console API.
+  recommended_repositories:
+  - name: every-app/open-seo
+    stars: 24858
+    category: Modern Frontend Frameworks, Reactive Web Engines (React/Vue/Svelte)
+      & Bundlers
+    url: https://github.com/every-app/open-seo
+    workflow_pipeline: Declarative component IR -> Fiber lanes / fine-grained topological
+      signals -> progressive streaming SSR hydration -> Rust Oxide AST utility CSS
+      compilation -> DOM patch.
+    role_in_stage: Sitemap generator and automated search engine pinging and indexation
+      engine
+  input_handoff:
+    source_stage: 'Stage 4: Programmatic Content Engine & Rich Asset Generation'
+    artifacts:
+    - Published URL Slugs
+    - Last-Modified Timestamps
+    - Change Frequency Tags
+    format: URL List / Git Diff
+  output_handoff:
+    next_stage: 'Stage 6: Growth Telemetry, Rank Tracking & Conversion Attribution'
+    artifacts:
+    - Validated sitemap.xml
+    - IndexNow Submission Receipts
+    - Google Search Console Inspection Logs
+    format: XML / HTTP 200 Confirmation
+  dependencies:
+  - IndexNow API Key hosted at domain root
+  - Google Cloud Service Account with GSC API access
+  - Automated Cron / Webhook
+  alternatives:
+  - name: ekalinin/sitemap.js
+    tradeoff: High-level sitemap-generating library for Node.js, fast streaming for
+      million-URL catalogs
+  - name: alexp-ssn/indexnow-action
+    tradeoff: GitHub Action for pushing changed URLs to IndexNow on git commit
+  quality_gate: 'Gate 5: Automated IndexNow HTTP 200/202 Response and Verification
+    of Valid Sitemaps in GSC without Parse Errors'
+- stage_id: 6
+  stage_name: Growth Telemetry, Rank Tracking & Conversion Attribution
+  purpose: Analyze organic search traffic trends, track SERP keyword position movements,
+    evaluate AI Overview citation share-of-voice, and attribute conversions to content.
+  recommended_repositories:
+  - name: matomo-org/matomo
+    stars: 21981
+    category: Database Engines, Distributed SQL, NoSQL, Vector DBs & Persistent Caches
+    url: https://github.com/matomo-org/matomo
+    workflow_pipeline: Client connection pooling -> SQL parsing & cost-based query
+      optimization -> WAL ahead logging -> MVCC concurrent execution -> in-memory
+      buffer pool / LSM-tree flush.
+    role_in_stage: Google Analytics alternative that protects user privacy, provides
+      full data ownership and search keyword insights
+  - name: umami-software/umami
+    stars: 39663
+    category: Python Ecosystem, Data Science, Scientific Computing & Analytics
+    url: https://github.com/umami-software/umami
+    workflow_pipeline: CPython C-API binding -> vectorized NumPy ndarray broadcasting
+      -> SIMD/BLAS numerical linear algebra -> computational pipeline execution ->
+      serialized analytical output.
+    role_in_stage: Simple, fast, privacy-focused open-source alternative to Google
+      Analytics with lightweight script
+  - name: plausible/analytics
+    stars: 29646
+    category: Database Engines, Distributed SQL, NoSQL, Vector DBs & Persistent Caches
+    url: https://github.com/plausible/analytics
+    workflow_pipeline: Client connection pooling -> SQL parsing & cost-based query
+      optimization -> WAL ahead logging -> MVCC concurrent execution -> in-memory
+      buffer pool / LSM-tree flush.
+    role_in_stage: Simple, open-source, lightweight (< 1 KB) and privacy-friendly
+      web analytics alternative to Google Analytics
+  input_handoff:
+    source_stage: 'Stage 5: Real-Time Indexation, Sitemaps & Search Engine Ingestion'
+    artifacts:
+    - Target Keyword Baseline Rankings
+    - Live Webhook Traffic Events
+    - Goal Funnel Definitions
+    format: Analytics Tracking Events
+  output_handoff:
+    next_stage: Chief Growth Officer / Marketing Executive Feedback Loop
+    artifacts:
+    - Organic Revenue Attribution Reports
+    - Keyword Ranking Movement Dashboard
+    - Content Decay Alerts
+    format: Executive BI Reports / CSV
+  dependencies:
+  - Self-hosted or Cloud Analytics Instance
+  - PostgreSQL / ClickHouse storage
+  - Zero-Cookie Privacy Compliance (GDPR/CCPA)
+  alternatives:
+  - name: PostHog/posthog
+    tradeoff: Full product analytics suite with session recording, heavier payload
+      than Plausible/Umami
+  - name: pirsch-analytics/pirsch
+    tradeoff: Server-side privacy-first web analytics with low overhead
+  quality_gate: 'Gate 6: Zero-Cookie GDPR Compliance, Sub-10ms Analytics Script Load
+    Time, and Verified Organic Conversion Attribution'

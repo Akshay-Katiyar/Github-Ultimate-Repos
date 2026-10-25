@@ -1,0 +1,483 @@
+{
+  "workflow_id": "WORKFLOW-001",
+  "name": "Production AI Agent Enterprise Lifecycle",
+  "domain": "Artificial Intelligence & Autonomous Agent Swarms",
+  "description": "Comprehensive 7-stage engineering lifecycle for enterprise multi-agent systems, from declarative prompt/specification optimization through low-latency quantized inference, structured multimodal document ingestion, scalable vector retrieval, dynamic swarm coordination via Model Context Protocol (MCP), LLM observability with automated evaluation guardrails, to production-grade gateway deployment.",
+  "total_stages": 7,
+  "governance": {
+    "quality_gate_standard": "7-Gate Enterprise Multi-Agent Governance",
+    "audit_status": "PRODUCTION_READY"
+  },
+  "stages": [
+    {
+      "stage_id": 1,
+      "stage_name": "Requirements & Specification Engineering",
+      "purpose": "Compile operational agent specifications, optimize prompt templates systematically, enforce deterministic typed schemas, and generate test assert suites.",
+      "recommended_repositories": [
+        {
+          "name": "stanfordnlp/dspy",
+          "stars": 38776,
+          "category": "Python Ecosystem, Data Science, Scientific Computing & Analytics",
+          "url": "https://github.com/stanfordnlp/dspy",
+          "workflow_pipeline": "CPython C-API binding -> vectorized NumPy ndarray broadcasting -> SIMD/BLAS numerical linear algebra -> computational pipeline execution -> serialized analytical output.",
+          "role_in_stage": "Algorithmic prompt optimization and compiler for LLM pipeline programming"
+        },
+        {
+          "name": "promptfoo/promptfoo",
+          "stars": 26397,
+          "category": "Artificial Intelligence, Large Language Models, Foundation Models & Quantization",
+          "url": "https://github.com/promptfoo/promptfoo",
+          "workflow_pipeline": "BPE/SentencePiece tokenization -> RoPE positional rotation -> FlashAttention-2 KV-cache -> fused quantized GEMM execution -> Softmax top-p sampling.",
+          "role_in_stage": "Security red-teaming, prompt regression test harness and eval matrix"
+        },
+        {
+          "name": "567-labs/instructor",
+          "stars": 14061,
+          "category": "Artificial Intelligence, Large Language Models, Foundation Models & Quantization",
+          "url": "https://github.com/567-labs/instructor",
+          "workflow_pipeline": "BPE/SentencePiece tokenization -> RoPE positional rotation -> FlashAttention-2 KV-cache -> fused quantized GEMM execution -> Softmax top-p sampling.",
+          "role_in_stage": "Pydantic-enforced structured LLM outputs, schema validation and automatic retries"
+        }
+      ],
+      "input_handoff": {
+        "source_stage": "User Requirements / Product Specification (PRD)",
+        "artifacts": [
+          "PRD Document",
+          "Domain Persona Briefs",
+          "Target Tool List",
+          "JSON Schema Contracts"
+        ],
+        "format": "Markdown / JSON Schema"
+      },
+      "output_handoff": {
+        "next_stage": "Stage 2: Foundation Model & Inference Optimization",
+        "artifacts": [
+          "Compiled DSPy Signatures",
+          "Pydantic Output Models",
+          "Promptfoo Evaluation Assertions",
+          "System Prompts"
+        ],
+        "format": "Python Modules / YAML Assertions"
+      },
+      "dependencies": [
+        "Python 3.10+",
+        "Pydantic v2",
+        "API Keys / Access to Reference Foundation Models"
+      ],
+      "alternatives": [
+        {
+          "name": "MadcowD/ell",
+          "tradeoff": "Functional prompt engineering with rich state tracking but less mathematical optimization than DSPy"
+        },
+        {
+          "name": "guidance-ai/guidance",
+          "tradeoff": "Interleaved generation with fine control over constrained token generation, higher token-level complexity"
+        }
+      ],
+      "quality_gate": "Gate 1: Schema Integrity & Promptfoo 95%+ Pass Rate on Synthesized Test Cases"
+    },
+    {
+      "stage_id": 2,
+      "stage_name": "Foundation Model & Inference Optimization",
+      "purpose": "Deploy and configure high-throughput local and cloud inference engines with continuous batching, quantized weights (GGUF/AWQ/GPTQ), and unified multi-provider routing.",
+      "recommended_repositories": [
+        {
+          "name": "vllm-project/vllm",
+          "stars": 95401,
+          "category": "Artificial Intelligence, Large Language Models, Foundation Models & Quantization",
+          "url": "https://github.com/vllm-project/vllm",
+          "workflow_pipeline": "Continuous iteration-level batching -> PagedAttention virtual block table allocation -> chunked prefill tensor parallel forward pass -> streaming token delivery.",
+          "role_in_stage": "High-throughput serving engine with PagedAttention and continuous iteration batching"
+        },
+        {
+          "name": "ollama/ollama",
+          "stars": 184693,
+          "category": "Artificial Intelligence, Large Language Models, Foundation Models & Quantization",
+          "url": "https://github.com/ollama/ollama",
+          "workflow_pipeline": "BPE/SentencePiece tokenization -> RoPE positional rotation -> FlashAttention-2 KV-cache -> fused quantized GEMM execution -> Softmax top-p sampling.",
+          "role_in_stage": "Lightweight, container-ready local LLM runtime with fast modelfile management"
+        },
+        {
+          "name": "ggml-org/llama.cpp",
+          "stars": 132281,
+          "category": "Artificial Intelligence, Large Language Models, Foundation Models & Quantization",
+          "url": "https://github.com/ggml-org/llama.cpp",
+          "workflow_pipeline": "Prompt tokenization -> quantized tensor memory mapping (GGUF INT4/INT8) -> AVX-512/Metal/CUDA SIMD GEMM kernel execution -> logits streaming output.",
+          "role_in_stage": "Bare-metal CPU/GPU quantized GGUF inference engine with zero external dependencies"
+        },
+        {
+          "name": "BerriAI/litellm",
+          "stars": 61995,
+          "category": "Artificial Intelligence, Large Language Models, Foundation Models & Quantization",
+          "url": "https://github.com/BerriAI/litellm",
+          "workflow_pipeline": "BPE/SentencePiece tokenization -> RoPE positional rotation -> FlashAttention-2 KV-cache -> fused quantized GEMM execution -> Softmax top-p sampling.",
+          "role_in_stage": "Universal proxy and load balancer translating 100+ LLM APIs into OpenAI-compatible endpoints"
+        }
+      ],
+      "input_handoff": {
+        "source_stage": "Stage 1: Requirements & Specification Engineering",
+        "artifacts": [
+          "Model Capability Matrix",
+          "Token Budget Specifications",
+          "Quantization Thresholds"
+        ],
+        "format": "JSON / YAML"
+      },
+      "output_handoff": {
+        "next_stage": "Stage 3: Multimodal Ingestion & Document Parsing",
+        "artifacts": [
+          "Standardized OpenAI-Compatible API Endpoints",
+          "Health-Checked Model Workers",
+          "Inference Fallback Policies"
+        ],
+        "format": "HTTPS / SSE Streaming"
+      },
+      "dependencies": [
+        "NVIDIA CUDA Toolkit 12.x / ROCm or Apple Silicon Metal",
+        "vLLM / Ollama Daemon",
+        "Minimum 16GB VRAM for 8B-14B models"
+      ],
+      "alternatives": [
+        {
+          "name": "huggingface/text-generation-inference",
+          "tradeoff": "Enterprise-grade Docker deployment, stricter licensing than vLLM"
+        },
+        {
+          "name": "unslothai/unsloth",
+          "tradeoff": "Ultra-fast LoRA/QLoRA fine-tuning runtime, primarily training-focused rather than serving"
+        }
+      ],
+      "quality_gate": "Gate 2: Sub-50ms Time-to-First-Token (TTFT) and 40+ tokens/sec throughput under concurrency"
+    },
+    {
+      "stage_id": 3,
+      "stage_name": "Multimodal Ingestion & Document Parsing",
+      "purpose": "Extract, normalize, chunk, and enrich heterogeneous document formats (PDFs, DOCX, scans, spreadsheets, code) into structured Markdown AST with bounding boxes and table preservation.",
+      "recommended_repositories": [
+        {
+          "name": "docling-project/docling",
+          "stars": 69544,
+          "category": "Python Ecosystem, Data Science, Scientific Computing & Analytics",
+          "url": "https://github.com/docling-project/docling",
+          "workflow_pipeline": "CPython C-API binding -> vectorized NumPy ndarray broadcasting -> SIMD/BLAS numerical linear algebra -> computational pipeline execution -> serialized analytical output.",
+          "role_in_stage": "State-of-the-art document layout analysis, OCR and universal Markdown conversion"
+        },
+        {
+          "name": "datalab-to/marker",
+          "stars": 40631,
+          "category": "Python Ecosystem, Data Science, Scientific Computing & Analytics",
+          "url": "https://github.com/datalab-to/marker",
+          "workflow_pipeline": "CPython C-API binding -> vectorized NumPy ndarray broadcasting -> SIMD/BLAS numerical linear algebra -> computational pipeline execution -> serialized analytical output.",
+          "role_in_stage": "High-speed PDF to Markdown conversion with LaTeX equation extraction"
+        },
+        {
+          "name": "google/langextract",
+          "stars": 39036,
+          "category": "Artificial Intelligence, Large Language Models, Foundation Models & Quantization",
+          "url": "https://github.com/google/langextract",
+          "workflow_pipeline": "BPE/SentencePiece tokenization -> RoPE positional rotation -> FlashAttention-2 KV-cache -> fused quantized GEMM execution -> Softmax top-p sampling.",
+          "role_in_stage": "Semantic text extraction and linguistic structure normalization"
+        }
+      ],
+      "input_handoff": {
+        "source_stage": "External Data Lakes / Cloud Buckets / Enterprise Storage",
+        "artifacts": [
+          "Raw PDFs",
+          "Technical Manuals",
+          "Financial Spreadsheets",
+          "API Documentation"
+        ],
+        "format": "Binary / PDF / DOCX / HTML"
+      },
+      "output_handoff": {
+        "next_stage": "Stage 4: Knowledge Indexing & Hybrid Vector Retrieval",
+        "artifacts": [
+          "Structured Markdown Documents",
+          "Extracted Tables as JSON/HTML",
+          "Semantic Chunks with Provenance Metadata"
+        ],
+        "format": "JSON Lines (JSONL) / Parquet"
+      },
+      "dependencies": [
+        "Tesseract OCR / EasyOCR",
+        "PyMuPDF / pdfplumber",
+        "Pandas / NumPy"
+      ],
+      "alternatives": [
+        {
+          "name": "Unstructured-IO/unstructured",
+          "tradeoff": "Extensive connector ecosystem, but heavier dependency footprint than Docling"
+        },
+        {
+          "name": "nlpaueb/spacy-transformers",
+          "tradeoff": "Deep linguistic tagging, requires significant CPU/memory overhead"
+        }
+      ],
+      "quality_gate": "Gate 3: 98%+ Table and Structure Extraction Fidelity with Zero Content Truncation"
+    },
+    {
+      "stage_id": 4,
+      "stage_name": "Knowledge Indexing & Hybrid Vector Retrieval",
+      "purpose": "Compute dense and sparse embeddings, index high-dimensional vectors, and execute hybrid BM25 + dense search with reciprocal rank fusion (RRF) and re-ranking.",
+      "recommended_repositories": [
+        {
+          "name": "qdrant/qdrant",
+          "stars": 35238,
+          "category": "Database Engines, Distributed SQL, NoSQL, Vector DBs & Persistent Caches",
+          "url": "https://github.com/qdrant/qdrant",
+          "workflow_pipeline": "Client connection pooling -> SQL parsing & cost-based query optimization -> WAL ahead logging -> MVCC concurrent execution -> in-memory buffer pool / LSM-tree flush.",
+          "role_in_stage": "High-performance Rust-powered vector database with rich payload filtering and HNSW indexing"
+        },
+        {
+          "name": "milvus-io/milvus",
+          "stars": 46471,
+          "category": "Artificial Intelligence, Large Language Models, Foundation Models & Quantization",
+          "url": "https://github.com/milvus-io/milvus",
+          "workflow_pipeline": "BPE/SentencePiece tokenization -> RoPE positional rotation -> FlashAttention-2 KV-cache -> fused quantized GEMM execution -> Softmax top-p sampling.",
+          "role_in_stage": "Cloud-native distributed vector database designed for billion-scale similarity search"
+        },
+        {
+          "name": "facebookresearch/faiss",
+          "stars": 41205,
+          "category": "Systems Programming, Low-Level Runtimes, Memory Safety & WebAssembly (Wasm)",
+          "url": "https://github.com/facebookresearch/faiss",
+          "workflow_pipeline": "Zero-cost abstraction type checking -> affine borrow checker & lifetime validation -> LLVM backend code generation -> memory-safe native binary emission.",
+          "role_in_stage": "Low-level optimized library for dense vector clustering and billion-scale search"
+        }
+      ],
+      "input_handoff": {
+        "source_stage": "Stage 3: Multimodal Ingestion & Document Parsing",
+        "artifacts": [
+          "Chunked Documents",
+          "Metadata Attributes (author, date, tags)",
+          "Embedding Model Specification"
+        ],
+        "format": "JSONL"
+      },
+      "output_handoff": {
+        "next_stage": "Stage 5: Swarm Orchestration & Tool Execution",
+        "artifacts": [
+          "Vector Collection Collections",
+          "RRF Hybrid Search Retriever Endpoints",
+          "Contextual Reranking Pipeline"
+        ],
+        "format": "gRPC / REST Endpoints"
+      },
+      "dependencies": [
+        "Text Embedding Model (e.g. BGE-M3 / OpenAI text-embedding-3)",
+        "Qdrant Cluster or Docker Container",
+        "FastAPI / gRPC Client"
+      ],
+      "alternatives": [
+        {
+          "name": "chroma-core/chroma",
+          "tradeoff": "Zero-config embedded local database, lower throughput than Qdrant in distributed multi-node clusters"
+        },
+        {
+          "name": "pgvector/pgvector",
+          "tradeoff": "Consolidates vector search inside PostgreSQL, lower maximum QPS on billion-scale collections"
+        }
+      ],
+      "quality_gate": "Gate 4: Recall@10 >= 0.88 and Sub-15ms Hybrid Query Retrieval Latency"
+    },
+    {
+      "stage_id": 5,
+      "stage_name": "Swarm Orchestration & Tool Execution",
+      "purpose": "Coordinate multi-agent collaboration, manage dynamic task decomposition DAGs, implement Model Context Protocol (MCP) tool bindings, and maintain stateful conversational memory.",
+      "recommended_repositories": [
+        {
+          "name": "FoundationAgents/MetaGPT",
+          "stars": 71010,
+          "category": "Multi-Agent Systems, Autonomous Swarms, AI Orchestration & MCP Tools",
+          "url": "https://github.com/FoundationAgents/MetaGPT",
+          "workflow_pipeline": "Goal decomposition DAG -> dynamic tool routing (MCP JSON-RPC) -> state graph & shared memory scratchpad -> multi-agent execution swarm -> critic-refiner consensus loop.",
+          "role_in_stage": "Multi-agent collaborative framework encoding Standard Operating Procedures (SOPs) into agent teams"
+        },
+        {
+          "name": "microsoft/autogen",
+          "stars": 61554,
+          "category": "Multi-Agent Systems, Autonomous Swarms, AI Orchestration & MCP Tools",
+          "url": "https://github.com/microsoft/autogen",
+          "workflow_pipeline": "Goal decomposition DAG -> dynamic tool routing (MCP JSON-RPC) -> state graph & shared memory scratchpad -> multi-agent execution swarm -> critic-refiner consensus loop.",
+          "role_in_stage": "Event-driven multi-agent conversation framework with code execution and human-in-the-loop"
+        },
+        {
+          "name": "crewAIInc/crewAI",
+          "stars": 60081,
+          "category": "Multi-Agent Systems, Autonomous Swarms, AI Orchestration & MCP Tools",
+          "url": "https://github.com/crewAIInc/crewAI",
+          "workflow_pipeline": "Goal decomposition DAG -> dynamic tool routing (MCP JSON-RPC) -> state graph & shared memory scratchpad -> multi-agent execution swarm -> critic-refiner consensus loop.",
+          "role_in_stage": "Role-based autonomous agent orchestration platform with built-in task delegation"
+        },
+        {
+          "name": "langchain-ai/langgraph",
+          "stars": 43859,
+          "category": "Multi-Agent Systems, Autonomous Swarms, AI Orchestration & MCP Tools",
+          "url": "https://github.com/langchain-ai/langgraph",
+          "workflow_pipeline": "Goal decomposition DAG -> dynamic tool routing (MCP JSON-RPC) -> state graph & shared memory scratchpad -> multi-agent execution swarm -> critic-refiner consensus loop.",
+          "role_in_stage": "Graph-based cyclic state machine for reliable multi-agent workflows and checkpoints"
+        }
+      ],
+      "input_handoff": {
+        "source_stage": "Stage 1 (Specs), Stage 2 (Models), Stage 4 (Retrievers)",
+        "artifacts": [
+          "Agent Role Definitions",
+          "MCP Tool Servers",
+          "Retriever Tools",
+          "Execution Graph"
+        ],
+        "format": "Python Classes / LangGraph StateGraph / YAML"
+      },
+      "output_handoff": {
+        "next_stage": "Stage 6: Continuous Evaluation, Observability & Guardrails",
+        "artifacts": [
+          "Multi-Agent Execution Traces",
+          "Tool Call Payloads",
+          "Intermediate Reasoning Chains",
+          "Final Agent Outputs"
+        ],
+        "format": "OpenTelemetry Spans / JSON Lines"
+      },
+      "dependencies": [
+        "Python 3.11+",
+        "LangGraph / CrewAI SDK",
+        "Docker Sandbox for Safe Code Execution",
+        "Model Context Protocol (MCP) Server Runtimes"
+      ],
+      "alternatives": [
+        {
+          "name": "huggingface/smolagents",
+          "tradeoff": "Minimalist code-based agent framework, lightweight but fewer enterprise team SOP primitives"
+        },
+        {
+          "name": "microsoft/semantic-kernel",
+          "tradeoff": "Polyglot enterprise SDK (C#, Python, Java), more verbose enterprise abstractions"
+        }
+      ],
+      "quality_gate": "Gate 5: Zero Tool Hallucination Rate and Non-Cyclical Termination Guarantee within Configured Max Steps"
+    },
+    {
+      "stage_id": 6,
+      "stage_name": "Continuous Evaluation, Observability & Guardrails",
+      "purpose": "Monitor agent traces in real time, evaluate groundedness, answer relevancy, and hallucination scores, and apply runtime security guardrails against prompt injections.",
+      "recommended_repositories": [
+        {
+          "name": "langfuse/langfuse",
+          "stars": 36417,
+          "category": "Multi-Agent Systems, Autonomous Swarms, AI Orchestration & MCP Tools",
+          "url": "https://github.com/langfuse/langfuse",
+          "workflow_pipeline": "Goal decomposition DAG -> dynamic tool routing (MCP JSON-RPC) -> state graph & shared memory scratchpad -> multi-agent execution swarm -> critic-refiner consensus loop.",
+          "role_in_stage": "Open-source LLM engineering platform for distributed tracing, evals, prompt management and latency monitoring"
+        },
+        {
+          "name": "vibrantlabsai/ragas",
+          "stars": 16142,
+          "category": "Artificial Intelligence, Large Language Models, Foundation Models & Quantization",
+          "url": "https://github.com/vibrantlabsai/ragas",
+          "workflow_pipeline": "BPE/SentencePiece tokenization -> RoPE positional rotation -> FlashAttention-2 KV-cache -> fused quantized GEMM execution -> Softmax top-p sampling.",
+          "role_in_stage": "Automated RAG evaluation framework measuring Faithfulness, Answer Relevance, and Context Precision"
+        },
+        {
+          "name": "Portkey-AI/gateway",
+          "stars": 13269,
+          "category": "Artificial Intelligence, Large Language Models, Foundation Models & Quantization",
+          "url": "https://github.com/Portkey-AI/gateway",
+          "workflow_pipeline": "BPE/SentencePiece tokenization -> RoPE positional rotation -> FlashAttention-2 KV-cache -> fused quantized GEMM execution -> Softmax top-p sampling.",
+          "role_in_stage": "Fast AI gateway with routing, fallbacks, load-balancing, rate-limiting, and guardrails"
+        }
+      ],
+      "input_handoff": {
+        "source_stage": "Stage 5: Swarm Orchestration & Tool Execution",
+        "artifacts": [
+          "Real-Time Execution Traces",
+          "Prompt/Response Pairs",
+          "Context Documents"
+        ],
+        "format": "OTel Traces / JSON"
+      },
+      "output_handoff": {
+        "next_stage": "Stage 7: Production Deployment, Gateway & Scaling",
+        "artifacts": [
+          "Quality Scorecards",
+          "Safety Policy Verification",
+          "Latency Profiles",
+          "Filtered Production Prompts"
+        ],
+        "format": "Dashboard Analytics / Prometheus Metrics"
+      },
+      "dependencies": [
+        "Langfuse Server / PostgreSQL",
+        "Ragas Benchmark Datasets",
+        "OpenTelemetry SDK"
+      ],
+      "alternatives": [
+        {
+          "name": "Arize-ai/phoenix",
+          "tradeoff": "AI observability with deep embedding space clustering, specialized in drift detection"
+        },
+        {
+          "name": "NVIDIA/NeMo-Guardrails",
+          "tradeoff": "Colang programmable safety rails, requires learning Colang domain-specific language"
+        }
+      ],
+      "quality_gate": "Gate 6: Faithfulness >= 0.92, Context Relevance >= 0.85, and 100% Guardrail Block on Adversarial Injections"
+    },
+    {
+      "stage_id": 7,
+      "stage_name": "Production Deployment, Gateway & Scaling",
+      "purpose": "Package agent swarms into production microservices, configure intelligent edge routing, enforce rate limits, and provide enterprise user interfaces.",
+      "recommended_repositories": [
+        {
+          "name": "bentoml/BentoML",
+          "stars": 8920,
+          "category": "Artificial Intelligence, Large Language Models, Foundation Models & Quantization",
+          "url": "https://github.com/bentoml/BentoML",
+          "workflow_pipeline": "BPE/SentencePiece tokenization -> RoPE positional rotation -> FlashAttention-2 KV-cache -> fused quantized GEMM execution -> Softmax top-p sampling.",
+          "role_in_stage": "Enterprise framework for building reliable, performant, and scalable AI services and APIs"
+        },
+        {
+          "name": "open-webui/open-webui",
+          "stars": 156679,
+          "category": "Artificial Intelligence, Large Language Models, Foundation Models & Quantization",
+          "url": "https://github.com/open-webui/open-webui",
+          "workflow_pipeline": "BPE/SentencePiece tokenization -> RoPE positional rotation -> FlashAttention-2 KV-cache -> fused quantized GEMM execution -> Softmax top-p sampling.",
+          "role_in_stage": "Extensible, self-hosted AI interface with comprehensive multi-model chat, RAG, and MCP integrations"
+        }
+      ],
+      "input_handoff": {
+        "source_stage": "Stage 6: Continuous Evaluation, Observability & Guardrails",
+        "artifacts": [
+          "Validated Agent Workflows",
+          "Model Serving Containers",
+          "Guardrail Rulesets"
+        ],
+        "format": "Docker Images / Helm Charts"
+      },
+      "output_handoff": {
+        "next_stage": "End Users / Enterprise API Consumers",
+        "artifacts": [
+          "Production HTTPS API Gateway",
+          "Web UI Portal",
+          "Telemetry Dashboards"
+        ],
+        "format": "Web Applications / REST / gRPC"
+      },
+      "dependencies": [
+        "Kubernetes / Docker Compose",
+        "Reverse Proxy (Traefik / Nginx / Envoy)",
+        "Redis for Rate Limiting"
+      ],
+      "alternatives": [
+        {
+          "name": "ray-project/ray",
+          "tradeoff": "Massive distributed computing and Ray Serve scaling, heavier operational footprint"
+        },
+        {
+          "name": "kserve/kserve",
+          "tradeoff": "Kubernetes-native standard serving on Knative/Istio, complex control-plane prerequisites"
+        }
+      ],
+      "quality_gate": "Gate 7: 99.95% API Availability SLA, Sub-200ms Non-Streaming Latency Overhead, Zero-Trust TLS 1.3 Encryption"
+    }
+  ]
+}

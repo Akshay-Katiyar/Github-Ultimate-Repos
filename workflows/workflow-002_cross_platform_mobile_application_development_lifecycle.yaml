@@ -1,0 +1,379 @@
+workflow_id: WORKFLOW-002
+name: Cross-Platform Mobile Application Development Lifecycle
+domain: Mobile Engineering & Cross-Platform Applications
+description: End-to-end multi-stage architecture for high-performance cross-platform
+  mobile apps (iOS, Android, Desktop), bridging declarative design systems, reactive
+  unidirectional state management, local-first offline relational persistence, native
+  platform channels & hardware APIs, resilient networking, automated UI regression
+  testing, and automated store release deployment.
+total_stages: 7
+governance:
+  quality_gate_standard: Mobile App Store Excellence & Zero-Crash Standard
+  audit_status: PRODUCTION_READY
+stages:
+- stage_id: 1
+  stage_name: Cross-Platform UI Framework & Design System
+  purpose: Establish high-performance declarative UI architecture, compile responsive
+    multi-screen layouts, and enforce tokenized theme standards across iOS and Android.
+  recommended_repositories:
+  - name: flutter/flutter
+    stars: 180367
+    category: Mobile App Development, Cross-Platform Frameworks (Flutter/React Native)
+      & SDKs
+    url: https://github.com/flutter/flutter
+    workflow_pipeline: Declarative UI widget tree construction -> platform channel
+      native interop -> single-pass box constraint layout -> Impeller AOT PSO hardware-accelerated
+      rasterization.
+    role_in_stage: Google's multi-platform UI toolkit compiled natively to ARM64 machine
+      code via Skia/Impeller
+  - name: react/react-native
+    stars: 126779
+    category: Modern Frontend Frameworks, Reactive Web Engines (React/Vue/Svelte)
+      & Bundlers
+    url: https://github.com/react/react-native
+    workflow_pipeline: Declarative component IR -> Fiber lanes / fine-grained topological
+      signals -> progressive streaming SSR hydration -> Rust Oxide AST utility CSS
+      compilation -> DOM patch.
+    role_in_stage: Industry-leading framework for building native Android and iOS
+      apps using React and Hermes JS engine
+  - name: expo/expo
+    stars: 53066
+    category: Modern Frontend Frameworks, Reactive Web Engines (React/Vue/Svelte)
+      & Bundlers
+    url: https://github.com/expo/expo
+    workflow_pipeline: Declarative component IR -> Fiber lanes / fine-grained topological
+      signals -> progressive streaming SSR hydration -> Rust Oxide AST utility CSS
+      compilation -> DOM patch.
+    role_in_stage: Ecosystem of universal tools and SDKs for React Native with file-based
+      routing and EAS builds
+  input_handoff:
+    source_stage: Figma / UI/UX Design Token Specifications
+    artifacts:
+    - Design Tokens (JSON)
+    - Responsive Screen Layouts
+    - Component Wireframes
+    - Asset Bundles
+    format: Figma Tokens / SVG
+  output_handoff:
+    next_stage: 'Stage 2: State Management & Reactive Dataflow'
+    artifacts:
+    - Reusable Component Library
+    - Theme Context Providers
+    - Dynamic Route Navigation Tree
+    format: Dart / TypeScript React Native Code
+  dependencies:
+  - Flutter SDK 3.x / Node.js 20+ with React Native CLI
+  - Android Studio (SDK 34) & Xcode 15+
+  - Hermes / Impeller Runtime
+  alternatives:
+  - name: tauri-apps/tauri
+    tradeoff: Rust-powered lightweight webview wrapper, minimal binary size, less
+      native feel on complex mobile touch gestures
+  - name: JetBrains/compose-multiplatform
+    tradeoff: Kotlin Multiplatform native UI, rapid Android code sharing, evolving
+      iOS ecosystem
+  quality_gate: 'Gate 1: 60/120 FPS Jitter-Free Scroll Rendering on Target Mobile
+    Baseline Hardware'
+- stage_id: 2
+  stage_name: State Management & Reactive Dataflow
+  purpose: Architect predictable unidirectional state management, isolate business
+    logic from UI widgets, and implement atomic reactive subscriptions.
+  recommended_repositories:
+  - name: pmndrs/zustand
+    stars: 58870
+    category: Modern Frontend Frameworks, Reactive Web Engines (React/Vue/Svelte)
+      & Bundlers
+    url: https://github.com/pmndrs/zustand
+    workflow_pipeline: Declarative component IR -> Fiber lanes / fine-grained topological
+      signals -> progressive streaming SSR hydration -> Rust Oxide AST utility CSS
+      compilation -> DOM patch.
+    role_in_stage: Small, fast and scalable bearbones state-management using simplified
+      flux principles for React Native
+  - name: reduxjs/redux
+    stars: 61450
+    category: Modern Frontend Frameworks, Reactive Web Engines (React/Vue/Svelte)
+      & Bundlers
+    url: https://github.com/reduxjs/redux
+    workflow_pipeline: Declarative component IR -> Fiber lanes / fine-grained topological
+      signals -> progressive streaming SSR hydration -> Rust Oxide AST utility CSS
+      compilation -> DOM patch.
+    role_in_stage: Predictable state container with Redux Toolkit (RTK) for immutable
+      state and middleware pipelines
+  input_handoff:
+    source_stage: 'Stage 1: Cross-Platform UI Framework & Design System'
+    artifacts:
+    - UI Component Hierarchy
+    - User Action Events
+    - Form Input Payloads
+    format: Code Modules
+  output_handoff:
+    next_stage: 'Stage 3: Offline-First Embedded Storage & Edge DB'
+    artifacts:
+    - Global Store Definitions
+    - Selectors & Reducers
+    - Action Dispatch Handlers
+    format: Typed Stores (TypeScript / Dart Riverpod)
+  dependencies:
+  - TypeScript 5.x / Dart 3.x
+  - Zustand / Redux Toolkit / Riverpod
+  alternatives:
+  - name: rrousselGit/riverpod
+    tradeoff: Compile-safe dependency injection and state management for Flutter,
+      steep learning curve
+  - name: felangel/bloc
+    tradeoff: Strict enterprise BLoC pattern for Flutter, highly testable but involves
+      boilerplate
+  quality_gate: 'Gate 2: 100% Unidirectional Dataflow Audit and Zero Unnecessary Re-render
+    Cycles'
+- stage_id: 3
+  stage_name: Offline-First Embedded Storage & Edge DB
+  purpose: Provide instant local reads and writes, relational schema migration, and
+    encrypted disk storage with background cloud synchronization.
+  recommended_repositories:
+  - name: tursodatabase/turso
+    stars: 25014
+    category: Database Engines, Distributed SQL, NoSQL, Vector DBs & Persistent Caches
+    url: https://github.com/tursodatabase/turso
+    workflow_pipeline: Client connection pooling -> SQL parsing & cost-based query
+      optimization -> WAL ahead logging -> MVCC concurrent execution -> in-memory
+      buffer pool / LSM-tree flush.
+    role_in_stage: Distributed database powered by libSQL (open-source SQLite fork)
+      with embedded replica sync
+  - name: typeorm/typeorm
+    stars: 36662
+    category: Database Engines, Distributed SQL, NoSQL, Vector DBs & Persistent Caches
+    url: https://github.com/typeorm/typeorm
+    workflow_pipeline: Client connection pooling -> SQL parsing & cost-based query
+      optimization -> WAL ahead logging -> MVCC concurrent execution -> in-memory
+      buffer pool / LSM-tree flush.
+    role_in_stage: ORM for TypeScript with support for Cordova/React Native SQLite
+      storage engines
+  input_handoff:
+    source_stage: 'Stage 2: State Management & Reactive Dataflow'
+    artifacts:
+    - Domain Entity Models
+    - Local Query Schemas
+    - Sync Conflict Policies
+    format: TypeScript / Dart Schema Classes
+  output_handoff:
+    next_stage: 'Stage 4: Native Device Channels & Hardware Telemetry'
+    artifacts:
+    - Encrypted SQLite Database Instances
+    - Local Repositories & DAO Interfaces
+    - Offline Sync Queue Engine
+    format: SQLite / libSQL Embedded Storage
+  dependencies:
+  - libSQL / SQLite3 C bindings
+  - SQLCipher for encryption
+  - AsyncStorage / MMKV Native Module
+  alternatives:
+  - name: Nozbe/WatermelonDB
+    tradeoff: Lazy-loading SQLite architecture for React Native, complex setup for
+      non-React Native targets
+  - name: realm/realm-js
+    tradeoff: Fast object-oriented embedded engine, larger binary footprint and proprietary
+      licensing concerns
+  quality_gate: 'Gate 3: Sub-5ms Local Query Latency and Deterministic Offline-to-Online
+    Conflict Resolution'
+- stage_id: 4
+  stage_name: Native Device Channels & Hardware Telemetry
+  purpose: Bridge cross-platform code to native iOS/Android hardware sensors (Camera,
+    Biometrics, Bluetooth BLE, Geolocation, Background Workers).
+  recommended_repositories:
+  - name: expo/expo
+    stars: 53066
+    category: Modern Frontend Frameworks, Reactive Web Engines (React/Vue/Svelte)
+      & Bundlers
+    url: https://github.com/expo/expo
+    workflow_pipeline: Declarative component IR -> Fiber lanes / fine-grained topological
+      signals -> progressive streaming SSR hydration -> Rust Oxide AST utility CSS
+      compilation -> DOM patch.
+    role_in_stage: Comprehensive universal native API modules covering camera, sensors,
+      filesystem, and notifications
+  - name: flutter/flutter
+    stars: 180367
+    category: Mobile App Development, Cross-Platform Frameworks (Flutter/React Native)
+      & SDKs
+    url: https://github.com/flutter/flutter
+    workflow_pipeline: Declarative UI widget tree construction -> platform channel
+      native interop -> single-pass box constraint layout -> Impeller AOT PSO hardware-accelerated
+      rasterization.
+    role_in_stage: Low-latency asynchronous Platform Channels communicating directly
+      with Kotlin/Swift host runtimes
+  input_handoff:
+    source_stage: 'Stage 3: Offline-First Embedded Storage & Edge DB'
+    artifacts:
+    - Hardware Permission Requests
+    - Sensor Sampling Frequencies
+    - Background Worker Callbacks
+    format: API Declarations
+  output_handoff:
+    next_stage: 'Stage 5: Network Resilience & API Interfacing'
+    artifacts:
+    - Hardware Controller Facades
+    - Biometric Auth Tokens
+    - Location / Camera Frame Streams
+    format: Event Streams / Observables
+  dependencies:
+  - iOS Info.plist & Android AndroidManifest.xml permissions
+  - Platform channel bridges
+  alternatives:
+  - name: react-native-sensors
+    tradeoff: Direct sensor streaming for React Native, requires manual permission
+      and maintenance hooks
+  - name: flutter_blue_plus
+    tradeoff: Specialized BLE library for Flutter, focused strictly on Bluetooth Low
+      Energy
+  quality_gate: 'Gate 4: Graceful Permission Rejection Handling and Zero Native Memory
+    Leaks across Background App State Transitions'
+- stage_id: 5
+  stage_name: Network Resilience & API Interfacing
+  purpose: Execute resilient network requests with automatic exponential backoff,
+    request batching, SSL pinning, and payload compression.
+  recommended_repositories:
+  - name: react/react-native
+    stars: 126779
+    category: Modern Frontend Frameworks, Reactive Web Engines (React/Vue/Svelte)
+      & Bundlers
+    url: https://github.com/react/react-native
+    workflow_pipeline: Declarative component IR -> Fiber lanes / fine-grained topological
+      signals -> progressive streaming SSR hydration -> Rust Oxide AST utility CSS
+      compilation -> DOM patch.
+    role_in_stage: Native fetch with SSL Certificate Pinning and HTTP/2 multiplexing
+      support
+  - name: pmndrs/zustand
+    stars: 58870
+    category: Modern Frontend Frameworks, Reactive Web Engines (React/Vue/Svelte)
+      & Bundlers
+    url: https://github.com/pmndrs/zustand
+    workflow_pipeline: Declarative component IR -> Fiber lanes / fine-grained topological
+      signals -> progressive streaming SSR hydration -> Rust Oxide AST utility CSS
+      compilation -> DOM patch.
+    role_in_stage: Reactive caching and optimistic UI updates based on network fetch
+      states
+  input_handoff:
+    source_stage: 'Stage 4: Native Device Channels'
+    artifacts:
+    - OpenAPI / gRPC Specifications
+    - JWT Auth Tokens
+    - Retry Configuration
+    format: JSON / Proto3
+  output_handoff:
+    next_stage: 'Stage 6: Automated UI Testing & Device Lab Verification'
+    artifacts:
+    - Typed API Client SDK
+    - Request Interceptor Stack
+    - Network Error Handler
+    format: TypeScript / Dart Client Packages
+  dependencies:
+  - HTTP/2 or HTTP/3 Protocol Support
+  - SSL Pinning Certificates
+  - Network Reachability Monitor
+  alternatives:
+  - name: TanStack/query
+    tradeoff: World-class query caching for React Native, adds external library footprint
+  - name: cfug/dio
+    tradeoff: Premier Dart HTTP client with interceptors and FormData support for
+      Flutter
+  quality_gate: 'Gate 5: Network Timeout Handling under Simulated 2G/3G Packet Drop
+    and SSL Certificate Verification'
+- stage_id: 6
+  stage_name: Automated UI Testing & Device Lab Verification
+  purpose: Run deterministic black-box and grey-box end-to-end integration tests across
+    real physical devices and emulators with visual regression checks.
+  recommended_repositories:
+  - name: mobile-dev-inc/Maestro
+    stars: 16205
+    category: Cloud-Native Infrastructure, Kubernetes, Containers & Service Meshes
+    url: https://github.com/mobile-dev-inc/Maestro
+    workflow_pipeline: Declarative YAML manifest -> etcd Raft consensus quorum ->
+      controller-runtime reconciliation loop -> CRI container runtime & CNI network
+      routing.
+    role_in_stage: Modern, declarative, multi-platform UI test automation framework
+      built for mobile apps
+  - name: appium/appium
+    stars: 22124
+    category: Modern Frontend Frameworks, Reactive Web Engines (React/Vue/Svelte)
+      & Bundlers
+    url: https://github.com/appium/appium
+    workflow_pipeline: Declarative component IR -> Fiber lanes / fine-grained topological
+      signals -> progressive streaming SSR hydration -> Rust Oxide AST utility CSS
+      compilation -> DOM patch.
+    role_in_stage: Cross-platform test automation tool for native, hybrid and mobile
+      web apps
+  input_handoff:
+    source_stage: 'Stage 5: Network Resilience & API Interfacing'
+    artifacts:
+    - Compiled iOS (.ipa/.app) and Android (.apk/.aab) Debug Builds
+    - User Journey Test Scripts
+    format: Application Binaries & YAML Flows
+  output_handoff:
+    next_stage: 'Stage 7: CI/CD Pipeline, App Store Signing & Telemetry'
+    artifacts:
+    - E2E Test Execution Reports
+    - Screen Recording Artifacts
+    - Visual Diff Screenshots
+    format: JUnit XML / HTML Test Reports
+  dependencies:
+  - Android Emulator / iOS Simulator or Device Farm
+  - Maestro CLI / Node.js runtime
+  alternatives:
+  - name: wix/Detox
+    tradeoff: Grey-box synchronization for React Native, faster than Appium but sensitive
+      to framework versions
+  - name: leancodepl/patrol
+    tradeoff: Flutter-first testing tool enabling native permission and system dialog
+      interactions
+  quality_gate: 'Gate 6: 100% Core Checkout & Auth Flows Passing Across iOS 16-18
+    and Android 12-14'
+- stage_id: 7
+  stage_name: CI/CD Pipeline, App Store Signing & Telemetry
+  purpose: Automate cryptographic code signing, provisioning profile management, App
+    Store / Google Play distribution, and real-time crash reporting.
+  recommended_repositories:
+  - name: fastlane/fastlane
+    stars: 42300
+    category: Cloud-Native Infrastructure, Kubernetes, Containers & Service Meshes
+    url: https://github.com/fastlane/fastlane
+    workflow_pipeline: Declarative YAML manifest -> etcd Raft consensus quorum ->
+      controller-runtime reconciliation loop -> CRI container runtime & CNI network
+      routing.
+    role_in_stage: Industry standard tool to automate building and releasing your
+      iOS and Android apps
+  - name: getsentry/sentry
+    stars: 45643
+    category: Backend Web Frameworks, Microservices, REST / GraphQL / gRPC APIs &
+      ORMs
+    url: https://github.com/getsentry/sentry
+    workflow_pipeline: HTTP request stream decoding -> middleware execution pipeline
+      -> routing table pattern match -> asynchronous controller handler -> serialized
+      JSON response dispatch.
+    role_in_stage: Real-time error tracking and performance monitoring with deep mobile
+      stack traces
+  input_handoff:
+    source_stage: 'Stage 6: Automated UI Testing & Device Lab Verification'
+    artifacts:
+    - Release Candidate Source Tag
+    - Apple Distribution Certificates
+    - Google Play Service Account Key
+    format: Git Commit / Cryptographic Keystores
+  output_handoff:
+    next_stage: Apple App Store / Google Play Store
+    artifacts:
+    - Signed Android App Bundle (.aab)
+    - Signed iOS Binary (.ipa)
+    - Symbolication dSYM & Proguard Mapping Files
+    format: Production Store Artifacts
+  dependencies:
+  - Apple Developer Program Account
+  - Google Play Developer Account
+  - Fastlane Fastfile & Match Git Repository
+  alternatives:
+  - name: expo/eas-cli
+    tradeoff: Managed cloud building and submission for Expo/React Native, fee-based
+      cloud service
+  - name: firebase/firebase-crashlytics
+    tradeoff: Google-backed free crash reporting, proprietary telemetry telemetry
+      pipeline
+  quality_gate: 'Gate 7: Automated Match Cryptographic Signing, Zero Crash-Free Session
+    Degradation (<0.1% crash rate)'

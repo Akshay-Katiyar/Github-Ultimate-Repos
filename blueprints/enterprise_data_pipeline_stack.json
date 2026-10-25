@@ -1,0 +1,167 @@
+{
+  "blueprint_id": "BP-DATA-PIPELINE-04",
+  "name": "High-Throughput Enterprise Lakehouse & Data Engineering Pipeline",
+  "category": "Data Engineering, Lakehouse Architecture & Distributed Analytics",
+  "target_audience": "Data Engineers, Analytics Architects, Platform Engineers & Enterprise BI Leads",
+  "summary": "Cloud-agnostic modern data stack providing sub-second streaming event ingestion via Apache Kafka / Redpanda, ACID open table format lakehouse storage via Apache Iceberg and MinIO, SQL-first transformation modeling via dbt and Apache Spark, and programmatic DAG scheduling via Apache Airflow.",
+  "architecture_overview": "Modern enterprise data engineering demands a shift away from brittle legacy data warehouses to open table formats. By pairing Kafka/Redpanda high-throughput message streaming with Apache Iceberg open table metadata, organizations achieve vendor independence and unified streaming/batch processing. dbt-core handles declarative SQL transformations with automated data contracts and lineage graphs; Apache Spark scales heavy distributed compute; ClickHouse delivers sub-100ms analytical OLAP queries; and Apache Airflow coordinates resilient DAG scheduling across the entire pipeline.",
+  "tiers": [
+    {
+      "tier_id": "streaming",
+      "name": "Distributed Event Streaming & Real-Time Ingestion",
+      "purpose": "Ingest millions of events per second with exactly-once delivery guarantees and distributed partitioning.",
+      "primary_component": {
+        "repo": "apache/kafka",
+        "role": "Industry-standard distributed event streaming platform with partition replication and consumer groups",
+        "language": "Java / Scala",
+        "why_chosen": "Proven enterprise stability across Fortune 500 fleets, massive connector ecosystem (Kafka Connect), and high durability.",
+        "trade_offs": "JVM memory tuning and KRaft cluster management overhead."
+      },
+      "alternative_components": [
+        {
+          "repo": "redpanda-data/redpanda",
+          "role": "C++ native Kafka-compatible streaming platform with zero JVM and sub-millisecond p99 latency",
+          "trade_offs": "Enterprise commercial license considerations for certain advanced tier features."
+        },
+        {
+          "repo": "apache/flink",
+          "role": "Stateful stream processing engine for complex event processing and low-latency windowing",
+          "trade_offs": "Operational complexity when managing large RocksDB state backends."
+        }
+      ]
+    },
+    {
+      "tier_id": "storage",
+      "name": "Open Table Format Lakehouse & S3 Storage",
+      "purpose": "Store Petabyte-scale structured/unstructured datasets with ACID transactions, time travel, and schema evolution.",
+      "primary_component": {
+        "repo": "apache/iceberg",
+        "role": "High-performance open table format for huge analytic datasets with hidden partitioning and snapshot isolation",
+        "language": "Java / Python",
+        "why_chosen": "Supported natively by Snowflake, BigQuery, Spark, Trino, and DuckDB; prevents file-listing bottleneck on cloud storage.",
+        "trade_offs": "Requires catalog management (REST catalog, Nessie, or AWS Glue)."
+      },
+      "alternative_components": [
+        {
+          "repo": "minio/minio",
+          "role": "High-performance S3-compatible enterprise object storage",
+          "trade_offs": "Must be provisioned with high-bandwidth NVMe storage for maximum I/O throughput."
+        },
+        {
+          "repo": "ClickHouse/ClickHouse",
+          "role": "Columnar real-time analytical database engine for instant aggregate queries",
+          "trade_offs": "Optimized for fast analytical filtering rather than mutable transactional updates."
+        }
+      ]
+    },
+    {
+      "tier_id": "transformation",
+      "name": "Declarative SQL Transformation & Distributed Compute",
+      "purpose": "Cleanse, normalize, enrich, and model raw Bronze lakehouse tables into Gold business dimension models.",
+      "primary_component": {
+        "repo": "dbt-labs/dbt",
+        "role": "Analytics engineering transformation framework with versioned models, tests, and documentation",
+        "language": "Python / SQL",
+        "why_chosen": "Transforms data directly inside the processing engine using modular SQL, automated testing, and DAG lineage.",
+        "trade_offs": "Does not provide its own compute engine; relies on attached query engines."
+      },
+      "alternative_components": [
+        {
+          "repo": "apache/spark",
+          "role": "Unified analytics engine for large-scale distributed data processing and machine learning",
+          "trade_offs": "Substantial compute cluster overhead for simple small-scale workloads."
+        },
+        {
+          "repo": "pola-rs/polars",
+          "role": "Blazingly fast multi-threaded DataFrame library written in Rust",
+          "trade_offs": "Single-node memory focus rather than multi-node cluster distribution."
+        }
+      ]
+    },
+    {
+      "tier_id": "orchestration",
+      "name": "DAG Workflow Orchestration & Data Quality Monitoring",
+      "purpose": "Schedule data pipelines, manage cross-system dependencies, execute retries, and trigger alerts.",
+      "primary_component": {
+        "repo": "apache/airflow",
+        "role": "Industry-standard programmatic workflow orchestration platform using Python DAG definitions",
+        "language": "Python",
+        "why_chosen": "Enormous ecosystem of production operators, dynamic task generation, and widespread enterprise adoption.",
+        "trade_offs": "Airflow metadata database (Postgres) and Celery/Kubernetes executor administration requirements."
+      },
+      "alternative_components": [
+        {
+          "repo": "dagster-io/dagster",
+          "role": "Modern data-aware orchestrator with native software-defined assets and local testing",
+          "trade_offs": "Smaller legacy operator library than Airflow; modern asset-centric paradigm shift."
+        }
+      ]
+    }
+  ],
+  "end_to_end_workflow": "Change Data Capture (CDC) / Event Stream -> Apache Kafka Message Log -> Apache Iceberg Lakehouse (Bronze) -> Apache Spark Cleanse (Silver) -> dbt Dimensional Modeling (Gold) -> Airflow DAG Orchestration -> ClickHouse Analytics Serving",
+  "data_flow_stages": [
+    {
+      "stage": 1,
+      "title": "Raw Event Ingestion & Partitioned Buffering",
+      "input": "Application logs, payment events, and transactional DB CDC streams",
+      "output": "Durable distributed commit log replicated across 3 Kafka broker nodes",
+      "tools_involved": ["apache/kafka", "redpanda-data/redpanda"],
+      "verification": "Ensure consumer lag metrics remain < 500 messages across all consumer groups."
+    },
+    {
+      "stage": 2,
+      "title": "Lakehouse Ingestion & Parquet Compaction",
+      "input": "Kafka micro-batches streamed into object storage",
+      "output": "Versioned Apache Iceberg tables stored in MinIO/S3 with metadata manifests",
+      "tools_involved": ["apache/iceberg", "minio/minio"],
+      "verification": "Validate snapshot commit integrity and run hourly file compaction procedures."
+    },
+    {
+      "stage": 3,
+      "title": "Declarative Business Modeling & Testing",
+      "input": "Bronze raw event tables",
+      "output": "Audited Silver/Gold star-schema tables with dimension keys",
+      "tools_involved": ["dbt-labs/dbt", "apache/spark"],
+      "verification": "Execute dbt test suite (unique, not_null, accepted_values, foreign_key_integrity)."
+    },
+    {
+      "stage": 4,
+      "title": "Orchestrated Schedule & Anomaly Alerting",
+      "input": "Cron schedule / sensor triggers",
+      "output": "Dependency-resolved pipeline execution with telemetry logs and Slack alerts",
+      "tools_involved": ["apache/airflow"],
+      "verification": "SLA missed task triggers automatic retries and PagerDuty notification."
+    }
+  ],
+  "production_readiness": {
+    "sla_target": "99.99% data pipeline availability with end-to-end event-to-dashboard latency < 5 minutes",
+    "security_considerations": [
+      "mTLS encryption between Kafka brokers, producers, and consumers",
+      "RBAC table and column level masking enforced in data lakehouse",
+      "Zero plain-text database credentials in code (injected via HashiCorp Vault / Kubernetes Secrets)",
+      "Automated PII scrubbing and anonymization in Silver refinement stage"
+    ],
+    "failure_modes_and_mitigations": [
+      {
+        "failure_mode": "Upstream source schema changes unexpectedly (e.g. dropped columns)",
+        "mitigation": "Enforce strict Confluent / Avro Schema Registry backwards compatibility on Kafka topics."
+      },
+      {
+        "failure_mode": "Small files proliferation degrading Iceberg query performance",
+        "mitigation": "Schedule automated Spark/Iceberg rewrite_data_files maintenance procedures nightly."
+      },
+      {
+        "failure_mode": "Airflow task execution deadlocks due to worker pool starvation",
+        "mitigation": "Deploy KubernetesExecutor with dynamic auto-scaling pods per task."
+      }
+    ]
+  },
+  "quickstart": {
+    "setup_commands": [
+      "pip install apache-airflow dbt-core dbt-postgres pyspark",
+      "docker run -d --name redpanda -p 9092:9092 docker.redpanda.com/redpandadata/redpanda:latest redpanda start --smp 1 --memory 1G --overprovisioned",
+      "docker run -d --name minio -p 9000:9000 -p 9001:9001 minio/minio server /data --console-address ':9001'"
+    ],
+    "sample_config_or_code": "from airflow import DAG\nfrom airflow.operators.bash import BashOperator\nfrom datetime import datetime, timedelta\n\ndefault_args = {'owner': 'data_eng', 'retries': 2, 'retry_delay': timedelta(minutes=5)}\nwith DAG('lakehouse_gold_transform', default_args=default_args, schedule_interval='@hourly', start_date=datetime(2026, 1, 1), catchup=False) as dag:\n    ingest = BashOperator(task_id='kafka_to_iceberg', bash_command='spark-submit ingest_stream.py')\n    transform = BashOperator(task_id='dbt_run_models', bash_command='dbt run --models gold')\n    test = BashOperator(task_id='dbt_test_models', bash_command='dbt test --models gold')\n    ingest >> transform >> test"
+  }
+}

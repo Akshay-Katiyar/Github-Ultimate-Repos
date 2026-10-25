@@ -1,0 +1,64 @@
+name: "🛠️ Metadata Correction & Catalog Update"
+description: "Report or submit a fix for outdated star counts, broken links, renamed repos, or workflow revisions"
+title: "[METADATA]: "
+labels: ["metadata-fix", "catalog-maintenance"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Help Keep 11,730+ Repositories Accurate
+        Use this streamlined template to report broken links, outdated star counts, repository renames, or architectural workflow corrections.
+  - type: input
+    id: repo_target
+    attributes:
+      label: Repository Identifier (owner/repo)
+      description: Which repository record needs updating?
+      placeholder: "e.g. langchain-ai/langchain"
+    validations:
+      required: true
+  - type: dropdown
+    id: correction_type
+    attributes:
+      label: Type of Metadata Correction
+      description: Select the primary nature of the correction.
+      options:
+        - "Broken or Outdated Repository URL (404 / Moved)"
+        - "Repository Renamed or Transferred Owner"
+        - "Significant Stargazer / Fork Metric Discrepancy"
+        - "Inaccurate or Outdated 1-Line Architecture Workflow"
+        - "Misclassified Category Discipline"
+        - "Incorrect Primary Language Specification"
+        - "Duplicate Repository Entry in Catalog"
+    validations:
+      required: true
+  - type: textarea
+    id: current_value
+    attributes:
+      label: Current Catalog Value
+      description: What is currently displayed in the CSV or category markdown?
+      placeholder: "Current URL / Workflow / Category..."
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_value
+    attributes:
+      label: Corrected Value
+      description: What should the updated value be?
+      placeholder: "Updated URL / Verified Workflow / Correct Category..."
+    validations:
+      required: true
+  - type: input
+    id: evidence_source
+    attributes:
+      label: Evidence or Source Reference
+      description: Link to GitHub repository, announcement, or documentation verifying this change.
+      placeholder: "https://github.com/owner/new-repo-name"
+    validations:
+      required: true
+  - type: checkboxes
+    id: pr_intent
+    attributes:
+      label: Pull Request
+      options:
+        - label: "I am ready and able to submit a Pull Request to fix this myself."
+          required: false

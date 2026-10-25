@@ -1,0 +1,114 @@
+name: "🔬 AI Research Benchmark & Evaluation Suite Submission"
+description: "Propose an AI evaluation benchmark, foundation model suite, scientific dataset, or agent evaluation framework"
+title: "[RESEARCH]: "
+labels: ["ai-research", "benchmark", "evaluation-suite"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Submit an AI Benchmark, Evaluation Harness, or Frontier Research Framework
+        We welcome submissions from AI researchers, ML evaluators, and autonomous systems engineers.
+        This template catalogs reproducible benchmarks, evaluation datasets, and algorithmic research papers across our 55 DeepTech disciplines.
+  - type: input
+    id: benchmark_name
+    attributes:
+      label: Benchmark or Framework Name
+      description: Official title of the benchmark or evaluation framework.
+      placeholder: "e.g. SWE-bench, GAIA, HumanEval, MMLU-Pro, OSWorld, WebArena"
+    validations:
+      required: true
+  - type: input
+    id: repo_url
+    attributes:
+      label: Repository URL
+      description: Canonical GitHub repository hosting code, harness, or datasets.
+      placeholder: "https://github.com/princeton-nlp/SWE-bench"
+    validations:
+      required: true
+  - type: input
+    id: arxiv_paper
+    attributes:
+      label: ArXiv Paper / Publication DOI
+      description: Link to the research paper detailing methodology and empirical findings.
+      placeholder: "https://arxiv.org/abs/2310.06770"
+    validations:
+      required: true
+  - type: dropdown
+    id: evaluation_type
+    attributes:
+      label: Primary Evaluation Focus
+      description: What capability does this benchmark measure?
+      options:
+        - "Autonomous Agent Benchmark (Coding, Issue Resolution, Tool Use)"
+        - "Multi-Modal Reasoning & Vision-Language (VQA, NeRF, 3D Scenes)"
+        - "General LLM Reasoning & Mathematics (GSM8K, MATH, MMLU)"
+        - "Robotics, Humanoid Kinematics & Embodied Simulation"
+        - "Frontier Physics, Quantum & Scientific ML (CFD, Materials, Chem)"
+        - "Cybersecurity, Binary Exploitation & Red-Teaming"
+        - "Code Synthesis, Formal Verification & Proof Generation"
+        - "Long-Context Retrieval & RAG Needle-in-a-Haystack"
+    validations:
+      required: true
+  - type: dropdown
+    id: discipline
+    attributes:
+      label: Target Discipline Category (1-55)
+      description: Primary category where this research repository belongs.
+      options:
+        - "01 - Curated Knowledge, Developer Guides, Books & Awesome Collections"
+        - "02 - Artificial Intelligence, Large Language Models, Foundation Models & Quantization"
+        - "03 - Multi-Agent Systems, Autonomous Swarms, AI Orchestration & MCP Tools"
+        - "04 - Computer Vision, Multimodal AI, Diffusion & Neural Rendering (NeRF/3D-GS)"
+        - "05 - Speech, Voice AI, Audio Processing, Audio Synthesis & Music Generation"
+        - "06 - Robotics, Humanoid Kinematics, Dynamics, Actuators & Physics Simulation"
+        - "07 - Autonomous Vehicles, Mobile Robotics, LiDAR SLAM & Drone Flight Control"
+        - "08 - Semiconductor, Silicon EDA, RTL-to-GDSII, FPGA & RISC-V Architecture"
+        - "09 - Quantum Computing, Quantum Algorithms, Circuit Simulation & Error Correction"
+        - "12 - Nuclear Fusion, Plasma Physics, Tokamaks & Particle Accelerators"
+        - "18 - Computational Fluid Dynamics (CFD), Turbulence & Multiphase Slosh"
+        - "26 - Healthcare, Computational Biomedicine, Drug Discovery & Molecular Modeling"
+        - "27 - Genomics, CRISPR Gene Editing & Synthetic Biology"
+        - "28 - Neurotechnology, Brain-Computer Interfaces (BCI) & Neuromorphic Computing"
+        - "30 - Cybersecurity, Reverse Engineering, Binary Exploitation & Vulnerability Research"
+        - "32 - Cryptography, Zero-Knowledge Proofs (ZKP), Post-Quantum & Privacy Tech"
+        - "33 - Formal Verification, Theorem Proving & Mathematical Proof Systems"
+        - "37 - Database Engines, Distributed SQL, NoSQL, Vector DBs & Persistent Caches"
+        - "55 - Python Ecosystem, Data Science, Scientific Computing & Analytics"
+        - "Other Discipline (Specify in notes)"
+    validations:
+      required: true
+  - type: textarea
+    id: metrics_and_baselines
+    attributes:
+      label: Evaluation Metrics & State-of-the-Art Baselines
+      description: How is performance quantified and what are established reference baselines?
+      placeholder: "e.g. Metric: Resolved Issue % (Pass@1). Baseline: GPT-4o achieves 33.2%, Claude 3.5 Sonnet achieves 49.0%..."
+    validations:
+      required: true
+  - type: textarea
+    id: workflow_pipeline
+    attributes:
+      label: 1-Line Operational Architecture Workflow Pipeline
+      description: "Evaluation flow format: [Input / Benchmark Tasks] -> [Agent / Model Execution] -> [Environment Harness] -> [Grading & Score Verification]"
+      placeholder: "GitHub issue description -> Agent repo workspace & patch generation -> Docker container execution & test runner -> Pass/Fail evaluation score"
+    validations:
+      required: true
+  - type: textarea
+    id: artifacts_and_splits
+    attributes:
+      label: Open Artifacts, Datasets & Reproducibility
+      description: Specify dataset locations (HuggingFace, Zenodo), license, and execution requirements.
+      placeholder: "Dataset hosted on Hugging Face (princeton-nlp/SWE-bench_Lite). Evaluation requires Docker runtime."
+    validations:
+      required: true
+  - type: checkboxes
+    id: research_checklist
+    attributes:
+      label: Research Integrity Checklist
+      options:
+        - label: "The benchmark or evaluation harness is open source with publicly accessible code."
+          required: true
+        - label: "The associated paper or pre-print is accessible (e.g. arXiv, OpenReview, IEEE, ACM)."
+          required: true
+        - label: "The 1-line architecture pipeline accurately reflects the end-to-end evaluation procedure."
+          required: true

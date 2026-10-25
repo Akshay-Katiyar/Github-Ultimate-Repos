@@ -1,0 +1,420 @@
+{
+  "workflow_id": "WORKFLOW-003",
+  "name": "Cloud-Native Kubernetes & GitOps Platform Engineering Workflow",
+  "domain": "DevOps, Cloud-Native Infrastructure & Platform Engineering",
+  "description": "Production-ready 7-stage Kubernetes infrastructure lifecycle implementing declarative Infrastructure-as-Code, immutable packaging, automated GitOps cluster reconciliation, eBPF service mesh and ingress routing, zero-trust secrets management, full-stack metrics/tracing observability, and security posture enforcement.",
+  "total_stages": 7,
+  "governance": {
+    "quality_gate_standard": "Production Cloud-Native Architecture & Zero-Drift GitOps Standard",
+    "audit_status": "PRODUCTION_READY"
+  },
+  "stages": [
+    {
+      "stage_id": 1,
+      "stage_name": "Declarative Infrastructure as Code Provisioning",
+      "purpose": "Provision immutable VPC networks, managed Kubernetes clusters (EKS/GKE/Talos), and cloud resource backbones with state-locking.",
+      "recommended_repositories": [
+        {
+          "name": "hashicorp/terraform",
+          "stars": 50116,
+          "category": "CI/CD Automation, GitOps & Infrastructure-as-Code (Terraform/Ansible)",
+          "url": "https://github.com/hashicorp/terraform",
+          "workflow_pipeline": "Git push webhook trigger -> DAG pipeline runner dispatch -> isolated container build sandbox -> automated test suite execution -> artifact registry push.",
+          "role_in_stage": "Declarative Infrastructure as Code engine delivering reproducible cloud provisioning via HCL"
+        },
+        {
+          "name": "opentofu/manifesto",
+          "stars": 35582,
+          "category": "CI/CD Automation, GitOps & Infrastructure-as-Code (Terraform/Ansible)",
+          "url": "https://github.com/opentofu/manifesto",
+          "workflow_pipeline": "Git push webhook trigger -> DAG pipeline runner dispatch -> isolated container build sandbox -> automated test suite execution -> artifact registry push.",
+          "role_in_stage": "Open-source, community-driven Infrastructure as Code engine maintaining open governance"
+        },
+        {
+          "name": "gruntwork-io/terragrunt",
+          "stars": 9898,
+          "category": "CI/CD Automation, GitOps & Infrastructure-as-Code (Terraform/Ansible)",
+          "url": "https://github.com/gruntwork-io/terragrunt",
+          "workflow_pipeline": "Git push webhook trigger -> DAG pipeline runner dispatch -> isolated container build sandbox -> automated test suite execution -> artifact registry push.",
+          "role_in_stage": "Thin wrapper that provides extra tools for keeping Terraform configurations DRY and modular"
+        }
+      ],
+      "input_handoff": {
+        "source_stage": "Cloud Architecture Design / Network Topology Spec",
+        "artifacts": [
+          "VPC Architecture Blueprint",
+          "CIDR Block Allocations",
+          "IAM Role Mapping Matrix"
+        ],
+        "format": "HCL / JSON"
+      },
+      "output_handoff": {
+        "next_stage": "Stage 2: Package Management & Application Templating",
+        "artifacts": [
+          "Live Kubernetes Clusters",
+          "Kubeconfig Credentials",
+          "VPC & Subnet IDs",
+          "IAM OIDC Providers"
+        ],
+        "format": "Terraform State / Kubeconfig YAML"
+      },
+      "dependencies": [
+        "AWS / GCP / Azure / Hetzner Cloud API Keys",
+        "Terraform / OpenTofu CLI",
+        "S3 / GCS Remote State Backend with DynamoDB Locking"
+      ],
+      "alternatives": [
+        {
+          "name": "pulumi/pulumi",
+          "tradeoff": "General-purpose programming languages (TypeScript, Python, Go) for IaC, higher complexity than HCL"
+        },
+        {
+          "name": "crossplane/crossplane",
+          "tradeoff": "Kubernetes-native control plane managing cloud infrastructure via CRDs, requires existing K8s cluster"
+        }
+      ],
+      "quality_gate": "Gate 1: Idempotent terraform plan with Zero Unintended Destruction and Strict Static Policy Verification"
+    },
+    {
+      "stage_id": 2,
+      "stage_name": "Package Management & Application Templating",
+      "purpose": "Package containerized microservices into parameterized, versioned, and reusable application manifests with dependency resolution.",
+      "recommended_repositories": [
+        {
+          "name": "helm/helm",
+          "stars": 30369,
+          "category": "Cloud-Native Infrastructure, Kubernetes, Containers & Service Meshes",
+          "url": "https://github.com/helm/helm",
+          "workflow_pipeline": "Declarative YAML manifest -> etcd Raft consensus quorum -> controller-runtime reconciliation loop -> CRI container runtime & CNI network routing.",
+          "role_in_stage": "The package manager for Kubernetes managing charts with parameterized values and lifecycle hooks"
+        },
+        {
+          "name": "helm/charts",
+          "stars": 15400,
+          "category": "Cloud-Native Infrastructure, Kubernetes, Containers & Service Meshes",
+          "url": "https://github.com/helm/charts",
+          "workflow_pipeline": "Declarative YAML manifest -> etcd Raft consensus quorum -> controller-runtime reconciliation loop -> CRI container runtime & CNI network routing.",
+          "role_in_stage": "Curated collection of production-grade Kubernetes deployment chart blueprints"
+        }
+      ],
+      "input_handoff": {
+        "source_stage": "Stage 1: Declarative Infrastructure as Code Provisioning",
+        "artifacts": [
+          "Container Image Digest Tags",
+          "Service Configuration Variables",
+          "Resource CPU/Memory Limit Requests"
+        ],
+        "format": "Docker Image SHAs / YAML Values"
+      },
+      "output_handoff": {
+        "next_stage": "Stage 3: GitOps Continuous Delivery & Cluster Reconciliation",
+        "artifacts": [
+          "Versioned Helm Charts (.tgz / OCI Registries)",
+          "Rendered Kubernetes Manifests",
+          "Chart.yaml Contracts"
+        ],
+        "format": "OCI Artifacts / Helm Package"
+      },
+      "dependencies": [
+        "Kubernetes 1.28+",
+        "Helm CLI v3.x",
+        "OCI Artifact Registry (GHCR / Harbor / ECR)"
+      ],
+      "alternatives": [
+        {
+          "name": "kubernetes-sigs/kustomize",
+          "tradeoff": "Template-free overlay engine built into kubectl, simpler for minor patches but lacks release management"
+        },
+        {
+          "name": "stefanprodan/timoni",
+          "tradeoff": "CUE-powered package manager for Kubernetes with strong type validation, smaller community"
+        }
+      ],
+      "quality_gate": "Gate 2: Helm Lint Validation, Schema Compliance Check, and Vulnerability Scan on Target Base Images"
+    },
+    {
+      "stage_id": 3,
+      "stage_name": "GitOps Continuous Delivery & Cluster Reconciliation",
+      "purpose": "Maintain zero-drift declarative state between Git repositories and live Kubernetes clusters via continuous automated reconciliation.",
+      "recommended_repositories": [
+        {
+          "name": "argoproj/argo-cd",
+          "stars": 24467,
+          "category": "Cloud-Native Infrastructure, Kubernetes, Containers & Service Meshes",
+          "url": "https://github.com/argoproj/argo-cd",
+          "workflow_pipeline": "Declarative YAML manifest -> etcd Raft consensus quorum -> controller-runtime reconciliation loop -> CRI container runtime & CNI network routing.",
+          "role_in_stage": "Declarative, GitOps continuous delivery tool for Kubernetes with automated self-healing and sync windows"
+        }
+      ],
+      "input_handoff": {
+        "source_stage": "Stage 2: Package Management & Application Templating",
+        "artifacts": [
+          "GitOps Fleet Configuration Repository",
+          "ApplicationSet Manifests",
+          "Target Environment Values"
+        ],
+        "format": "Git Commits"
+      },
+      "output_handoff": {
+        "next_stage": "Stage 4: Service Mesh, Ingress & eBPF Networking",
+        "artifacts": [
+          "Synced Cluster Workloads",
+          "Reconciliation Audit History",
+          "Health Status Metrics"
+        ],
+        "format": "Kubernetes API State"
+      },
+      "dependencies": [
+        "ArgoCD Controller installed on target cluster",
+        "Git Deploy Keys with Read Access",
+        "RBAC Service Accounts"
+      ],
+      "alternatives": [
+        {
+          "name": "fluxcd/flux2",
+          "tradeoff": "Modular GitOps toolkit based on native K8s controllers, lighter UI but excellent multi-tenancy"
+        },
+        {
+          "name": "weaveworks/flagger",
+          "tradeoff": "Progressive delivery operator managing canary releases, works on top of ArgoCD/Flux"
+        }
+      ],
+      "quality_gate": "Gate 3: Automated Sync Verification with Zero Configuration Drift (Sync Status: Synced, Health: Healthy)"
+    },
+    {
+      "stage_id": 4,
+      "stage_name": "Service Mesh, Ingress & eBPF Networking",
+      "purpose": "Provide high-performance eBPF-based pod routing, Layer 7 traffic management, mutual TLS (mTLS) encryption, and Gateway API ingress.",
+      "recommended_repositories": [
+        {
+          "name": "cilium/cilium",
+          "stars": 25711,
+          "category": "Cloud-Native Infrastructure, Kubernetes, Containers & Service Meshes",
+          "url": "https://github.com/cilium/cilium",
+          "workflow_pipeline": "Declarative YAML manifest -> etcd Raft consensus quorum -> controller-runtime reconciliation loop -> CRI container runtime & CNI network routing.",
+          "role_in_stage": "eBPF-powered networking, observability, and security connecting Kubernetes workloads with zero sidecar overhead"
+        },
+        {
+          "name": "istio/istio",
+          "stars": 38471,
+          "category": "Cloud-Native Infrastructure, Kubernetes, Containers & Service Meshes",
+          "url": "https://github.com/istio/istio",
+          "workflow_pipeline": "Declarative YAML manifest -> etcd Raft consensus quorum -> controller-runtime reconciliation loop -> CRI container runtime & CNI network routing.",
+          "role_in_stage": "Industry-standard service mesh providing traffic routing, mTLS security, and fine-grained authorization"
+        },
+        {
+          "name": "linkerd/linkerd2",
+          "stars": 11520,
+          "category": "Cloud-Native Infrastructure, Kubernetes, Containers & Service Meshes",
+          "url": "https://github.com/linkerd/linkerd2",
+          "workflow_pipeline": "Declarative YAML manifest -> etcd Raft consensus quorum -> controller-runtime reconciliation loop -> CRI container runtime & CNI network routing.",
+          "role_in_stage": "Ultralight, security-focused service mesh for Kubernetes written in Rust and Go"
+        }
+      ],
+      "input_handoff": {
+        "source_stage": "Stage 3: GitOps Continuous Delivery & Cluster Reconciliation",
+        "artifacts": [
+          "Ingress Route Definitions",
+          "TLS Domain Certificates",
+          "NetworkPolicy / CiliumNetworkPolicy Specifications"
+        ],
+        "format": "YAML Manifests"
+      },
+      "output_handoff": {
+        "next_stage": "Stage 5: Zero-Trust Security, Secret Storage & Vulnerability Scanning",
+        "artifacts": [
+          "Encrypted L7 Service Mesh Fabric",
+          "Ingress Gateway Endpoints",
+          "Network Telemetry Streams (Hubble)"
+        ],
+        "format": "eBPF BPF Maps / Envoy Dynamic Routes"
+      },
+      "dependencies": [
+        "Linux Kernel 5.4+ with eBPF support",
+        "Cilium CNI / Istio Operator",
+        "Cert-Manager for Let's Encrypt TLS"
+      ],
+      "alternatives": [
+        {
+          "name": "traefik/traefik",
+          "tradeoff": "Lightweight cloud-native HTTP reverse proxy and ingress, simpler than full service mesh"
+        },
+        {
+          "name": "envoyproxy/gateway",
+          "tradeoff": "Official Envoy Gateway API implementation, growing community"
+        }
+      ],
+      "quality_gate": "Gate 4: 100% Inter-Pod Traffic Enforced via mTLS and Default-Deny Ingress Network Policies"
+    },
+    {
+      "stage_id": 5,
+      "stage_name": "Zero-Trust Security, Secret Storage & Vulnerability Scanning",
+      "purpose": "Inject secrets dynamically without disk persistence, audit container vulnerabilities in CI and runtime, and enforce admission controller policies.",
+      "recommended_repositories": [
+        {
+          "name": "hashicorp/vault",
+          "stars": 36428,
+          "category": "Systems Programming, Low-Level Runtimes, Memory Safety & WebAssembly (Wasm)",
+          "url": "https://github.com/hashicorp/vault",
+          "workflow_pipeline": "Zero-cost abstraction type checking -> affine borrow checker & lifetime validation -> LLVM backend code generation -> memory-safe native binary emission.",
+          "role_in_stage": "Tool for secrets management, encryption as a service, and privileged access management"
+        },
+        {
+          "name": "aquasecurity/trivy",
+          "stars": 38702,
+          "category": "Cloud-Native Infrastructure, Kubernetes, Containers & Service Meshes",
+          "url": "https://github.com/aquasecurity/trivy",
+          "workflow_pipeline": "Declarative YAML manifest -> etcd Raft consensus quorum -> controller-runtime reconciliation loop -> CRI container runtime & CNI network routing.",
+          "role_in_stage": "Comprehensive vulnerability and misconfiguration scanner for containers, Kubernetes, and code"
+        }
+      ],
+      "input_handoff": {
+        "source_stage": "Stage 4: Service Mesh, Ingress & eBPF Networking",
+        "artifacts": [
+          "Container Images",
+          "Secret Ingestion Declarations",
+          "Pod Security Admission Profiles"
+        ],
+        "format": "OCI Images / ExternalSecret CRDs"
+      },
+      "output_handoff": {
+        "next_stage": "Stage 6: Full-Stack Observability, Tracing & APM Telemetry",
+        "artifacts": [
+          "In-Memory Ephemeral Secret Mounts",
+          "Trivy Security Audit Reports",
+          "Admission Control Approval Tokens"
+        ],
+        "format": "Audit JSON / Attestation Signatures"
+      },
+      "dependencies": [
+        "HashiCorp Vault or Cloud KMS (KMS/Secrets Manager)",
+        "External Secrets Operator",
+        "Kubernetes Admission Webhooks"
+      ],
+      "alternatives": [
+        {
+          "name": "kyverno/kyverno",
+          "tradeoff": "Kubernetes native policy engine without requiring Rego (unlike OPA/Gatekeeper)"
+        },
+        {
+          "name": "falcosecurity/falco",
+          "tradeoff": "Runtime eBPF threat detection engine alerting on unexpected kernel syscalls"
+        }
+      ],
+      "quality_gate": "Gate 5: Zero Critical/High CVEs in Runtime Containers and 100% In-Flight Secret Injection"
+    },
+    {
+      "stage_id": 6,
+      "stage_name": "Full-Stack Observability, Tracing & APM Telemetry",
+      "purpose": "Ingest high-cardinality metrics, aggregate distributed traces across microservices, and render unified operational dashboards with alerting rules.",
+      "recommended_repositories": [
+        {
+          "name": "prometheus/prometheus",
+          "stars": 66746,
+          "category": "Observability, APM Telemetry, Metrics, Distributed Tracing & Logging",
+          "url": "https://github.com/prometheus/prometheus",
+          "workflow_pipeline": "Push/pull metric ingestion -> Gorilla double-delta timestamp & XOR float compression -> in-memory Head chunking -> immutable TSDB block compaction & PromQL evaluation.",
+          "role_in_stage": "Cloud-native systems monitoring and alerting toolkit with dimensional data model and PromQL"
+        },
+        {
+          "name": "grafana/grafana",
+          "stars": 77487,
+          "category": "Database Engines, Distributed SQL, NoSQL, Vector DBs & Persistent Caches",
+          "url": "https://github.com/grafana/grafana",
+          "workflow_pipeline": "Client connection pooling -> SQL parsing & cost-based query optimization -> WAL ahead logging -> MVCC concurrent execution -> in-memory buffer pool / LSM-tree flush.",
+          "role_in_stage": "Leading open-source observability visualization and interactive analytics platform"
+        }
+      ],
+      "input_handoff": {
+        "source_stage": "Stage 5: Zero-Trust Security, Secret Storage",
+        "artifacts": [
+          "Service Metrics Scrape Endpoints (/metrics)",
+          "OpenTelemetry Trace Exporters",
+          "Log Stream Sinks"
+        ],
+        "format": "Prometheus Exposition Format / OTLP"
+      },
+      "output_handoff": {
+        "next_stage": "Stage 7: Reliability Verification & Auto-Healing Cluster Operations",
+        "artifacts": [
+          "Grafana Executive Dashboards",
+          "Alertmanager PagerDuty/Slack Routes",
+          "SLO / SLA Error Budget Trackers"
+        ],
+        "format": "Prometheus Rules / Grafana JSON Dashboards"
+      },
+      "dependencies": [
+        "Prometheus Operator (kube-prometheus-stack)",
+        "OpenTelemetry Collector DaemonSet",
+        "Persistent Volumes for TSDB"
+      ],
+      "alternatives": [
+        {
+          "name": "VictoriaMetrics/VictoriaMetrics",
+          "tradeoff": "Cost-effective drop-in replacement for Prometheus with significantly lower RAM/disk usage"
+        },
+        {
+          "name": "grafana/loki",
+          "tradeoff": "Log aggregation system inspired by Prometheus, indexes only labels rather than full text"
+        }
+      ],
+      "quality_gate": "Gate 6: Golden Signals Monitored (Latency, Traffic, Errors, Saturation) with Sub-30s Alert Trigger Threshold"
+    },
+    {
+      "stage_id": 7,
+      "stage_name": "Reliability Verification & Auto-Healing Cluster Operations",
+      "purpose": "Implement horizontal pod autoscaling (HPA / KEDA), automated node provisioning, and continuous chaos resilience verification.",
+      "recommended_repositories": [
+        {
+          "name": "argoproj/argo-cd",
+          "stars": 24467,
+          "category": "Cloud-Native Infrastructure, Kubernetes, Containers & Service Meshes",
+          "url": "https://github.com/argoproj/argo-cd",
+          "workflow_pipeline": "Declarative YAML manifest -> etcd Raft consensus quorum -> controller-runtime reconciliation loop -> CRI container runtime & CNI network routing.",
+          "role_in_stage": "Continuous rollback triggers and automated sync window management"
+        },
+        {
+          "name": "prometheus/prometheus",
+          "stars": 66746,
+          "category": "Observability, APM Telemetry, Metrics, Distributed Tracing & Logging",
+          "url": "https://github.com/prometheus/prometheus",
+          "workflow_pipeline": "Push/pull metric ingestion -> Gorilla double-delta timestamp & XOR float compression -> in-memory Head chunking -> immutable TSDB block compaction & PromQL evaluation.",
+          "role_in_stage": "Telemetry-driven auto-scaling triggers via PromQL custom metrics"
+        }
+      ],
+      "input_handoff": {
+        "source_stage": "Stage 6: Full-Stack Observability, Tracing & APM Telemetry",
+        "artifacts": [
+          "SLO Thresholds",
+          "Autoscaling Policies (CPU/Memory/Queue Depth)",
+          "Chaos Testing Plans"
+        ],
+        "format": "HPA / KEDA ScaledObject CRDs"
+      },
+      "output_handoff": {
+        "next_stage": "Production Operations & Platform Engineers",
+        "artifacts": [
+          "Auto-Healing Infrastructure",
+          "Chaos Resilience Certification",
+          "Incident Runbooks"
+        ],
+        "format": "Production SLA Reports"
+      },
+      "dependencies": [
+        "Kubernetes Metrics Server / KEDA",
+        "Cluster Autoscaler / Karpenter"
+      ],
+      "alternatives": [
+        {
+          "name": "chaos-mesh/chaos-mesh",
+          "tradeoff": "Cloud-native chaos engineering platform injecting network delays, pod kills, and I/O faults"
+        },
+        {
+          "name": "kubernetes-sigs/karpenter",
+          "tradeoff": "High-velocity AWS node autoscaler bypassing ASGs, requires AWS EKS"
+        }
+      ],
+      "quality_gate": "Gate 7: Automated Recovery from Single-Node Outage in under 60 Seconds with Zero User-Perceived Downtime"
+    }
+  ]
+}

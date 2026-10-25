@@ -59,3 +59,13 @@ coverage.xml
 *.log
 scratch/
 tmp/
+
+# SQLite database journal, write-ahead logs & temporary runtime files
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+*.bak

@@ -1,0 +1,1730 @@
+{
+  "version": "1.0.0",
+  "total_disciplines": 55,
+  "clusters": [
+    "AI & Intelligent Systems",
+    "Robotics, Physical Systems & Autonomous Vehicles",
+    "Frontier Physics, Quantum & Clean Energy",
+    "Earth Sciences, Materials & Engineering",
+    "Industrial Systems, SCADA & Utilities",
+    "Cybersecurity, Cryptography & Digital Forensics",
+    "Systems Programming, Cloud & Distributed Engines",
+    "Web, Mobile, Desktop & Creative Applications"
+  ],
+  "disciplines": [
+    {
+      "id": 1,
+      "stable_id": "cat-01-curated-knowledge",
+      "name": "Curated Knowledge, Developer Guides, Books & Awesome Collections",
+      "slug": "curated-knowledge-developer-guides-books-awesome-collections",
+      "description": "Curated knowledge aggregation, community-driven awesome lists, canonical developer roadmaps, interactive CS curricula, free programming books, and public API registries that synthesize technical literature and learning pathways.",
+      "parent_cluster": "AI & Intelligent Systems",
+      "keywords": [
+        "awesome-list",
+        "developer-roadmap",
+        "computer-science-curriculum",
+        "free-programming-books",
+        "public-apis",
+        "cheat-sheets",
+        "study-plan",
+        "interview-prep",
+        "system-design-primer"
+      ],
+      "top_languages": [
+        "Other",
+        "Python",
+        "JavaScript",
+        "Shell",
+        "HTML"
+      ],
+      "metrics": {
+        "repository_count": 689,
+        "total_stars": 16178214,
+        "total_forks": 2335673,
+        "language_diversity": 38
+      }
+    },
+    {
+      "id": 2,
+      "stable_id": "cat-02-ai-foundation-models",
+      "name": "Artificial Intelligence, Large Language Models, Foundation Models & Quantization",
+      "slug": "artificial-intelligence-large-language-models-foundation-models-quantization",
+      "description": "Pre-trained foundation models, Large Language Models (LLMs), Transformer architectures, efficient model serving engines, quantization techniques (GGUF, AWQ, GPTQ), and parameter-efficient fine-tuning (LoRA, QLoRA).",
+      "parent_cluster": "AI & Intelligent Systems",
+      "keywords": [
+        "llm",
+        "transformers",
+        "foundation-models",
+        "quantization",
+        "gguf",
+        "vllm",
+        "ollama",
+        "fine-tuning",
+        "lora",
+        "llama"
+      ],
+      "top_languages": [
+        "Python",
+        "TypeScript",
+        "Jupyter Notebook",
+        "Other",
+        "JavaScript"
+      ],
+      "metrics": {
+        "repository_count": 1101,
+        "total_stars": 22083549,
+        "total_forks": 3490395,
+        "language_diversity": 28
+      }
+    },
+    {
+      "id": 3,
+      "stable_id": "cat-03-multi-agent-systems",
+      "name": "Multi-Agent Systems, Autonomous Swarms, AI Orchestration & MCP Tools",
+      "slug": "multi-agent-systems-autonomous-swarms-ai-orchestration-mcp-tools",
+      "description": "Autonomous multi-agent coordination frameworks, cognitive architectures, swarm intelligence, Model Context Protocol (MCP) tool integrations, planning engines, execution DAGs, and autonomous developer agents.",
+      "parent_cluster": "AI & Intelligent Systems",
+      "keywords": [
+        "multi-agent",
+        "autonomous-agents",
+        "mcp",
+        "langchain",
+        "crewai",
+        "autogpt",
+        "swarm-intelligence",
+        "orchestration",
+        "agent-framework"
+      ],
+      "top_languages": [
+        "Python",
+        "TypeScript",
+        "Rust",
+        "Go",
+        "JavaScript"
+      ],
+      "metrics": {
+        "repository_count": 303,
+        "total_stars": 7471295,
+        "total_forks": 937271,
+        "language_diversity": 17
+      }
+    },
+    {
+      "id": 4,
+      "stable_id": "cat-04-computer-vision-multimodal",
+      "name": "Computer Vision, Multimodal AI, Diffusion & Neural Rendering (NeRF/3D-GS)",
+      "slug": "computer-vision-multimodal-ai-diffusion-neural-rendering-nerf-3d-gs",
+      "description": "Visual perception, image segmentation, object detection, multimodal vision-language models (VLM), generative latent diffusion pipelines, and 3D neural rendering including Neural Radiance Fields (NeRF) and 3D Gaussian Splatting (3D-GS).",
+      "parent_cluster": "AI & Intelligent Systems",
+      "keywords": [
+        "computer-vision",
+        "diffusion-models",
+        "stable-diffusion",
+        "comfyui",
+        "nerf",
+        "gaussian-splatting",
+        "yolo",
+        "segmentation",
+        "multimodal"
+      ],
+      "top_languages": [
+        "Python",
+        "C++",
+        "Jupyter Notebook",
+        "TypeScript",
+        "JavaScript"
+      ],
+      "metrics": {
+        "repository_count": 84,
+        "total_stars": 1108140,
+        "total_forks": 215209,
+        "language_diversity": 15
+      }
+    },
+    {
+      "id": 5,
+      "stable_id": "cat-05-speech-voice-audio",
+      "name": "Speech, Voice AI, Audio Processing, Audio Synthesis & Music Generation",
+      "slug": "speech-voice-ai-audio-processing-audio-synthesis-music-generation",
+      "description": "Automatic Speech Recognition (ASR), Text-to-Speech (TTS), neural voice cloning, acoustic feature extraction, real-time voice conversion, and deep generative audio/music synthesis.",
+      "parent_cluster": "AI & Intelligent Systems",
+      "keywords": [
+        "speech-recognition",
+        "tts",
+        "whisper",
+        "voice-cloning",
+        "audio-synthesis",
+        "music-generation",
+        "vocoder",
+        "audio-dsp",
+        "speech-to-text"
+      ],
+      "top_languages": [
+        "Python",
+        "TypeScript",
+        "C++",
+        "Swift",
+        "Jupyter Notebook"
+      ],
+      "metrics": {
+        "repository_count": 46,
+        "total_stars": 698744,
+        "total_forks": 80076,
+        "language_diversity": 8
+      }
+    },
+    {
+      "id": 6,
+      "stable_id": "cat-06-robotics-kinematics",
+      "name": "Robotics, Humanoid Kinematics, Dynamics, Actuators & Physics Simulation",
+      "slug": "robotics-humanoid-kinematics-dynamics-actuators-physics-simulation",
+      "description": "Rigid-body kinematics and dynamics algorithms, humanoid bipedal locomotion, zero-moment point (ZMP) balance, robotic actuator control, spatial trajectory optimization, and GPU-accelerated physics simulation.",
+      "parent_cluster": "Robotics, Physical Systems & Autonomous Vehicles",
+      "keywords": [
+        "robotics",
+        "humanoid",
+        "kinematics",
+        "dynamics",
+        "mujoco",
+        "pinocchio",
+        "physics-simulation",
+        "actuators",
+        "bipedal-locomotion"
+      ],
+      "top_languages": [
+        "C++",
+        "Python",
+        "Other",
+        "Rust",
+        "JavaScript"
+      ],
+      "metrics": {
+        "repository_count": 39,
+        "total_stars": 318945,
+        "total_forks": 52117,
+        "language_diversity": 8
+      }
+    },
+    {
+      "id": 7,
+      "stable_id": "cat-07-autonomous-vehicles-slam",
+      "name": "Autonomous Vehicles, Mobile Robotics, LiDAR SLAM & Drone Flight Control",
+      "slug": "autonomous-vehicles-mobile-robotics-lidar-slam-drone-flight-control",
+      "description": "Autonomous driving software stacks, mobile robotic navigation, simultaneous localization and mapping (SLAM) using LiDAR and visual-inertial odometry, and UAV/drone autopilot systems.",
+      "parent_cluster": "Robotics, Physical Systems & Autonomous Vehicles",
+      "keywords": [
+        "autonomous-vehicles",
+        "slam",
+        "lidar",
+        "autoware",
+        "point-cloud",
+        "drone-control",
+        "autopilot",
+        "ros2",
+        "odometry"
+      ],
+      "top_languages": [
+        "C++",
+        "TypeScript",
+        "Shell",
+        "Python",
+        "Java"
+      ],
+      "metrics": {
+        "repository_count": 25,
+        "total_stars": 377437,
+        "total_forks": 108649,
+        "language_diversity": 8
+      }
+    },
+    {
+      "id": 8,
+      "stable_id": "cat-08-semiconductor-eda-riscv",
+      "name": "Semiconductor, Silicon EDA, RTL-to-GDSII, FPGA & RISC-V Architecture",
+      "slug": "semiconductor-silicon-eda-rtl-to-gdsii-fpga-risc-v-architecture",
+      "description": "Electronic Design Automation (EDA), register-transfer level (RTL) synthesis, physical placement and routing (P&R), formal hardware verification, FPGA bitstream toolchains, and open-source RISC-V processor architectures.",
+      "parent_cluster": "Systems Programming, Cloud & Distributed Engines",
+      "keywords": [
+        "eda",
+        "semiconductor",
+        "riscv",
+        "verilog",
+        "openlane",
+        "yosys",
+        "fpga",
+        "asic",
+        "hardware-design"
+      ],
+      "top_languages": [
+        "Python",
+        "C",
+        "Verilog",
+        "C++",
+        "SystemVerilog"
+      ],
+      "metrics": {
+        "repository_count": 34,
+        "total_stars": 225293,
+        "total_forks": 33585,
+        "language_diversity": 12
+      }
+    },
+    {
+      "id": 9,
+      "stable_id": "cat-09-quantum-computing-algorithms",
+      "name": "Quantum Computing, Quantum Algorithms, Circuit Simulation & Error Correction",
+      "slug": "quantum-computing-quantum-algorithms-circuit-simulation-error-correction",
+      "description": "Quantum circuit synthesis, unitary statevector and density matrix simulation, quantum variational algorithms (VQE, QAOA), quantum error correction (QEC surface codes), and quantum programming frameworks.",
+      "parent_cluster": "Frontier Physics, Quantum & Clean Energy",
+      "keywords": [
+        "quantum-computing",
+        "qiskit",
+        "cirq",
+        "pennylane",
+        "quantum-algorithms",
+        "qec",
+        "circuit-simulation",
+        "vqe",
+        "qubit"
+      ],
+      "top_languages": [
+        "Python",
+        "Jupyter Notebook"
+      ],
+      "metrics": {
+        "repository_count": 9,
+        "total_stars": 21525,
+        "total_forks": 7149,
+        "language_diversity": 2
+      }
+    },
+    {
+      "id": 10,
+      "stable_id": "cat-10-superconductivity-cryogenics",
+      "name": "Superconducting Systems, Cryogenics & Energy Storage (SMES)",
+      "slug": "superconducting-systems-cryogenics-energy-storage-smes",
+      "description": "High- and low-temperature superconductivity simulation, Ginzburg-Landau and London vortex dynamics, cryogenic thermal refrigeration cycles, and Superconducting Magnetic Energy Storage (SMES) systems.",
+      "parent_cluster": "Frontier Physics, Quantum & Clean Energy",
+      "keywords": [
+        "superconductivity",
+        "cryogenics",
+        "smes",
+        "hts",
+        "vortex-dynamics",
+        "thermal-modeling",
+        "magnets",
+        "meissner-effect"
+      ],
+      "top_languages": [
+        "Python",
+        "Jupyter Notebook",
+        "Other",
+        "C++"
+      ],
+      "metrics": {
+        "repository_count": 10,
+        "total_stars": 484,
+        "total_forks": 172,
+        "language_diversity": 4
+      }
+    },
+    {
+      "id": 11,
+      "stable_id": "cat-11-spintronics-micromagnetics",
+      "name": "Spintronics, Micromagnetics & Atomistic Spin Dynamics (LLG)",
+      "slug": "spintronics-micromagnetics-atomistic-spin-dynamics-llg",
+      "description": "Landau-Lifshitz-Gilbert (LLG) equation solvers, micromagnetic finite-difference simulations, magnetic skyrmion dynamics, spin-transfer torque (STT/SOT), and spintronic non-volatile memory architectures.",
+      "parent_cluster": "Frontier Physics, Quantum & Clean Energy",
+      "keywords": [
+        "spintronics",
+        "micromagnetics",
+        "mumax3",
+        "oommf",
+        "spin-dynamics",
+        "skyrmions",
+        "magnetic-memory",
+        "stt-mram"
+      ],
+      "top_languages": [
+        "Python",
+        "Julia",
+        "Fortran",
+        "C++",
+        "C"
+      ],
+      "metrics": {
+        "repository_count": 7,
+        "total_stars": 377,
+        "total_forks": 119,
+        "language_diversity": 5
+      }
+    },
+    {
+      "id": 12,
+      "stable_id": "cat-12-nuclear-fusion-plasma",
+      "name": "Nuclear Fusion, Plasma Physics, Tokamaks & Particle Accelerators",
+      "slug": "nuclear-fusion-plasma-physics-tokamaks-particle-accelerators",
+      "description": "Magnetic confinement fusion, Grad-Shafranov equilibrium solvers, magnetohydrodynamics (MHD) plasma stability, Particle-in-Cell (PIC) kinetic simulations, and particle accelerator beam dynamics.",
+      "parent_cluster": "Frontier Physics, Quantum & Clean Energy",
+      "keywords": [
+        "nuclear-fusion",
+        "plasma-physics",
+        "tokamak",
+        "mhd",
+        "particle-in-cell",
+        "accelerator",
+        "magnetic-confinement",
+        "stellarator"
+      ],
+      "top_languages": [
+        "Python",
+        "C++",
+        "C",
+        "Other",
+        "Go"
+      ],
+      "metrics": {
+        "repository_count": 11,
+        "total_stars": 1555,
+        "total_forks": 856,
+        "language_diversity": 5
+      }
+    },
+    {
+      "id": 13,
+      "stable_id": "cat-13-clean-energy-batteries",
+      "name": "Clean Energy, Solid Oxide Fuel Cells, Batteries & Power Grids",
+      "slug": "clean-energy-solid-oxide-fuel-cells-batteries-power-grids",
+      "description": "Electrochemical energy conversion and storage, Doyle-Fuller-Newman (DFN/P2D) lithium-ion battery modeling, solid oxide and PEM fuel cell thermodynamics, and electric grid distribution power flow simulation.",
+      "parent_cluster": "Frontier Physics, Quantum & Clean Energy",
+      "keywords": [
+        "clean-energy",
+        "pybamm",
+        "battery-simulation",
+        "fuel-cells",
+        "electrochemical",
+        "power-grid",
+        "renewable-energy",
+        "solid-oxide"
+      ],
+      "top_languages": [
+        "Python",
+        "Jupyter Notebook"
+      ],
+      "metrics": {
+        "repository_count": 5,
+        "total_stars": 4171,
+        "total_forks": 1622,
+        "language_diversity": 2
+      }
+    },
+    {
+      "id": 14,
+      "stable_id": "cat-14-space-systems-astrodynamics",
+      "name": "Space Systems, Orbital Astrodynamics, Satellite Tracking & Rocket Propulsion",
+      "slug": "space-systems-orbital-astrodynamics-satellite-tracking-rocket-propulsion",
+      "description": "Celestial mechanics, orbital trajectory propagation, satellite ephemeris determination, multi-body gravitational mechanics, and chemical/electric rocket propulsion thermochemistry.",
+      "parent_cluster": "Robotics, Physical Systems & Autonomous Vehicles",
+      "keywords": [
+        "space-systems",
+        "astrodynamics",
+        "orekit",
+        "poliastro",
+        "orbital-mechanics",
+        "satellite-tracking",
+        "propulsion",
+        "rocket-science"
+      ],
+      "top_languages": [
+        "Python",
+        "Rust",
+        "MATLAB",
+        "Jupyter Notebook",
+        "Julia"
+      ],
+      "metrics": {
+        "repository_count": 13,
+        "total_stars": 1941,
+        "total_forks": 425,
+        "language_diversity": 8
+      }
+    },
+    {
+      "id": 15,
+      "stable_id": "cat-15-spacecraft-proximity-docking",
+      "name": "Spacecraft Proximity Operations, Docking & Deployable Structures",
+      "slug": "spacecraft-proximity-operations-docking-deployable-structures",
+      "description": "Relative spacecraft motion, Clohessy-Wiltshire (Hill's) rendezvous equations, autonomous terminal guidance and docking mechanisms, and deployable space structures/solar array kinematics.",
+      "parent_cluster": "Robotics, Physical Systems & Autonomous Vehicles",
+      "keywords": [
+        "proximity-operations",
+        "spacecraft-docking",
+        "relative-navigation",
+        "clohessy-wiltshire",
+        "rendezvous",
+        "deployable-structures",
+        "guidance"
+      ],
+      "top_languages": [
+        "Python",
+        "Other"
+      ],
+      "metrics": {
+        "repository_count": 3,
+        "total_stars": 47,
+        "total_forks": 14,
+        "language_diversity": 2
+      }
+    },
+    {
+      "id": 16,
+      "stable_id": "cat-16-gravitational-waves-metrology",
+      "name": "Gravitational Wave Astronomy, Precision Metrology & Casimir Physics",
+      "slug": "gravitational-wave-astronomy-precision-metrology-casimir-physics",
+      "description": "Laser interferometric gravitational wave detection, matched filtering of compact binary coalescences, quantum optomechanical metrology, and macroscopic Casimir force physics.",
+      "parent_cluster": "Frontier Physics, Quantum & Clean Energy",
+      "keywords": [
+        "gravitational-waves",
+        "pycbc",
+        "gwpy",
+        "metrology",
+        "interferometry",
+        "casimir-effect",
+        "astrophysics",
+        "ligo"
+      ],
+      "top_languages": [
+        "Python",
+        "MATLAB",
+        "Jupyter Notebook",
+        "HTML"
+      ],
+      "metrics": {
+        "repository_count": 4,
+        "total_stars": 689,
+        "total_forks": 617,
+        "language_diversity": 4
+      }
+    },
+    {
+      "id": 17,
+      "stable_id": "cat-17-aerospace-hypersonics",
+      "name": "Aerospace Aerodynamics, Hypersonics & Rarefied Gas Dynamics",
+      "slug": "aerospace-aerodynamics-hypersonics-rarefied-gas-dynamics",
+      "description": "Compressible aerodynamics, high-enthalpy hypersonic boundary layers, shock-wave/boundary-layer interactions, and Direct Simulation Monte Carlo (DSMC) for rarefied gas regimes.",
+      "parent_cluster": "Robotics, Physical Systems & Autonomous Vehicles",
+      "keywords": [
+        "aerodynamics",
+        "hypersonics",
+        "su2",
+        "dsmc",
+        "shock-waves",
+        "rarefied-gas",
+        "compressible-flow",
+        "boundary-layer"
+      ],
+      "top_languages": [
+        "Java",
+        "MATLAB",
+        "Python",
+        "Other",
+        "Jupyter Notebook"
+      ],
+      "metrics": {
+        "repository_count": 12,
+        "total_stars": 22500,
+        "total_forks": 4934,
+        "language_diversity": 9
+      }
+    },
+    {
+      "id": 18,
+      "stable_id": "cat-18-computational-fluid-dynamics",
+      "name": "Computational Fluid Dynamics (CFD), Turbulence & Multiphase Slosh",
+      "slug": "computational-fluid-dynamics-cfd-turbulence-multiphase-slosh",
+      "description": "Incompressible and multiphase Navier-Stokes solvers, Reynolds-Averaged Navier-Stokes (RANS), Large Eddy Simulation (LES), Lattice Boltzmann Methods (LBM), and propellant slosh dynamics.",
+      "parent_cluster": "Earth Sciences, Materials & Engineering",
+      "keywords": [
+        "cfd",
+        "openfoam",
+        "fluid-dynamics",
+        "turbulence",
+        "navier-stokes",
+        "lattice-boltzmann",
+        "multiphase",
+        "aerodynamic-sim"
+      ],
+      "top_languages": [
+        "C++",
+        "Other",
+        "Python",
+        "Jupyter Notebook",
+        "JavaScript"
+      ],
+      "metrics": {
+        "repository_count": 17,
+        "total_stars": 26580,
+        "total_forks": 4212,
+        "language_diversity": 6
+      }
+    },
+    {
+      "id": 19,
+      "stable_id": "cat-19-peridynamics-structural-mechanics",
+      "name": "Peridynamics, Structural Mechanics, FEA & Non-Local Fracture",
+      "slug": "peridynamics-structural-mechanics-fea-non-local-fracture",
+      "description": "Non-local peridynamic continuum mechanics, material crack nucleation and dynamic fracture propagation, finite element analysis (FEA), and non-linear constitutive structural mechanics.",
+      "parent_cluster": "Earth Sciences, Materials & Engineering",
+      "keywords": [
+        "peridynamics",
+        "structural-mechanics",
+        "fea",
+        "finite-element",
+        "fracture-mechanics",
+        "calculix",
+        "solid-mechanics",
+        "continuum-mechanics"
+      ],
+      "top_languages": [
+        "Other",
+        "Roff",
+        "Python",
+        "Julia",
+        "C++"
+      ],
+      "metrics": {
+        "repository_count": 7,
+        "total_stars": 25606,
+        "total_forks": 2574,
+        "language_diversity": 5
+      }
+    },
+    {
+      "id": 20,
+      "stable_id": "cat-20-additive-manufacturing",
+      "name": "Additive Manufacturing, Laser Powder Bed Fusion (LPBF) & 3D Slicing",
+      "slug": "additive-manufacturing-laser-powder-bed-fusion-lpbf-3d-slicing",
+      "description": "Thermal melt pool kinetics, laser powder bed fusion (L-PBF) process modeling, residual stress and distortion prediction, G-code slicing algorithms, and additive manufacturing toolpaths.",
+      "parent_cluster": "Earth Sciences, Materials & Engineering",
+      "keywords": [
+        "additive-manufacturing",
+        "3d-printing",
+        "lpbf",
+        "slicing",
+        "melt-pool",
+        "thermal-simulation",
+        "gcode",
+        "powder-bed"
+      ],
+      "top_languages": [
+        "C++",
+        "Python",
+        "MATLAB",
+        "G-code",
+        "C"
+      ],
+      "metrics": {
+        "repository_count": 9,
+        "total_stars": 44508,
+        "total_forks": 13370,
+        "language_diversity": 5
+      }
+    },
+    {
+      "id": 21,
+      "stable_id": "cat-21-terrestrial-laser-scanning-shm",
+      "name": "Terrestrial Laser Scanning (TLS) & Structural Health Monitoring (SHM)",
+      "slug": "terrestrial-laser-scanning-tls-structural-health-monitoring-shm",
+      "description": "High-density LiDAR point cloud registration, surface deformation analysis, structural modal vibration identification, digital twin calibration, and civil infrastructure health monitoring.",
+      "parent_cluster": "Earth Sciences, Materials & Engineering",
+      "keywords": [
+        "lidar-scanning",
+        "tls",
+        "point-cloud",
+        "structural-health-monitoring",
+        "shm",
+        "deformation-analysis",
+        "digital-twin",
+        "infrastructure-monitoring"
+      ],
+      "top_languages": [
+        "Go",
+        "C",
+        "Shell",
+        "C#",
+        "Python"
+      ],
+      "metrics": {
+        "repository_count": 43,
+        "total_stars": 753560,
+        "total_forks": 124024,
+        "language_diversity": 9
+      }
+    },
+    {
+      "id": 22,
+      "stable_id": "cat-22-subsurface-geomechanics-geothermal",
+      "name": "Subsurface Geomechanics, Geothermal (EGS) & Nuclear Waste Vitrification",
+      "slug": "subsurface-geomechanics-geothermal-egs-nuclear-waste-vitrification",
+      "description": "Thermo-hydro-mechanical-chemical (THMC) subsurface coupled processes, enhanced geothermal systems (EGS) fracture flow, reservoir stimulation, and radioactive waste repository geological containment.",
+      "parent_cluster": "Earth Sciences, Materials & Engineering",
+      "keywords": [
+        "geomechanics",
+        "geothermal",
+        "egs",
+        "subsurface-flow",
+        "thmc",
+        "poroelasticity",
+        "nuclear-waste-containment",
+        "reservoir-engineering"
+      ],
+      "top_languages": [
+        "Python",
+        "Julia",
+        "C++",
+        "MATLAB",
+        "Lasso"
+      ],
+      "metrics": {
+        "repository_count": 10,
+        "total_stars": 1209,
+        "total_forks": 380,
+        "language_diversity": 5
+      }
+    },
+    {
+      "id": 23,
+      "stable_id": "cat-23-acoustic-levitation-acoustofluidics",
+      "name": "Acoustic Levitation, Acoustofluidics & Phased Array Manipulation",
+      "slug": "acoustic-levitation-acoustofluidics-phased-array-manipulation",
+      "description": "Ultrasound phased array acoustic radiation force computation, Gor'kov acoustic potential fields, contactless particle levitation, and acoustofluidic microparticle separation.",
+      "parent_cluster": "Earth Sciences, Materials & Engineering",
+      "keywords": [
+        "acoustic-levitation",
+        "acoustofluidics",
+        "ultrasound",
+        "radiation-force",
+        "phased-arrays",
+        "gorkov-potential",
+        "microfluidics"
+      ],
+      "top_languages": [
+        "Python",
+        "Other",
+        "OpenSCAD",
+        "MATLAB"
+      ],
+      "metrics": {
+        "repository_count": 7,
+        "total_stars": 80,
+        "total_forks": 13,
+        "language_diversity": 4
+      }
+    },
+    {
+      "id": 24,
+      "stable_id": "cat-24-marine-hydrodynamics-sonar",
+      "name": "Marine Hydrodynamics, Sonar Transducer Arrays & Ocean Engineering",
+      "slug": "marine-hydrodynamics-sonar-transducer-arrays-ocean-engineering",
+      "description": "Computational ship hydrodynamics, wave-body boundary element methods (BEM), sonar transducer beamforming, underwater acoustics propagation, and autonomous underwater vehicle (AUV) dynamics.",
+      "parent_cluster": "Earth Sciences, Materials & Engineering",
+      "keywords": [
+        "marine-hydrodynamics",
+        "sonar",
+        "beamforming",
+        "underwater-acoustics",
+        "ocean-engineering",
+        "bem",
+        "auv",
+        "seakeeping"
+      ],
+      "top_languages": [
+        "Jupyter Notebook",
+        "C++",
+        "C"
+      ],
+      "metrics": {
+        "repository_count": 4,
+        "total_stars": 1647,
+        "total_forks": 664,
+        "language_diversity": 3
+      }
+    },
+    {
+      "id": 25,
+      "stable_id": "cat-25-atmospheric-sciences-meteorology",
+      "name": "Atmospheric Sciences, Meteorology, LiDAR & Earth Observation",
+      "slug": "atmospheric-sciences-meteorology-lidar-earth-observation",
+      "description": "Numerical weather prediction (NWP), mesoscale atmospheric boundary layer modeling, Doppler weather radar and aerosol LiDAR processing, and planetary satellite climatology analysis.",
+      "parent_cluster": "Earth Sciences, Materials & Engineering",
+      "keywords": [
+        "meteorology",
+        "atmospheric-science",
+        "wrf",
+        "weather-prediction",
+        "satellite-observation",
+        "radar",
+        "climatology",
+        "remote-sensing"
+      ],
+      "top_languages": [
+        "Python",
+        "Java",
+        "Other",
+        "HTML",
+        "TypeScript"
+      ],
+      "metrics": {
+        "repository_count": 21,
+        "total_stars": 137516,
+        "total_forks": 35560,
+        "language_diversity": 7
+      }
+    },
+    {
+      "id": 26,
+      "stable_id": "cat-26-healthcare-biomedicine-drug-discovery",
+      "name": "Healthcare, Computational Biomedicine, Drug Discovery & Molecular Modeling",
+      "slug": "healthcare-computational-biomedicine-drug-discovery-molecular-modeling",
+      "description": "Structure-based virtual screening, molecular docking algorithms, physiological pharmacokinetic (PBPK) modeling, protein-ligand binding affinity prediction, and biomedical deep learning.",
+      "parent_cluster": "Earth Sciences, Materials & Engineering",
+      "keywords": [
+        "drug-discovery",
+        "molecular-docking",
+        "computational-biology",
+        "biomedicine",
+        "protein-folding",
+        "cheminformatics",
+        "pharmacokinetics"
+      ],
+      "top_languages": [
+        "Python",
+        "Other",
+        "HTML",
+        "C++"
+      ],
+      "metrics": {
+        "repository_count": 11,
+        "total_stars": 99500,
+        "total_forks": 16066,
+        "language_diversity": 4
+      }
+    },
+    {
+      "id": 27,
+      "stable_id": "cat-27-genomics-crispr-synthetic-biology",
+      "name": "Genomics, CRISPR Gene Editing & Synthetic Biology",
+      "slug": "genomics-crispr-gene-editing-synthetic-biology",
+      "description": "Next-generation sequencing (NGS) alignment, CRISPR-Cas gRNA on-target efficiency and off-target cleavage prediction, gene circuit metabolic synthesis, and genomic variant calling.",
+      "parent_cluster": "AI & Intelligent Systems",
+      "keywords": [
+        "genomics",
+        "crispr",
+        "gene-editing",
+        "synthetic-biology",
+        "dna-sequencing",
+        "bioinformatics",
+        "variant-calling",
+        "grna"
+      ],
+      "top_languages": [
+        "Python",
+        "Java",
+        "C++",
+        "C"
+      ],
+      "metrics": {
+        "repository_count": 10,
+        "total_stars": 16365,
+        "total_forks": 5124,
+        "language_diversity": 4
+      }
+    },
+    {
+      "id": 28,
+      "stable_id": "cat-28-neurotechnology-bci",
+      "name": "Neurotechnology, Brain-Computer Interfaces (BCI) & Neuromorphic Computing",
+      "slug": "neurotechnology-brain-computer-interfaces-bci-neuromorphic-computing",
+      "description": "Electroencephalography (EEG) and intracortical neural spike decoding, Common Spatial Patterns (CSP), Riemannian geometry decoders, motor imagery classification, and spiking neural networks (SNN).",
+      "parent_cluster": "AI & Intelligent Systems",
+      "keywords": [
+        "bci",
+        "neurotechnology",
+        "eeg",
+        "brain-computer-interface",
+        "spike-sorting",
+        "neuromorphic",
+        "spiking-neural-networks",
+        "electrophysiology"
+      ],
+      "top_languages": [
+        "Python",
+        "C++",
+        "MATLAB"
+      ],
+      "metrics": {
+        "repository_count": 12,
+        "total_stars": 28588,
+        "total_forks": 6619,
+        "language_diversity": 3
+      }
+    },
+    {
+      "id": 29,
+      "stable_id": "cat-29-smart-cities-bim",
+      "name": "Smart Cities, Building Information Modeling (BIM/IFC) & Urban Mobility",
+      "slug": "smart-cities-building-information-modeling-bim-ifc-urban-mobility",
+      "description": "OpenBIM Industry Foundation Classes (IFC) 3D geometric parsing, automated spatial clash detection, multi-modal urban traffic flow microsimulation, and smart city digital twin sensor networks.",
+      "parent_cluster": "Industrial Systems, SCADA & Utilities",
+      "keywords": [
+        "smart-cities",
+        "bim",
+        "ifcopenshell",
+        "urban-mobility",
+        "traffic-simulation",
+        "sumo",
+        "clash-detection",
+        "digital-twin",
+        "ifc"
+      ],
+      "top_languages": [
+        "Python",
+        "C++",
+        "TypeScript",
+        "Rust",
+        "Ruby"
+      ],
+      "metrics": {
+        "repository_count": 14,
+        "total_stars": 146346,
+        "total_forks": 23982,
+        "language_diversity": 7
+      }
+    },
+    {
+      "id": 30,
+      "stable_id": "cat-30-cybersecurity-reverse-engineering",
+      "name": "Cybersecurity, Reverse Engineering, Binary Exploitation & Vulnerability Research",
+      "slug": "cybersecurity-reverse-engineering-binary-exploitation-vulnerability-research",
+      "description": "Binary disassembly, control flow graph recovery, symbolic execution, coverage-guided fuzzing, automated vulnerability research, malware dynamic analysis, and red team exploitation.",
+      "parent_cluster": "Cybersecurity, Cryptography & Digital Forensics",
+      "keywords": [
+        "cybersecurity",
+        "reverse-engineering",
+        "ghidra",
+        "binary-exploitation",
+        "fuzzing",
+        "vulnerability-research",
+        "malware-analysis",
+        "threat-intelligence"
+      ],
+      "top_languages": [
+        "Python",
+        "Rust",
+        "Go",
+        "C++",
+        "C"
+      ],
+      "metrics": {
+        "repository_count": 127,
+        "total_stars": 1692665,
+        "total_forks": 242970,
+        "language_diversity": 17
+      }
+    },
+    {
+      "id": 31,
+      "stable_id": "cat-31-industrial-automation-scada",
+      "name": "Industrial Automation, SCADA, PLC Ladder Logic, OPC-UA & Hardware Security",
+      "slug": "industrial-automation-scada-plc-ladder-logic-opc-ua-hardware-security",
+      "description": "IEC 61131-3 programmable logic controller (PLC) runtimes, ladder diagram compilation, OPC-UA industrial telemetry pub/sub, Modbus/DNP3 protocols, and industrial supervisory control.",
+      "parent_cluster": "Industrial Systems, SCADA & Utilities",
+      "keywords": [
+        "industrial-automation",
+        "scada",
+        "plc",
+        "opc-ua",
+        "modbus",
+        "iec-61131-3",
+        "fieldbus",
+        "telemetry",
+        "ladder-logic"
+      ],
+      "top_languages": [
+        "Python",
+        "Go",
+        "TypeScript",
+        "JavaScript",
+        "Java"
+      ],
+      "metrics": {
+        "repository_count": 9,
+        "total_stars": 60999,
+        "total_forks": 13580,
+        "language_diversity": 7
+      }
+    },
+    {
+      "id": 32,
+      "stable_id": "cat-32-cryptography-zkp",
+      "name": "Cryptography, Zero-Knowledge Proofs (ZKP), Post-Quantum & Privacy Tech",
+      "slug": "cryptography-zero-knowledge-proofs-zkp-post-quantum-privacy-tech",
+      "description": "Non-interactive zero-knowledge arguments of knowledge (zk-SNARKs/zk-STARKs), arithmetic constraint satisfaction (R1CS), lattice-based post-quantum cryptography, and secure multi-party computation.",
+      "parent_cluster": "Cybersecurity, Cryptography & Digital Forensics",
+      "keywords": [
+        "cryptography",
+        "zero-knowledge-proofs",
+        "zk-snarks",
+        "post-quantum",
+        "elliptic-curves",
+        "smpc",
+        "circom",
+        "privacy-tech"
+      ],
+      "top_languages": [
+        "TypeScript",
+        "Rust",
+        "Go",
+        "C"
+      ],
+      "metrics": {
+        "repository_count": 4,
+        "total_stars": 73133,
+        "total_forks": 4623,
+        "language_diversity": 4
+      }
+    },
+    {
+      "id": 33,
+      "stable_id": "cat-33-formal-verification",
+      "name": "Formal Verification, Theorem Proving & Mathematical Proof Systems",
+      "slug": "formal-verification-theorem-proving-mathematical-proof-systems",
+      "description": "Interactive theorem proving (Coq, Lean, Isabelle), Satisfiability Modulo Theories (SMT) automated solvers, deductive software verification, and mathematically proven invariant systems.",
+      "parent_cluster": "Cybersecurity, Cryptography & Digital Forensics",
+      "keywords": [
+        "formal-verification",
+        "theorem-proving",
+        "lean",
+        "coq",
+        "smt-solvers",
+        "z3",
+        "formal-methods",
+        "logic",
+        "proof-assistant"
+      ],
+      "top_languages": [
+        "Lean",
+        "SMT",
+        "OCaml",
+        "C#"
+      ],
+      "metrics": {
+        "repository_count": 5,
+        "total_stars": 23722,
+        "total_forks": 4025,
+        "language_diversity": 4
+      }
+    },
+    {
+      "id": 34,
+      "stable_id": "cat-34-edtech-stem",
+      "name": "EdTech, Adaptive Learning, Cognitive Scaffolding & STEM Assessment",
+      "slug": "edtech-adaptive-learning-cognitive-scaffolding-stem-assessment",
+      "description": "Bayesian Knowledge Tracing (BKT), item response theory (IRT), dynamic STEM question generation with SymPy/LaTeX verification, automated grading rubrics, and Socratic cognitive tutoring.",
+      "parent_cluster": "AI & Intelligent Systems",
+      "keywords": [
+        "edtech",
+        "adaptive-learning",
+        "knowledge-tracing",
+        "stem-education",
+        "qti",
+        "cognitive-tutoring",
+        "learning-analytics",
+        "assessment-engine"
+      ],
+      "top_languages": [
+        "Python",
+        "TypeScript",
+        "Rust",
+        "Jupyter Notebook",
+        "C++"
+      ],
+      "metrics": {
+        "repository_count": 8,
+        "total_stars": 485646,
+        "total_forks": 72183,
+        "language_diversity": 5
+      }
+    },
+    {
+      "id": 35,
+      "stable_id": "cat-35-fintech-core-banking",
+      "name": "Fintech, Core Banking, Payment Protocols & Algorithmic Trading",
+      "slug": "fintech-core-banking-payment-protocols-algorithmic-trading",
+      "description": "Ultra-low-latency event-driven algorithmic backtesting, limit order book microstructure, ISO 20022/FIX payment exchange protocols, options pricing models, and double-entry accounting ledgers.",
+      "parent_cluster": "Systems Programming, Cloud & Distributed Engines",
+      "keywords": [
+        "fintech",
+        "algorithmic-trading",
+        "core-banking",
+        "fix-protocol",
+        "orderbook",
+        "quantitative-finance",
+        "payment-systems",
+        "trading-engine"
+      ],
+      "top_languages": [
+        "Python",
+        "Jupyter Notebook",
+        "Rust",
+        "Go",
+        "C++"
+      ],
+      "metrics": {
+        "repository_count": 30,
+        "total_stars": 505879,
+        "total_forks": 102465,
+        "language_diversity": 11
+      }
+    },
+    {
+      "id": 36,
+      "stable_id": "cat-36-blockchain-web3",
+      "name": "Blockchain, Web3, Smart Contracts & EVM/Solana Engineering",
+      "slug": "blockchain-web3-smart-contracts-evm-solana-engineering",
+      "description": "Decentralized consensus runtimes, Ethereum Virtual Machine (EVM) Yul bytecode execution, Solana Sealevel Anchor parallel execution, DeFi automated market maker (AMM) math, and smart contract verification.",
+      "parent_cluster": "Systems Programming, Cloud & Distributed Engines",
+      "keywords": [
+        "blockchain",
+        "web3",
+        "smart-contracts",
+        "ethereum",
+        "solana",
+        "evm",
+        "defi",
+        "anchor",
+        "solidity"
+      ],
+      "top_languages": [
+        "TypeScript",
+        "Rust",
+        "Python",
+        "Go",
+        "C++"
+      ],
+      "metrics": {
+        "repository_count": 87,
+        "total_stars": 1319654,
+        "total_forks": 337879,
+        "language_diversity": 19
+      }
+    },
+    {
+      "id": 37,
+      "stable_id": "cat-37-database-engines",
+      "name": "Database Engines, Distributed SQL, NoSQL, Vector DBs & Persistent Caches",
+      "slug": "database-engines-distributed-sql-nosql-vector-dbs-persistent-caches",
+      "description": "High-performance storage engines, Log-Structured Merge-trees (LSM), B+tree index algorithms, distributed consensus SQL transactions (Raft/Paxos), and Approximate Nearest Neighbor (ANN) vector databases.",
+      "parent_cluster": "Systems Programming, Cloud & Distributed Engines",
+      "keywords": [
+        "database-engines",
+        "distributed-sql",
+        "nosql",
+        "vector-database",
+        "lsm-tree",
+        "storage-engine",
+        "ann-search",
+        "rocksdb",
+        "clickhouse"
+      ],
+      "top_languages": [
+        "TypeScript",
+        "Java",
+        "Go",
+        "Python",
+        "Rust"
+      ],
+      "metrics": {
+        "repository_count": 291,
+        "total_stars": 5032498,
+        "total_forks": 756602,
+        "language_diversity": 29
+      }
+    },
+    {
+      "id": 38,
+      "stable_id": "cat-38-data-engineering-distributed",
+      "name": "Data Engineering, Distributed Analytics, Stream Processing (Kafka/Spark) & ETL",
+      "slug": "data-engineering-distributed-analytics-stream-processing-kafka-spark-etl",
+      "description": "High-throughput distributed event streaming, Kafka/Spark partition rebalancing, lakehouse columnar storage formats (Parquet, Iceberg, Delta Lake), and scalable real-time ETL data pipelines.",
+      "parent_cluster": "Systems Programming, Cloud & Distributed Engines",
+      "keywords": [
+        "data-engineering",
+        "apache-spark",
+        "apache-kafka",
+        "stream-processing",
+        "lakehouse",
+        "etl",
+        "parquet",
+        "iceberg",
+        "distributed-analytics"
+      ],
+      "top_languages": [
+        "Python",
+        "Java",
+        "Go",
+        "TypeScript",
+        "JavaScript"
+      ],
+      "metrics": {
+        "repository_count": 82,
+        "total_stars": 1212901,
+        "total_forks": 266977,
+        "language_diversity": 14
+      }
+    },
+    {
+      "id": 39,
+      "stable_id": "cat-39-cloud-native-infrastructure",
+      "name": "Cloud-Native Infrastructure, Kubernetes, Containers & Service Meshes",
+      "slug": "cloud-native-infrastructure-kubernetes-containers-service-meshes",
+      "description": "Container virtualization runtimes, declarative Kubernetes operators, cloud orchestration, Envoy service mesh proxies, distributed cloud elasticity, and multi-tenant cluster management.",
+      "parent_cluster": "Systems Programming, Cloud & Distributed Engines",
+      "keywords": [
+        "cloud-native",
+        "kubernetes",
+        "containers",
+        "docker",
+        "envoy",
+        "service-mesh",
+        "infrastructure",
+        "cloud",
+        "orchestration"
+      ],
+      "top_languages": [
+        "Other",
+        "Java",
+        "C#",
+        "PHP",
+        "Go"
+      ],
+      "metrics": {
+        "repository_count": 2472,
+        "total_stars": 33213842,
+        "total_forks": 5725093,
+        "language_diversity": 118
+      }
+    },
+    {
+      "id": 40,
+      "stable_id": "cat-40-cicd-gitops-iac",
+      "name": "CI/CD Automation, GitOps & Infrastructure-as-Code (Terraform/Ansible)",
+      "slug": "ci-cd-automation-gitops-infrastructure-as-code-terraform-ansible",
+      "description": "Continuous integration and deployment pipelines, declarative GitOps reconciliation (ArgoCD, Flux), Infrastructure-as-Code configuration automation (Terraform, Ansible), and release engineering.",
+      "parent_cluster": "Systems Programming, Cloud & Distributed Engines",
+      "keywords": [
+        "ci-cd",
+        "gitops",
+        "infrastructure-as-code",
+        "terraform",
+        "ansible",
+        "argocd",
+        "automation",
+        "devops",
+        "pipelines"
+      ],
+      "top_languages": [
+        "Go",
+        "TypeScript",
+        "Python",
+        "Shell",
+        "HTML"
+      ],
+      "metrics": {
+        "repository_count": 36,
+        "total_stars": 528859,
+        "total_forks": 93044,
+        "language_diversity": 11
+      }
+    },
+    {
+      "id": 41,
+      "stable_id": "cat-41-observability-telemetry",
+      "name": "Observability, APM Telemetry, Metrics, Distributed Tracing & Logging",
+      "slug": "observability-apm-telemetry-metrics-distributed-tracing-logging",
+      "description": "OpenTelemetry unified collection protocols, high-cardinality time-series metrics storage, distributed request tracing, log aggregation, and site reliability engineering (SRE) alert synthesis.",
+      "parent_cluster": "Systems Programming, Cloud & Distributed Engines",
+      "keywords": [
+        "observability",
+        "opentelemetry",
+        "metrics",
+        "tracing",
+        "prometheus",
+        "grafana",
+        "apm",
+        "sre",
+        "logging"
+      ],
+      "top_languages": [
+        "Go",
+        "Java",
+        "TypeScript",
+        "Python",
+        "JavaScript"
+      ],
+      "metrics": {
+        "repository_count": 52,
+        "total_stars": 777470,
+        "total_forks": 116317,
+        "language_diversity": 10
+      }
+    },
+    {
+      "id": 42,
+      "stable_id": "cat-42-networking-reverse-proxies",
+      "name": "Networking, Reverse Proxies, Load Balancers, Edge Gateways & API Gateways",
+      "slug": "networking-reverse-proxies-load-balancers-edge-gateways-api-gateways",
+      "description": "High-concurrency reverse proxy engines, dynamic layer 4/layer 7 load balancing algorithms, edge worker runtimes, eBPF network filtering, and modern internet transport protocols (HTTP/3, QUIC).",
+      "parent_cluster": "Systems Programming, Cloud & Distributed Engines",
+      "keywords": [
+        "networking",
+        "reverse-proxy",
+        "load-balancer",
+        "ebpf",
+        "quic",
+        "http3",
+        "edge-computing",
+        "traefik",
+        "gateways"
+      ],
+      "top_languages": [
+        "Go",
+        "Other",
+        "C",
+        "Rust",
+        "Python"
+      ],
+      "metrics": {
+        "repository_count": 100,
+        "total_stars": 1473333,
+        "total_forks": 218836,
+        "language_diversity": 18
+      }
+    },
+    {
+      "id": 43,
+      "stable_id": "cat-43-operating-systems-kernels",
+      "name": "Operating Systems, Linux Kernels, Low-Level Drivers & Emulators",
+      "slug": "operating-systems-linux-kernels-low-level-drivers-emulators",
+      "description": "Monolithic and microkernel architectures, Linux kernel subsystems, virtual memory management, device driver engineering, hardware virtualization hypervisors (KVM), and hardware CPU emulation.",
+      "parent_cluster": "Systems Programming, Cloud & Distributed Engines",
+      "keywords": [
+        "operating-systems",
+        "linux-kernel",
+        "device-drivers",
+        "hypervisor",
+        "virtual-memory",
+        "microkernel",
+        "emulation",
+        "qemu"
+      ],
+      "top_languages": [
+        "C",
+        "C++",
+        "Rust",
+        "Shell",
+        "Python"
+      ],
+      "metrics": {
+        "repository_count": 86,
+        "total_stars": 1466920,
+        "total_forks": 200137,
+        "language_diversity": 18
+      }
+    },
+    {
+      "id": 44,
+      "stable_id": "cat-44-compilers-interpreters",
+      "name": "Compilers, Interpreters, Virtual Machines, Language Toolchains & JIT Engines",
+      "slug": "compilers-interpreters-virtual-machines-language-toolchains-jit-engines",
+      "description": "Abstract Syntax Tree (AST) parsing, LLVM Intermediate Representation (IR) optimization pipelines, register allocation algorithms, bytecode interpreters, and Just-In-Time (JIT) runtime compilation.",
+      "parent_cluster": "Systems Programming, Cloud & Distributed Engines",
+      "keywords": [
+        "compilers",
+        "llvm",
+        "interpreters",
+        "virtual-machines",
+        "jit",
+        "parser",
+        "codegen",
+        "language-toolchain",
+        "intermediate-representation"
+      ],
+      "top_languages": [
+        "Rust",
+        "JavaScript",
+        "TypeScript",
+        "C++",
+        "Go"
+      ],
+      "metrics": {
+        "repository_count": 121,
+        "total_stars": 2426516,
+        "total_forks": 284983,
+        "language_diversity": 35
+      }
+    },
+    {
+      "id": 45,
+      "stable_id": "cat-45-systems-programming-memory-safety",
+      "name": "Systems Programming, Low-Level Runtimes, Memory Safety & WebAssembly (Wasm)",
+      "slug": "systems-programming-low-level-runtimes-memory-safety-webassembly-wasm",
+      "description": "Bare-metal runtime environments, compile-time borrow checking and memory safety, lock-free concurrent data structures, asynchronous I/O primitives, and zero-cost abstraction systems programming.",
+      "parent_cluster": "Systems Programming, Cloud & Distributed Engines",
+      "keywords": [
+        "systems-programming",
+        "rust",
+        "zig",
+        "cpp",
+        "memory-safety",
+        "concurrency",
+        "low-level",
+        "lock-free",
+        "wasm"
+      ],
+      "top_languages": [
+        "Go",
+        "C++",
+        "C",
+        "Rust",
+        "C#"
+      ],
+      "metrics": {
+        "repository_count": 1321,
+        "total_stars": 16676337,
+        "total_forks": 2160656,
+        "language_diversity": 14
+      }
+    },
+    {
+      "id": 46,
+      "stable_id": "cat-46-developer-tooling-shell",
+      "name": "Developer Tooling, Shell Environments, Terminal Emulators & CLI Utilities",
+      "slug": "developer-tooling-shell-environments-terminal-emulators-cli-utilities",
+      "description": "Interactive terminal emulators, Unix shell scripting environments, terminal multiplexing (tmux), high-performance CLI utilities, and developer productivity workstation tools.",
+      "parent_cluster": "Systems Programming, Cloud & Distributed Engines",
+      "keywords": [
+        "developer-tooling",
+        "shell",
+        "terminal-emulator",
+        "cli",
+        "tmux",
+        "productivity",
+        "command-line",
+        "zsh"
+      ],
+      "top_languages": [
+        "Rust",
+        "Shell",
+        "Go",
+        "Python",
+        "TypeScript"
+      ],
+      "metrics": {
+        "repository_count": 164,
+        "total_stars": 3596484,
+        "total_forks": 272267,
+        "language_diversity": 19
+      }
+    },
+    {
+      "id": 47,
+      "stable_id": "cat-47-code-editors-ides-lsp",
+      "name": "Code Editors, IDEs, Syntax Plugins, Language Server Protocols (LSP) & Linters",
+      "slug": "code-editors-ides-syntax-plugins-language-server-protocols-lsp-linters",
+      "description": "Modern modal and extensible code editors (Neovim, VSCode), Language Server Protocol (LSP) language servers, Tree-sitter incremental syntax parsing, and IDE plugin ecosystems.",
+      "parent_cluster": "Web, Mobile, Desktop & Creative Applications",
+      "keywords": [
+        "code-editors",
+        "ide",
+        "lsp",
+        "neovim",
+        "vscode",
+        "tree-sitter",
+        "syntax-highlighting",
+        "plugins",
+        "language-servers"
+      ],
+      "top_languages": [
+        "TypeScript",
+        "Lua",
+        "JavaScript",
+        "Vim Script",
+        "Python"
+      ],
+      "metrics": {
+        "repository_count": 138,
+        "total_stars": 2521567,
+        "total_forks": 285463,
+        "language_diversity": 24
+      }
+    },
+    {
+      "id": 48,
+      "stable_id": "cat-48-game-development-graphics",
+      "name": "Game Development Engines, 2D/3D Graphics APIs & Shaders (WebGL/Vulkan)",
+      "slug": "game-development-engines-2d-3d-graphics-apis-shaders-webgl-vulkan",
+      "description": "Real-time 2D/3D game engines, scene graph scene management, modern graphics hardware APIs (Vulkan, DirectX 12, Metal, WebGPU), and programmable GPU shading pipelines.",
+      "parent_cluster": "Web, Mobile, Desktop & Creative Applications",
+      "keywords": [
+        "game-development",
+        "game-engine",
+        "graphics-api",
+        "vulkan",
+        "webgpu",
+        "shaders",
+        "godot",
+        "rendering",
+        "opengl"
+      ],
+      "top_languages": [
+        "C++",
+        "C#",
+        "JavaScript",
+        "TypeScript",
+        "Rust"
+      ],
+      "metrics": {
+        "repository_count": 140,
+        "total_stars": 1720397,
+        "total_forks": 262452,
+        "language_diversity": 20
+      }
+    },
+    {
+      "id": 49,
+      "stable_id": "cat-49-modern-frontend-frameworks",
+      "name": "Modern Frontend Frameworks, Reactive Web Engines (React/Vue/Svelte) & Bundlers",
+      "slug": "modern-frontend-frameworks-reactive-web-engines-react-vue-svelte-bundlers",
+      "description": "Virtual DOM and fine-grained reactive signal engines, server-side rendering (SSR), incremental static generation, modern JavaScript runtimes, and optimized web module bundlers (Vite/Turbopack).",
+      "parent_cluster": "Web, Mobile, Desktop & Creative Applications",
+      "keywords": [
+        "frontend",
+        "react",
+        "vue",
+        "svelte",
+        "nextjs",
+        "vite",
+        "javascript",
+        "typescript",
+        "web-framework",
+        "bundlers"
+      ],
+      "top_languages": [
+        "JavaScript",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "Vue"
+      ],
+      "metrics": {
+        "repository_count": 2249,
+        "total_stars": 35702770,
+        "total_forks": 5409211,
+        "language_diversity": 27
+      }
+    },
+    {
+      "id": 50,
+      "stable_id": "cat-50-ui-component-systems",
+      "name": "UI Component Systems, Design Tokens, Iconography & Animation Libraries",
+      "slug": "ui-component-systems-design-tokens-iconography-animation-libraries",
+      "description": "Accessible unstyled headless UI primitives (Radix, ARIA), design token systems, utility-first CSS engines (Tailwind), SVG icon design systems, and hardware-accelerated web animation engines.",
+      "parent_cluster": "Web, Mobile, Desktop & Creative Applications",
+      "keywords": [
+        "ui-components",
+        "design-tokens",
+        "tailwind",
+        "radix-ui",
+        "shadcn",
+        "animation",
+        "iconography",
+        "css",
+        "gsap"
+      ],
+      "top_languages": [
+        "TypeScript",
+        "JavaScript",
+        "Vue",
+        "Other",
+        "Swift"
+      ],
+      "metrics": {
+        "repository_count": 84,
+        "total_stars": 1607526,
+        "total_forks": 194939,
+        "language_diversity": 13
+      }
+    },
+    {
+      "id": 51,
+      "stable_id": "cat-51-mobile-app-development",
+      "name": "Mobile App Development, Cross-Platform Frameworks (Flutter/React Native) & SDKs",
+      "slug": "mobile-app-development-cross-platform-frameworks-flutter-react-native-sdks",
+      "description": "Cross-platform mobile runtimes (Flutter, React Native), native platform bindings (iOS Swift / Android Kotlin), mobile hardware sensor interfaces, and offline-first mobile data sync.",
+      "parent_cluster": "Web, Mobile, Desktop & Creative Applications",
+      "keywords": [
+        "mobile-development",
+        "flutter",
+        "react-native",
+        "ios",
+        "android",
+        "cross-platform",
+        "mobile-sdk",
+        "mobile-apps"
+      ],
+      "top_languages": [
+        "Dart",
+        "Swift",
+        "Other",
+        "Kotlin",
+        "TypeScript"
+      ],
+      "metrics": {
+        "repository_count": 79,
+        "total_stars": 1269320,
+        "total_forks": 174245,
+        "language_diversity": 10
+      }
+    },
+    {
+      "id": 52,
+      "stable_id": "cat-52-desktop-application-frameworks",
+      "name": "Desktop Application Frameworks, GUI Toolkits (Electron/Tauri/Qt) & Document Utilities",
+      "slug": "desktop-application-frameworks-gui-toolkits-electron-tauri-qt-document-utilities",
+      "description": "Native desktop GUI application frameworks, memory-efficient webview windowing shells (Tauri, Electron), multi-platform C++/Rust GUI widget libraries (Qt, Dear ImGui), and OS window integration.",
+      "parent_cluster": "Web, Mobile, Desktop & Creative Applications",
+      "keywords": [
+        "desktop-apps",
+        "electron",
+        "tauri",
+        "qt",
+        "gui-toolkit",
+        "imgui",
+        "native-shell",
+        "desktop",
+        "cross-platform-desktop"
+      ],
+      "top_languages": [
+        "TypeScript",
+        "JavaScript",
+        "Rust",
+        "C++",
+        "Python"
+      ],
+      "metrics": {
+        "repository_count": 90,
+        "total_stars": 2007944,
+        "total_forks": 209974,
+        "language_diversity": 11
+      }
+    },
+    {
+      "id": 53,
+      "stable_id": "cat-53-backend-web-frameworks",
+      "name": "Backend Web Frameworks, Microservices, REST / GraphQL / gRPC APIs & ORMs",
+      "slug": "backend-web-frameworks-microservices-rest-graphql-grpc-apis-orms",
+      "description": "High-performance asynchronous backend web servers, microservice architecture middleware, typed REST/GraphQL/gRPC API contracts, Object-Relational Mappers (ORM), and authentication security.",
+      "parent_cluster": "Web, Mobile, Desktop & Creative Applications",
+      "keywords": [
+        "backend",
+        "web-frameworks",
+        "microservices",
+        "fastapi",
+        "django",
+        "express",
+        "graphql",
+        "grpc",
+        "orm",
+        "api-gateway"
+      ],
+      "top_languages": [
+        "Python",
+        "Go",
+        "Java",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "metrics": {
+        "repository_count": 116,
+        "total_stars": 2187669,
+        "total_forks": 460946,
+        "language_diversity": 15
+      }
+    },
+    {
+      "id": 54,
+      "stable_id": "cat-54-multimedia-processing-codecs",
+      "name": "Multimedia Processing, Audio/Video Codecs, FFmpeg & Streaming Pipelines",
+      "slug": "multimedia-processing-audio-video-codecs-ffmpeg-streaming-pipelines",
+      "description": "Hardware-accelerated video decoding and encoding pipelines, FFmpeg filtering and demuxing APIs, modern video codecs (AV1, HEVC, VP9), low-latency WebRTC, and RTMP live broadcast streaming.",
+      "parent_cluster": "Web, Mobile, Desktop & Creative Applications",
+      "keywords": [
+        "multimedia",
+        "ffmpeg",
+        "video-processing",
+        "audio-codecs",
+        "streaming",
+        "webrtc",
+        "transcoding",
+        "obs",
+        "broadcasting"
+      ],
+      "top_languages": [
+        "JavaScript",
+        "C",
+        "TypeScript",
+        "Go",
+        "Rust"
+      ],
+      "metrics": {
+        "repository_count": 51,
+        "total_stars": 1009638,
+        "total_forks": 155602,
+        "language_diversity": 14
+      }
+    },
+    {
+      "id": 55,
+      "stable_id": "cat-55-python-ecosystem-scientific",
+      "name": "Python Ecosystem, Data Science, Scientific Computing & Analytics",
+      "slug": "python-ecosystem-data-science-scientific-computing-analytics",
+      "description": "N-dimensional array computation, vectorized numerical linear algebra (NumPy), structured DataFrame data manipulation (Pandas), scientific computing routines (SciPy), and classical machine learning (Scikit-Learn).",
+      "parent_cluster": "AI & Intelligent Systems",
+      "keywords": [
+        "python",
+        "data-science",
+        "numpy",
+        "pandas",
+        "scipy",
+        "scikit-learn",
+        "scientific-computing",
+        "machine-learning",
+        "analytics"
+      ],
+      "top_languages": [
+        "Python",
+        "Jupyter Notebook",
+        "TypeScript",
+        "Other",
+        "JavaScript"
+      ],
+      "metrics": {
+        "repository_count": 1228,
+        "total_stars": 14904058,
+        "total_forks": 2474972,
+        "language_diversity": 14
+      }
+    }
+  ]
+}

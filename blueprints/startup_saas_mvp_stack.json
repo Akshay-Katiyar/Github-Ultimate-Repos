@@ -1,0 +1,182 @@
+{
+  "blueprint_id": "BP-SAAS-MVP-02",
+  "name": "High-Velocity Startup Full-Stack SaaS MVP Stack",
+  "category": "Modern Web Applications & SaaS Architecture",
+  "target_audience": "Founders, Solo Hackers, Full-Stack Engineers & Early-Stage Startups",
+  "summary": "Production-ready, rapid-iteration web application architecture unifying Next.js React 19, FastAPI async microservices, Supabase PostgreSQL with RLS, Better-Auth identity, and self-hosted Coolify deployment.",
+  "architecture_overview": "Early-stage startups fail when architecture is too fragile or over-engineered. This blueprint balances instant velocity with enterprise maintainability: Next.js + shadcn/ui provides clean typography and design tokens; FastAPI delivers async Python power for AI integrations and type-safe APIs; Supabase provides managed PostgreSQL with Row Level Security; Better-Auth delivers flexible session management; and Coolify allows self-hosting on a cheap VPS with one-click Git push deployments.",
+  "tiers": [
+    {
+      "tier_id": "frontend",
+      "name": "Modern Frontend & UI Component System",
+      "purpose": "Server-rendered responsive UI with accessible components and design tokens.",
+      "primary_component": {
+        "repo": "vercel/next.js",
+        "role": "React 19 full-stack application framework with App Router and Server Components",
+        "language": "TypeScript",
+        "why_chosen": "Industry standard for SEO, server actions, instant routing, and React ecosystem dominance.",
+        "trade_offs": "Vercel vendor-lock subtleties around serverless caching; complex App Router mental model."
+      },
+      "alternative_components": [
+        {
+          "repo": "shadcn-ui/ui",
+          "role": "Radix-based unstyled copy-paste UI component primitives",
+          "trade_offs": "Code lives directly in your project; you maintain component updates yourself."
+        },
+        {
+          "repo": "tailwindlabs/tailwindcss",
+          "role": "Utility-first design token CSS framework",
+          "trade_offs": "HTML class verbosity requiring disciplined design token abstractions."
+        }
+      ]
+    },
+    {
+      "tier_id": "backend",
+      "name": "High-Performance Backend API & Business Logic",
+      "purpose": "Asynchronous REST/WebSocket endpoints, background jobs, and AI/ML model orchestration.",
+      "primary_component": {
+        "repo": "fastapi/fastapi",
+        "role": "Async Python web framework with automated OpenAPI schemas and Pydantic validation",
+        "language": "Python",
+        "why_chosen": "Direct native access to Python AI/data libraries, sub-millisecond serialization, and auto-generated Swagger UI.",
+        "trade_offs": "Requires separate ASGI server process (uvicorn/gunicorn) when decoupled from frontend."
+      },
+      "alternative_components": [
+        {
+          "repo": "fastapi/full-stack-fastapi-template",
+          "role": "Production cookiecutter template with Celery, Postgres, and Docker",
+          "trade_offs": "Opinionated boilerplate with extra legacy services."
+        }
+      ]
+    },
+    {
+      "tier_id": "database",
+      "name": "Transactional Relational Database & ORM Layer",
+      "purpose": "ACID-compliant transactional storage, schema migrations, and relational indexing.",
+      "primary_component": {
+        "repo": "supabase/supabase",
+        "role": "Open-source PostgreSQL platform with realtime subscriptions, storage, and Row Level Security (RLS)",
+        "language": "TypeScript / Go / SQL",
+        "why_chosen": "Standard PostgreSQL under the hood, instant REST/GraphQL APIs, built-in storage buckets, and zero lock-in.",
+        "trade_offs": "Heavy local Docker footprint when running full self-hosted Supabase suite."
+      },
+      "alternative_components": [
+        {
+          "repo": "drizzle-team/drizzle-orm",
+          "role": "Lightweight TypeScript SQL-first ORM with zero overhead",
+          "trade_offs": "Requires manual query writing compared to ActiveRecord-style abstraction."
+        },
+        {
+          "repo": "prisma/orm",
+          "role": "Declarative schema modeling and type-safe query generation",
+          "trade_offs": "Custom Rust query engine binary with higher memory consumption."
+        }
+      ]
+    },
+    {
+      "tier_id": "auth",
+      "name": "Authentication & Session Management",
+      "purpose": "Secure multi-tenant authentication, OAuth providers, session tokens, and RBAC permissions.",
+      "primary_component": {
+        "repo": "better-auth/better-auth",
+        "role": "Comprehensive TypeScript authentication library with 2FA, social OAuth, and organization tenancy",
+        "language": "TypeScript",
+        "why_chosen": "Modern, framework-agnostic, plugin-driven architecture with native Next.js server actions and database adapters.",
+        "trade_offs": "Relatively newer entrant compared to NextAuth/Auth.js, rapid ecosystem development."
+      },
+      "alternative_components": [
+        {
+          "repo": "supabase/supabase",
+          "role": "Built-in Supabase GoTrue authentication engine",
+          "trade_offs": "Tightly bound to Supabase DB schema conventions."
+        }
+      ]
+    },
+    {
+      "tier_id": "deployment",
+      "name": "Self-Hosted Cloud Deployment & Container Platform",
+      "purpose": "Automated Git push deployments, SSL certificates, database backups, and reverse proxy routing.",
+      "primary_component": {
+        "repo": "coollabsio/coolify",
+        "role": "Self-hosted all-in-one PaaS alternative to Heroku, Netlify, and Vercel",
+        "language": "PHP / Blade / Docker",
+        "why_chosen": "Run on any cheap Linux VPS (Hetzner, DigitalOcean), zero per-seat markup, automatic Let's Encrypt SSL, and Git webhook deployments.",
+        "trade_offs": "Self-hosted infrastructure responsibility; requires basic Linux sysadmin awareness."
+      },
+      "alternative_components": [
+        {
+          "repo": "minio/minio",
+          "role": "High-performance S3-compatible self-hosted object storage",
+          "trade_offs": "AGPL v3 license considerations for enterprise redistribution."
+        }
+      ]
+    }
+  ],
+  "end_to_end_workflow": "Client Browser Request -> Next.js Edge SSR / Static Hydration -> Better-Auth Session Validation -> FastAPI Async Business Logic -> Supabase PostgreSQL (RLS Enforced) -> Automated Docker CI/CD via Coolify",
+  "data_flow_stages": [
+    {
+      "stage": 1,
+      "title": "Client Navigation & Responsive SSR",
+      "input": "User URL request and browser session cookie",
+      "output": "HTML stream with pre-rendered server components and shadcn UI widgets",
+      "tools_involved": ["vercel/next.js", "shadcn-ui/ui", "tailwindlabs/tailwindcss"],
+      "verification": "Lighthouse audit: LCP < 1.8s, CLS = 0, Accessibility score = 100."
+    },
+    {
+      "stage": 2,
+      "title": "Authentication & Tenant Boundary Check",
+      "input": "Encrypted session token / bearer header",
+      "output": "Validated user profile with tenant organization and role claims",
+      "tools_involved": ["better-auth/better-auth"],
+      "verification": "Verify JWT signature, revocation list check, and CSRF token alignment."
+    },
+    {
+      "stage": 3,
+      "title": "Business Logic Execution & DB Mutation",
+      "input": "Validated Pydantic payload from client form action",
+      "output": "ACID transactional database write and updated record response",
+      "tools_involved": ["fastapi/fastapi", "supabase/supabase", "drizzle-team/drizzle-orm"],
+      "verification": "PostgreSQL Row Level Security policy guarantees zero cross-tenant data leaks."
+    },
+    {
+      "stage": 4,
+      "title": "Continuous Deployment & SSL Routing",
+      "input": "Git push to main branch",
+      "output": "Multi-stage Docker build, zero-downtime container swap, and SSL cert renewal",
+      "tools_involved": ["coollabsio/coolify"],
+      "verification": "Automated HTTP health check probe returns 200 OK before routing cutover."
+    }
+  ],
+  "production_readiness": {
+    "sla_target": "99.95% web application uptime with p95 API response latency < 120ms",
+    "security_considerations": [
+      "Strict PostgreSQL Row Level Security (RLS) enabled on all tables by default",
+      "HttpOnly, Secure, SameSite=Lax cookie flags on session tokens",
+      "Automated rate limiting via FastAPI middleware against brute-force endpoints",
+      "CORS restricted to authorized frontend origins only"
+    ],
+    "failure_modes_and_mitigations": [
+      {
+        "failure_mode": "Database connection pool exhaustion under sudden traffic surge",
+        "mitigation": "Deploy PgBouncer transaction pooling built into Supabase architecture."
+      },
+      {
+        "failure_mode": "Single VPS server failure running Coolify",
+        "mitigation": "Schedule automated hourly SQLite and PostgreSQL snapshots to offsite S3/MinIO bucket."
+      },
+      {
+        "failure_mode": "Long-running AI tasks blocking web server worker threads",
+        "mitigation": "Offload async work to Celery or Redis/BullMQ background queue worker."
+      }
+    ]
+  },
+  "quickstart": {
+    "setup_commands": [
+      "npx create-next-app@latest my-saas --typescript --tailwind --app",
+      "npx shadcn@latest init",
+      "pip install fastapi uvicorn pydantic",
+      "curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash"
+    ],
+    "sample_config_or_code": "import { betterAuth } from 'better-auth';\nimport { Pool } from 'pg';\n\nexport const auth = betterAuth({\n  database: new Pool({ connectionString: process.env.DATABASE_URL }),\n  emailAndPassword: { enabled: true },\n  socialProviders: { github: { clientId: process.env.GITHUB_CLIENT_ID, clientSecret: process.env.GITHUB_CLIENT_SECRET } }\n});"
+  }
+}

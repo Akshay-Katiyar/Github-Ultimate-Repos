@@ -1,0 +1,131 @@
+{
+  "blueprint_id": "BP-EDGE-AI-03",
+  "name": "Local-First, Offline-Capable Edge AI & Desktop Stack",
+  "category": "Local-First Architecture, Edge Computing & Desktop AI",
+  "target_audience": "Desktop Developers, Privacy-First AI Engineers, Embedded & Edge Specialists",
+  "summary": "Privacy-first, zero-cloud dependency edge architecture combining GGUF quantized local LLM inference, embedded SQLite/DuckDB relational and vector storage, and a memory-efficient Rust-powered Tauri UI shell.",
+  "architecture_overview": "Cloud LLMs introduce latency, recurring API costs, and data privacy liabilities. The Local-First & Edge AI Stack flips this model by executing models directly on end-user hardware (Apple Silicon Metal, NVIDIA CUDA, or modern x86/ARM CPUs). llama.cpp and Ollama manage quantized GGUF models; LibSQL / Turso and DuckDB provide zero-latency embedded databases; and Tauri wraps the web interface in a tiny 15MB native binary with ~30MB RAM usage compared to Electron's 200MB+ footprint.",
+  "tiers": [
+    {
+      "tier_id": "inference",
+      "name": "Edge LLM Inference & Model Management Engine",
+      "purpose": "High-speed local quantized model loading, token generation, and hardware acceleration.",
+      "primary_component": {
+        "repo": "ggml-org/llama.cpp",
+        "role": "Plain C/C++ LLM inference engine with zero external dependencies and AVX/NEON/Metal/CUDA kernels",
+        "language": "C / C++",
+        "why_chosen": "Gold standard for edge efficiency; supports 2-bit to 8-bit GGUF quantization with minimal memory overhead.",
+        "trade_offs": "Lower-level C++ CLI/API requiring wrapper bindings for high-level language integration."
+      },
+      "alternative_components": [
+        {
+          "repo": "ollama/ollama",
+          "role": "Developer-friendly local LLM daemon with REST API and modelfile packaging",
+          "trade_offs": "Slightly higher daemon memory baseline than bare llama.cpp library."
+        },
+        {
+          "repo": "ollama/ollama-python",
+          "role": "Official lightweight Python SDK for Ollama API interaction",
+          "trade_offs": "Depends on running Ollama service in background."
+        }
+      ]
+    },
+    {
+      "tier_id": "local_db",
+      "name": "Embedded Local Database & Analytics Storage",
+      "purpose": "Store relational records, local chat history, offline sync queues, and fast analytical OLAP queries.",
+      "primary_component": {
+        "repo": "tursodatabase/libsql",
+        "role": "Fork of SQLite optimized for local-first embedded operation, vector search, and edge replication",
+        "language": "C / Rust",
+        "why_chosen": "Maintains 100% SQLite compatibility while adding vector extensions and bidirectional cloud sync capabilities.",
+        "trade_offs": "Newer ecosystem than upstream 24-year-old vanilla SQLite."
+      },
+      "alternative_components": [
+        {
+          "repo": "duckdb/duckdb",
+          "role": "In-process analytical SQL database engine with columnar vector execution",
+          "trade_offs": "Optimized for heavy analytical read queries rather than rapid high-frequency OLTP key-value writes."
+        },
+        {
+          "repo": "sqlite/sqlite",
+          "role": "Classic public-domain in-process transactional SQL engine",
+          "trade_offs": "No built-in native remote sync replication."
+        }
+      ]
+    },
+    {
+      "tier_id": "lightweight_ui",
+      "name": "Lightweight Native Shell & Web UI",
+      "purpose": "Deliver a native desktop experience with native OS tray, menu bar, and minimal memory footprint.",
+      "primary_component": {
+        "repo": "tauri-apps/tauri",
+        "role": "Rust-based framework for building tiny, blazing fast native applications with web frontends",
+        "language": "Rust",
+        "why_chosen": "Uses system webview (WebKit/WebView2); binary size under 15MB with <40MB idle RAM usage.",
+        "trade_offs": "Requires Rust toolchain during development; platform-specific webview rendering differences."
+      },
+      "alternative_components": [
+        {
+          "repo": "open-webui/open-webui",
+          "role": "Feature-rich extensible, self-hosted AI interface for Ollama",
+          "trade_offs": "Full web server architecture rather than compiled standalone desktop client."
+        }
+      ]
+    }
+  ],
+  "end_to_end_workflow": "User Keystroke -> Tauri Native Shell IPC -> Embedded LibSQL Local State Query -> llama.cpp Metal/CUDA Quantized Generation -> Streaming UI Token Update (100% Offline)",
+  "data_flow_stages": [
+    {
+      "stage": 1,
+      "title": "Local Storage & Session Retrieval",
+      "input": "User workspace switch or document selection",
+      "output": "Instant relational state load from in-process SQLite/libSQL file (<1ms)",
+      "tools_involved": ["tursodatabase/libsql", "duckdb/duckdb"],
+      "verification": "Zero network requests dispatched; zero-alloc memory mapped I/O."
+    },
+    {
+      "stage": 2,
+      "title": "On-Device Quantized Model Execution",
+      "input": "Context prompt and token generation hyperparameters",
+      "output": "Token stream generated at 45-80 tokens/sec on modern laptop silicon",
+      "tools_involved": ["ggml-org/llama.cpp", "ollama/ollama"],
+      "verification": "Monitor VRAM allocation to ensure model fits within unified memory budget."
+    },
+    {
+      "stage": 3,
+      "title": "Native UI Rendering & IPC Response",
+      "input": "Generated token chunks over Tauri IPC Rust channel",
+      "output": "60fps smooth Markdown streaming render in lightweight webview",
+      "tools_involved": ["tauri-apps/tauri"],
+      "verification": "Confirm overall application memory footprint remains under 120MB RSS during generation."
+    }
+  ],
+  "production_readiness": {
+    "sla_target": "100% offline availability; zero data exfiltration; instantaneous application startup (<250ms)",
+    "security_considerations": [
+      "Zero telemetry leakage or outbound external phone-home connections",
+      "Full-disk encryption / SQLCipher database encryption for sensitive local chats",
+      "Strict Tauri IPC command allowlists preventing arbitrary OS process spawning"
+    ],
+    "failure_modes_and_mitigations": [
+      {
+        "failure_mode": "Out-of-memory crash when loading oversized LLM weights",
+        "mitigation": "Detect host physical RAM on startup and clamp maximum model parameter count to Q4_K_M quant."
+      },
+      {
+        "failure_mode": "Slow token generation on legacy CPU without AVX-512",
+        "mitigation": "Fallback to smaller 1B/3B distilled models (Llama 3.2 1B or Qwen 2.5 1.5B)."
+      }
+    ]
+  },
+  "quickstart": {
+    "setup_commands": [
+      "curl -fsSL https://ollama.com/install.sh | sh",
+      "ollama run llama3.2:3b",
+      "cargo install create-tauri-app --locked",
+      "cargo create-tauri-app my-local-ai --template react-ts"
+    ],
+    "sample_config_or_code": "# src-tauri/src/main.rs\n#[tauri::command]\nasync fn generate_local(prompt: String) -> Result<String, String> {\n    // Invoke local Ollama / llama.cpp HTTP API at 127.0.0.1:11434\n    let client = reqwest::Client::new();\n    let res = client.post('http://127.0.0.1:11434/api/generate')\n        .json(&serde_json::json!({ 'model': 'llama3.2:3b', 'prompt': prompt, 'stream': false }))\n        .send().await.map_err(|e| e.to_string())?;\n    Ok(res.text().await.map_err(|e| e.to_string())?)\n}"
+  }
+}

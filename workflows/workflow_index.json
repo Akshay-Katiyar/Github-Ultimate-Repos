@@ -1,0 +1,79 @@
+{
+  "title": "Github Ultimate Repos - Workflow Intelligence Catalog",
+  "version": "1.0.0",
+  "total_workflows": 6,
+  "workflows": [
+    {
+      "workflow_id": "WORKFLOW-001",
+      "name": "Production AI Agent Enterprise Lifecycle",
+      "domain": "Artificial Intelligence & Autonomous Agent Swarms",
+      "total_stages": 7,
+      "json_file": "workflow-001_production_ai_agent_enterprise_lifecycle.json",
+      "yaml_file": "workflow-001_production_ai_agent_enterprise_lifecycle.yaml",
+      "governance": {
+        "quality_gate_standard": "7-Gate Enterprise Multi-Agent Governance",
+        "audit_status": "PRODUCTION_READY"
+      }
+    },
+    {
+      "workflow_id": "WORKFLOW-002",
+      "name": "Cross-Platform Mobile Application Development Lifecycle",
+      "domain": "Mobile Engineering & Cross-Platform Applications",
+      "total_stages": 7,
+      "json_file": "workflow-002_cross_platform_mobile_application_development_lifecycle.json",
+      "yaml_file": "workflow-002_cross_platform_mobile_application_development_lifecycle.yaml",
+      "governance": {
+        "quality_gate_standard": "Mobile App Store Excellence & Zero-Crash Standard",
+        "audit_status": "PRODUCTION_READY"
+      }
+    },
+    {
+      "workflow_id": "WORKFLOW-003",
+      "name": "Cloud-Native Kubernetes & GitOps Platform Engineering Workflow",
+      "domain": "DevOps, Cloud-Native Infrastructure & Platform Engineering",
+      "total_stages": 7,
+      "json_file": "workflow-003_cloud_native_kubernetes_and_gitops_platform_engineering_workflow.json",
+      "yaml_file": "workflow-003_cloud_native_kubernetes_and_gitops_platform_engineering_workflow.yaml",
+      "governance": {
+        "quality_gate_standard": "Production Cloud-Native Architecture & Zero-Drift GitOps Standard",
+        "audit_status": "PRODUCTION_READY"
+      }
+    },
+    {
+      "workflow_id": "WORKFLOW-004",
+      "name": "High-Velocity Full-Stack SaaS MVP Engineering Workflow",
+      "domain": "Full-Stack Web Engineering & SaaS Product Acceleration",
+      "total_stages": 7,
+      "json_file": "workflow-004_high_velocity_full_stack_saas_mvp_engineering_workflow.json",
+      "yaml_file": "workflow-004_high_velocity_full_stack_saas_mvp_engineering_workflow.yaml",
+      "governance": {
+        "quality_gate_standard": "Full-Stack SaaS High-Conversion & Security Standard",
+        "audit_status": "PRODUCTION_READY"
+      }
+    },
+    {
+      "workflow_id": "WORKFLOW-005",
+      "name": "Cybersecurity, Penetration Testing & Vulnerability Research Lab Workflow",
+      "domain": "Cybersecurity, Red Teaming & Offensive Security Engineering",
+      "total_stages": 6,
+      "json_file": "workflow-005_cybersecurity_penetration_testing_and_vulnerability_research_lab_workflow.json",
+      "yaml_file": "workflow-005_cybersecurity_penetration_testing_and_vulnerability_research_lab_workflow.yaml",
+      "governance": {
+        "quality_gate_standard": "Authorized Red Team Rules of Engagement & Zero-Collateral Standard",
+        "audit_status": "PRODUCTION_READY"
+      }
+    },
+    {
+      "workflow_id": "WORKFLOW-006",
+      "name": "Autonomous Search Intelligence, GEO/AEO & Organic Growth Workflow",
+      "domain": "Search Engine Optimization, Generative Engine Optimization & Growth Automation",
+      "total_stages": 6,
+      "json_file": "workflow-006_autonomous_search_intelligence_geo_aeo_and_organic_growth_workflow.json",
+      "yaml_file": "workflow-006_autonomous_search_intelligence_geo_aeo_and_organic_growth_workflow.yaml",
+      "governance": {
+        "quality_gate_standard": "OmniSearch Growth Dual-Optimization (Traditional SEO + GEO + AEO)",
+        "audit_status": "PRODUCTION_READY"
+      }
+    }
+  ]
+}

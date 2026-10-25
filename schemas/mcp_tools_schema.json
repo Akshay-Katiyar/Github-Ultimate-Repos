@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MCPToolsCatalogSchema",
+  "description": "Standardized Model Context Protocol (MCP) tool specifications for Github-Ultimate-Repos",
+  "type": "object",
+  "required": ["server", "protocol_version", "tools"],
+  "properties": {
+    "server": {
+      "type": "string",
+      "enum": ["github-ultimate-repos-mcp"]
+    },
+    "protocol_version": {
+      "type": "string",
+      "default": "2024-11-05"
+    },
+    "transport": {
+      "type": "string",
+      "enum": ["stdio", "sse", "http"]
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description", "inputSchema"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "enum": [
+              "search_repositories",
+              "get_repository",
+              "get_repository_details",
+              "recommend_stack",
+              "recommend_repositories",
+              "compare_repositories",
+              "get_workflow",
+              "list_categories",
+              "get_catalog_stats"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "inputSchema": {
+            "type": "object",
+            "required": ["type", "properties"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["object"]
+              },
+              "properties": {
+                "type": "object"
+              },
+              "required": {
+                "type": "array",
+                "items": {"type": "string"}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

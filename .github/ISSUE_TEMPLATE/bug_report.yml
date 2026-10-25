@@ -1,37 +1,87 @@
 name: "🐛 Bug Report"
-description: Report an issue, incorrect metadata, or broken workflow in Github Ultimate Repos
+description: "Report a software defect, schema violation, or operational issue in Github Ultimate Repos"
 title: "[BUG]: "
 labels: ["bug", "triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to report an issue! Please provide as much context as possible.
+        ### Thank you for reporting a bug!
+        Please verify you are running the latest version of `main` and check [Troubleshooting Guide](https://github.com/Akshay-Katiyar/Github-Ultimate-Repos/blob/main/docs/troubleshooting.md) for known issues.
+  - type: dropdown
+    id: subsystem
+    attributes:
+      label: Subsystem Affected
+      description: Select the primary component or module where the issue occurred.
+      options:
+        - "CLI Query Engine (scripts/cli/ultimate_agent_cli.py)"
+        - "Recommendation Engine (scripts/engine/recommendation_engine.py)"
+        - "SQLite FTS5 Registry (registry/agents_registry.db)"
+        - "Schema Validation & Inventory (schemas/, scripts/inventory/)"
+        - "Interactive Web Explorer (index.html)"
+        - "Master Catalog Dataset (starred_repos_master_catalog.csv)"
+        - "Category Markdown Docs (categories/*.md)"
+        - "Automated Test Suite & CI/CD (.github/workflows/, tests/)"
+        - "Documentation & Guides (docs/, README.md)"
+    validations:
+      required: true
   - type: input
     id: repo_target
     attributes:
-      label: Repository or Asset Affected
-      description: Which repository, script, or documentation file is affected?
-      placeholder: "e.g. huggingface/transformers or scripts/cli/ultimate_agent_cli.py"
+      label: Specific File, Repository, or Command
+      description: Which exact command, file, or repository identifier is involved?
+      placeholder: "e.g. scripts/cli/ultimate_agent_cli.py search 'quantum' or huggingface/transformers"
     validations:
       required: true
   - type: textarea
     id: what_happened
     attributes:
       label: What happened?
-      description: Describe the bug and what you observed.
+      description: Describe the bug and what observed behavior took place.
+      placeholder: "Clear description of the error, crash, or incorrect output..."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: Steps to Reproduce
+      description: Provide explicit, minimal reproduction steps.
+      placeholder: |
+        1. Run `python scripts/cli/ultimate_agent_cli.py ...`
+        2. Execute query with parameters `...`
+        3. Observe error / failure
     validations:
       required: true
   - type: textarea
     id: expected_behavior
     attributes:
       label: Expected Behavior
-      description: What did you expect to happen?
+      description: What did you expect to happen instead?
+      placeholder: "Expected zero-exit code and JSON output with 5 matching records..."
     validations:
       required: true
+  - type: textarea
+    id: error_traceback
+    attributes:
+      label: Error Traceback or Log Output
+      description: Paste terminal output, Python traceback, or SQLite error messages if available.
+      render: shell
   - type: input
     id: environment
     attributes:
-      label: OS / Environment
-      description: What operating system and Python version are you using?
-      placeholder: "e.g. Windows 11, Python 3.12"
+      label: Environment Details
+      description: Operating system, Python version, and SQLite3 version.
+      placeholder: "e.g. Windows 11 (PowerShell 7.4) / Python 3.12.10 / SQLite 3.45.0"
+    validations:
+      required: true
+  - type: checkboxes
+    id: preflight_checklist
+    attributes:
+      label: Pre-flight Checklist
+      options:
+        - label: "I have confirmed this bug reproduces on the latest `main` branch."
+          required: true
+        - label: "I have searched existing issues and confirmed this is not a duplicate."
+          required: true
+        - label: "I have checked `docs/troubleshooting.md`."
+          required: false

@@ -1,0 +1,219 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "StackBlueprint",
+  "description": "Schema definition for an enterprise curated technology stack blueprint",
+  "type": "object",
+  "required": [
+    "blueprint_id",
+    "name",
+    "category",
+    "target_audience",
+    "summary",
+    "architecture_overview",
+    "tiers",
+    "end_to_end_workflow",
+    "data_flow_stages",
+    "production_readiness",
+    "quickstart"
+  ],
+  "properties": {
+    "blueprint_id": {
+      "type": "string",
+      "pattern": "^BP-[A-Z0-9-]+$",
+      "description": "Unique identifier for the stack blueprint"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 5,
+      "description": "Official title of the technology stack blueprint"
+    },
+    "category": {
+      "type": "string",
+      "description": "Discipline category or engineering domain"
+    },
+    "target_audience": {
+      "type": "string",
+      "description": "Intended engineering roles or company stages"
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 20,
+      "description": "Executive summary of the stack capability"
+    },
+    "architecture_overview": {
+      "type": "string",
+      "description": "High-level architectural philosophy and rationale"
+    },
+    "tiers": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "tier_id",
+          "name",
+          "purpose",
+          "primary_component"
+        ],
+        "properties": {
+          "tier_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "purpose": {
+            "type": "string"
+          },
+          "primary_component": {
+            "type": "object",
+            "required": [
+              "repo",
+              "role",
+              "language",
+              "why_chosen"
+            ],
+            "properties": {
+              "repo": {
+                "type": "string",
+                "pattern": "^[^/]+/[^/]+$"
+              },
+              "role": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "why_chosen": {
+                "type": "string"
+              },
+              "trade_offs": {
+                "type": "string"
+              }
+            }
+          },
+          "alternative_components": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "repo",
+                "role"
+              ],
+              "properties": {
+                "repo": {
+                  "type": "string",
+                  "pattern": "^[^/]+/[^/]+$"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "trade_offs": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "end_to_end_workflow": {
+      "type": "string",
+      "description": "Verified end-to-end operational pipeline string"
+    },
+    "data_flow_stages": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "stage",
+          "title",
+          "input",
+          "output",
+          "tools_involved",
+          "verification"
+        ],
+        "properties": {
+          "stage": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "title": {
+            "type": "string"
+          },
+          "input": {
+            "type": "string"
+          },
+          "output": {
+            "type": "string"
+          },
+          "tools_involved": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "verification": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "production_readiness": {
+      "type": "object",
+      "required": [
+        "sla_target",
+        "security_considerations",
+        "failure_modes_and_mitigations"
+      ],
+      "properties": {
+        "sla_target": {
+          "type": "string"
+        },
+        "security_considerations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "failure_modes_and_mitigations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "failure_mode",
+              "mitigation"
+            ],
+            "properties": {
+              "failure_mode": {
+                "type": "string"
+              },
+              "mitigation": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "quickstart": {
+      "type": "object",
+      "required": [
+        "setup_commands",
+        "sample_config_or_code"
+      ],
+      "properties": {
+        "setup_commands": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sample_config_or_code": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

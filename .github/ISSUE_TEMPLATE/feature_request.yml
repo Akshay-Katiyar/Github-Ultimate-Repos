@@ -1,23 +1,56 @@
 name: "💡 Feature Request"
-description: Propose an idea, new search capability, or architectural enhancement
+description: "Propose a new capability, search feature, agent integration, or architectural enhancement"
 title: "[FEAT]: "
-labels: ["enhancement"]
+labels: ["enhancement", "proposal"]
 body:
   - type: markdown
     attributes:
       value: |
-        We welcome proposals to improve repository discoverability, agent orchestration, or CLI capabilities!
-  - type: textarea
-    id: proposal
+        ### Propose a New Feature or Capability
+        We welcome proposals to improve repository discoverability, agent orchestration, recommendation intelligence, or CLI capabilities!
+        Please note our architecture operates under a **Zero External Dependencies** mandate (pure Python standard library & SQLite3).
+  - type: dropdown
+    id: target_area
     attributes:
-      label: Feature Proposal
-      description: Describe your proposed feature or enhancement.
+      label: Target Feature Area
+      description: Which area does your proposal enhance?
+      options:
+        - "CLI Query Engine & Command Flags"
+        - "Recommendation Engine & Graph Similarity"
+        - "SQLite FTS5 Full-Text Search & Indexing"
+        - "Agent Blueprint Schema & Swarm Tooling"
+        - "Dataset Formats & Export Capabilities (JSON, CSV, Parquet)"
+        - "Interactive Web Explorer UI/UX (index.html)"
+        - "Testing & CI/CD Automation"
+        - "Documentation & Architecture Tutorials"
     validations:
       required: true
   - type: textarea
-    id: use_case
+    id: problem_statement
     attributes:
-      label: Motivation & Use Case
-      description: Why is this feature needed and who will benefit from it?
+      label: Problem Statement or Use Case
+      description: Is your feature request related to a specific limitation, friction, or new use case?
+      placeholder: "A clear and concise description of what the friction is. e.g., 'When orchestrating multi-agent swarms, I need to filter repositories by...'"
     validations:
       required: true
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution you'd like to see implemented.
+      placeholder: "Detailed specification of proposed CLI command, function interface, or workflow..."
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives_considered
+    attributes:
+      label: Alternatives Considered
+      description: Any alternative solutions, features, or workarounds you have evaluated.
+      placeholder: "e.g., Implementing via external shell scripts, but native CLI support would be faster..."
+  - type: checkboxes
+    id: zero_dependency_mandate
+    attributes:
+      label: Architectural Compliance
+      options:
+        - label: "I confirm this proposal adheres to or respects the Zero External Dependencies mandate (Python standard library & SQLite3 only)."
+          required: true

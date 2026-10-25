@@ -1,0 +1,8 @@
+# Github Ultimate Repos - Development & Testing Dependencies
+# Note: The runtime core engine operates under a Zero External Dependencies mandate
+# (pure Python standard library & SQLite3 only). These dependencies are solely for
+# local test execution, schema validation, and CI/CD quality gates.
+
+pytest>=8.0.0
+jsonschema>=4.20.0
+pyyaml>=6.0.0

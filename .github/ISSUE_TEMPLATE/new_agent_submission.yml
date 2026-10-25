@@ -1,48 +1,172 @@
 name: "🤖 New Repository / Agent Blueprint Submission"
-description: Propose a high-impact open source repository or autonomous agent blueprint
+description: "Propose a high-impact open source repository or autonomous agent blueprint"
 title: "[SUBMIT]: "
-labels: ["catalog-addition"]
+labels: ["catalog-addition", "community-submission"]
 body:
   - type: markdown
     attributes:
       value: |
-        Please verify the repository adheres to our quality criteria (5,000+ stars or critical frontier architecture).
+        ### Submit a Gold-Standard Repository or Autonomous Agent Blueprint
+        To maintain enterprise catalog excellence, submissions should meet our quality criteria:
+        1. **Star Threshold**: Generally 5,000+ stars or critical frontier infrastructure / breakthrough research.
+        2. **Active Maintenance**: Commits or releases within the past 12 months.
+        3. **Operational Architecture**: A verified 1-line execution pipeline (`Input -> Processing -> Output`).
+        4. **Schema Compliance**: Conforms to `schemas/repository_schema.json` and `schemas/agent_schema.json`.
+  - type: input
+    id: repo_name
+    attributes:
+      label: Repository Identifier (owner/repo)
+      description: Exact GitHub slug in `owner/repo` format.
+      placeholder: "e.g. vllm-project/vllm"
+    validations:
+      required: true
   - type: input
     id: repo_url
     attributes:
       label: Repository URL
       description: Canonical HTTPS link to the GitHub repository.
-      placeholder: "https://github.com/owner/repository"
+      placeholder: "https://github.com/vllm-project/vllm"
+    validations:
+      required: true
+  - type: input
+    id: stars_and_forks
+    attributes:
+      label: Approximate Stars and Forks
+      description: Current GitHub stargazer and fork metrics.
+      placeholder: "e.g. 35,400★ / 5,100 forks"
+    validations:
+      required: true
+  - type: input
+    id: primary_language
+    attributes:
+      label: Primary Programming Language
+      description: Main programming language or framework.
+      placeholder: "e.g. Python, C++, Rust, TypeScript"
+    validations:
+      required: true
+  - type: dropdown
+    id: license
+    attributes:
+      label: Open Source License
+      description: License under which the repository is distributed.
+      options:
+        - "MIT License"
+        - "Apache 2.0"
+        - "BSD 3-Clause"
+        - "BSD 2-Clause"
+        - "Mozilla Public License 2.0 (MPL-2.0)"
+        - "GNU General Public License v3.0 (GPL-3.0)"
+        - "GNU Affero General Public License v3.0 (AGPL-3.0)"
+        - "Other OSI-Approved Open Source"
     validations:
       required: true
   - type: dropdown
     id: category
     attributes:
       label: Discipline Category (1-55)
+      description: Select the most accurate DeepTech discipline for this repository.
       options:
-        - "01 Curated Knowledge, Developer Guides & Awesome Collections"
-        - "02 Artificial Intelligence, Large Language Models & Quantization"
-        - "03 Multi-Agent Systems, Autonomous Swarms & MCP Tools"
-        - "04 Computer Vision, Multimodal AI & Neural Rendering"
-        - "05 Speech, Voice AI & Audio Processing"
-        - "06 Robotics, Humanoid Kinematics & Physics Sim"
-        - "07 Autonomous Vehicles & LiDAR SLAM"
-        - "08 Semiconductor & Silicon EDA"
-        - "09 Quantum Computing & Circuit Simulation"
-        - "37 Database Engines & Vector DBs"
-        - "38 Cloud-Native Infrastructure & Kubernetes"
-        - "39 Cybersecurity & Reverse Engineering"
-        - "42 Blockchain Protocols & Smart Contracts"
-        - "49 Modern Frontend Frameworks & Web Engines"
-        - "55 Python Ecosystem & Scientific Computing"
-        - "Other DeepTech Category"
+        - "01 - Curated Knowledge, Developer Guides, Books & Awesome Collections"
+        - "02 - Artificial Intelligence, Large Language Models, Foundation Models & Quantization"
+        - "03 - Multi-Agent Systems, Autonomous Swarms, AI Orchestration & MCP Tools"
+        - "04 - Computer Vision, Multimodal AI, Diffusion & Neural Rendering (NeRF/3D-GS)"
+        - "05 - Speech, Voice AI, Audio Processing, Audio Synthesis & Music Generation"
+        - "06 - Robotics, Humanoid Kinematics, Dynamics, Actuators & Physics Simulation"
+        - "07 - Autonomous Vehicles, Mobile Robotics, LiDAR SLAM & Drone Flight Control"
+        - "08 - Semiconductor, Silicon EDA, RTL-to-GDSII, FPGA & RISC-V Architecture"
+        - "09 - Quantum Computing, Quantum Algorithms, Circuit Simulation & Error Correction"
+        - "10 - Superconducting Systems, Cryogenics & Energy Storage (SMES)"
+        - "11 - Spintronics, Micromagnetics & Atomistic Spin Dynamics (LLG)"
+        - "12 - Nuclear Fusion, Plasma Physics, Tokamaks & Particle Accelerators"
+        - "13 - Clean Energy, Solid Oxide Fuel Cells, Batteries & Power Grids"
+        - "14 - Space Systems, Orbital Astrodynamics, Satellite Tracking & Rocket Propulsion"
+        - "15 - Spacecraft Proximity Operations, Docking & Deployable Structures"
+        - "16 - Gravitational Wave Astronomy, Precision Metrology & Casimir Physics"
+        - "17 - Aerospace Aerodynamics, Hypersonics & Rarefied Gas Dynamics"
+        - "18 - Computational Fluid Dynamics (CFD), Turbulence & Multiphase Slosh"
+        - "19 - Peridynamics, Structural Mechanics, FEA & Non-Local Fracture"
+        - "20 - Additive Manufacturing, Laser Powder Bed Fusion (LPBF) & 3D Slicing"
+        - "21 - Terrestrial Laser Scanning (TLS) & Structural Health Monitoring (SHM)"
+        - "22 - Subsurface Geomechanics, Geothermal (EGS) & Nuclear Waste Vitrification"
+        - "23 - Acoustic Levitation, Acoustofluidics & Phased Array Manipulation"
+        - "24 - Marine Hydrodynamics, Sonar Transducer Arrays & Ocean Engineering"
+        - "25 - Atmospheric Sciences, Meteorology, LiDAR & Earth Observation"
+        - "26 - Healthcare, Computational Biomedicine, Drug Discovery & Molecular Modeling"
+        - "27 - Genomics, CRISPR Gene Editing & Synthetic Biology"
+        - "28 - Neurotechnology, Brain-Computer Interfaces (BCI) & Neuromorphic Computing"
+        - "29 - Smart Cities, Building Information Modeling (BIM/IFC) & Urban Mobility"
+        - "30 - Cybersecurity, Reverse Engineering, Binary Exploitation & Vulnerability Research"
+        - "31 - Industrial Automation, SCADA, PLC Ladder Logic, OPC-UA & Hardware Security"
+        - "32 - Cryptography, Zero-Knowledge Proofs (ZKP), Post-Quantum & Privacy Tech"
+        - "33 - Formal Verification, Theorem Proving & Mathematical Proof Systems"
+        - "34 - EdTech, Adaptive Learning, Cognitive Scaffolding & STEM Assessment"
+        - "35 - Fintech, Core Banking, Payment Protocols & Algorithmic Trading"
+        - "36 - Blockchain, Web3, Smart Contracts & EVM/Solana Engineering"
+        - "37 - Database Engines, Distributed SQL, NoSQL, Vector DBs & Persistent Caches"
+        - "38 - Data Engineering, Distributed Analytics, Stream Processing (Kafka/Spark) & ETL"
+        - "39 - Cloud-Native Infrastructure, Kubernetes, Containers & Service Meshes"
+        - "40 - CI/CD Automation, GitOps & Infrastructure-as-Code (Terraform/Ansible)"
+        - "41 - Observability, APM Telemetry, Metrics, Distributed Tracing & Logging"
+        - "42 - Networking, Reverse Proxies, Load Balancers, Edge Gateways & API Gateways"
+        - "43 - Operating Systems, Linux Kernels, Low-Level Drivers & Emulators"
+        - "44 - Compilers, Interpreters, Virtual Machines, Language Toolchains & JIT Engines"
+        - "45 - Systems Programming, Low-Level Runtimes, Memory Safety & WebAssembly (Wasm)"
+        - "46 - Developer Tooling, Shell Environments, Terminal Emulators & CLI Utilities"
+        - "47 - Code Editors, IDEs, Syntax Plugins, Language Server Protocols (LSP) & Linters"
+        - "48 - Game Development Engines, 2D/3D Graphics APIs & Shaders (WebGL/Vulkan)"
+        - "49 - Modern Frontend Frameworks, Reactive Web Engines (React/Vue/Svelte) & Bundlers"
+        - "50 - UI Component Systems, Design Tokens, Iconography & Animation Libraries"
+        - "51 - Mobile App Development, Cross-Platform Frameworks (Flutter/React Native) & SDKs"
+        - "52 - Desktop Application Frameworks, GUI Toolkits (Electron/Tauri/Qt) & Document Utilities"
+        - "53 - Backend Web Frameworks, Microservices, REST / GraphQL / gRPC APIs & ORMs"
+        - "54 - Multimedia Processing, Audio/Video Codecs, FFmpeg & Streaming Pipelines"
+        - "55 - Python Ecosystem, Data Science, Scientific Computing & Analytics"
     validations:
       required: true
   - type: textarea
-    id: workflow
+    id: description
     attributes:
-      label: 1-Line Operational Architecture Workflow
-      description: Specify the verified architectural flow (Format: Component A -> Component B -> Component C).
-      placeholder: "Input ingestion -> Feature extraction -> Model inference -> Post-processing validation."
+      label: Repository Description & Technical Synopsis
+      description: Concise summary of what the software does and why it is significant.
+      placeholder: "High-throughput and memory-efficient LLM inference engine with PagedAttention algorithm..."
     validations:
       required: true
+  - type: textarea
+    id: architecture_workflow
+    attributes:
+      label: 1-Line Operational Architecture Workflow Pipeline
+      description: "Specify the verified execution pipeline. Format: [Input / Trigger] -> [Core Processing / Model] -> [Execution / Tool] -> [Output / Verification]"
+      placeholder: "Client prompt -> PagedAttention KV-cache manager -> Distributed continuous batching inference -> Streamed token response"
+    validations:
+      required: true
+  - type: textarea
+    id: agent_blueprint
+    attributes:
+      label: Autonomous Agent Blueprint Specification (Optional)
+      description: If this repository provides an autonomous agent capability or tool, specify role, capabilities, and status.
+      placeholder: |
+        Role: High-Throughput Inference Orchestrator
+        Capabilities:
+          - PagedAttention memory management
+          - Continuous batch scheduling
+          - Multi-GPU tensor parallelism
+        Status: ready
+  - type: input
+    id: research_paper
+    attributes:
+      label: Related Research Paper or arXiv Link (Optional)
+      description: If backed by academic research or formal publication.
+      placeholder: "e.g. arXiv:2309.07864"
+  - type: checkboxes
+    id: submission_checklist
+    attributes:
+      label: Submission Verification Checklist
+      options:
+        - label: "I have verified the repository is active with commits in the last 12 months."
+          required: true
+        - label: "I have verified the 1-line architectural workflow reflects real system execution."
+          required: true
+        - label: "I have verified this repository is not already indexed in the catalog."
+          required: true
+        - label: "I agree to license my contribution under the repository's MIT License."
+          required: true

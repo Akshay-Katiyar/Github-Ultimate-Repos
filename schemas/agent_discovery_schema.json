@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AgentDiscoverySchema",
+  "description": "Standardized schema for programmatic discovery and query of the Github-Ultimate-Repos ecosystem by AI Coding Assistants and Swarms",
+  "type": "object",
+  "required": [
+    "service_identifier",
+    "version",
+    "capabilities",
+    "discovery_endpoints",
+    "supported_agent_clients",
+    "query_contract",
+    "response_contract"
+  ],
+  "properties": {
+    "service_identifier": {
+      "type": "string",
+      "const": "github-ultimate-repos-agent-service"
+    },
+    "version": {
+      "type": "string"
+    },
+    "catalog_summary": {
+      "type": "object",
+      "properties": {
+        "total_repositories": {"type": "integer"},
+        "disciplines_count": {"type": "integer"},
+        "storage_engine": {"type": "string"},
+        "full_text_search": {"type": "string"}
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "full_text_search_fts5",
+          "intent_recommendation",
+          "side_by_side_comparison",
+          "architecture_workflow_extraction",
+          "discipline_taxonomy_browsing",
+          "mcp_stdio_transport",
+          "cli_json_export"
+        ]
+      }
+    },
+    "discovery_endpoints": {
+      "type": "object",
+      "properties": {
+        "mcp_stdio": {
+          "type": "object",
+          "properties": {
+            "command": {"type": "string"},
+            "args": {"type": "array", "items": {"type": "string"}},
+            "protocol": {"type": "string"}
+          }
+        },
+        "cli_exec": {
+          "type": "object",
+          "properties": {
+            "entrypoint": {"type": "string"},
+            "commands": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "sqlite_direct": {
+          "type": "object",
+          "properties": {
+            "path": {"type": "string"},
+            "tables": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      }
+    },
+    "supported_agent_clients": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "integration_mode": {"type": "string"},
+          "configuration_file": {"type": "string"}
+        }
+      }
+    },
+    "query_contract": {
+      "type": "object",
+      "required": ["action"],
+      "properties": {
+        "action": {
+          "type": "string",
+          "enum": ["search", "get", "recommend", "compare", "workflow", "categories", "stats"]
+        },
+        "query": {"type": "string"},
+        "category": {"type": "string"},
+        "language": {"type": "string"},
+        "min_stars": {"type": "integer"},
+        "limit": {"type": "integer"}
+      }
+    },
+    "response_contract": {
+      "type": "object",
+      "required": ["status", "data"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["success", "error"]
+        },
+        "data": {
+          "type": ["object", "array"]
+        },
+        "execution_metadata": {
+          "type": "object",
+          "properties": {
+            "engine": {"type": "string"},
+            "latency_ms": {"type": "number"}
+          }
+        }
+      }
+    }
+  }
+}

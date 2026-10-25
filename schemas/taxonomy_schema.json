@@ -1,0 +1,130 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DisciplineTaxonomySpecification",
+  "description": "Formal JSON Schema specification for the 55-discipline DeepTech taxonomy, domain boundaries, keywords, parent cluster groupings, and repository metrics in Github Ultimate Repos.",
+  "type": "object",
+  "required": [
+    "version",
+    "total_disciplines",
+    "clusters",
+    "disciplines"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Semantic version identifier of the taxonomy specification"
+    },
+    "total_disciplines": {
+      "type": "integer",
+      "minimum": 55,
+      "maximum": 55,
+      "description": "Total count of granular DeepTech disciplines (strictly 55)"
+    },
+    "clusters": {
+      "type": "array",
+      "minItems": 8,
+      "description": "Hierarchical parent clusters grouping disciplines into macroscopic fields",
+      "items": {
+        "type": "string"
+      }
+    },
+    "disciplines": {
+      "type": "array",
+      "minItems": 55,
+      "maxItems": 55,
+      "description": "Comprehensive specification for each of the 55 disciplines",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "stable_id",
+          "name",
+          "slug",
+          "description",
+          "parent_cluster",
+          "keywords",
+          "top_languages",
+          "metrics"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 55,
+            "description": "Canonical numeric sequence identifier (1 to 55)"
+          },
+          "stable_id": {
+            "type": "string",
+            "pattern": "^cat-[0-9]{2}-[a-z0-9-]+$",
+            "description": "Immutable kebab-case slug identifier for external linking and references"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 5,
+            "description": "Canonical full title of the discipline as cataloged"
+          },
+          "slug": {
+            "type": "string",
+            "minLength": 3,
+            "description": "Filesystem and URL slug matching category documents"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 30,
+            "description": "Comprehensive technical definition and scope of the discipline"
+          },
+          "parent_cluster": {
+            "type": "string",
+            "description": "Identifier of the parent domain cluster"
+          },
+          "keywords": {
+            "type": "array",
+            "minItems": 3,
+            "items": {
+              "type": "string"
+            },
+            "description": "Core foundational search keywords, alternate names, and domain synonyms"
+          },
+          "top_languages": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            },
+            "description": "Most prominent programming languages represented in this discipline"
+          },
+          "metrics": {
+            "type": "object",
+            "required": [
+              "repository_count",
+              "total_stars",
+              "total_forks"
+            ],
+            "properties": {
+              "repository_count": {
+                "type": "integer",
+                "minimum": 1,
+                "description": "Verified repository count corresponding to starred_repos_master_catalog.csv"
+              },
+              "total_stars": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Aggregate stargazer count for the discipline"
+              },
+              "total_forks": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Aggregate fork count for the discipline"
+              },
+              "language_diversity": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Count of distinct programming languages cataloged"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
