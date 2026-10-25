@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RepositoryRecord",
+  "description": "Schema definition for an enterprise cataloged repository asset",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "url",
+    "stars",
+    "forks",
+    "language",
+    "category_id",
+    "category_name",
+    "description",
+    "architecture_workflow"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Unique catalog sequence identifier"
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^[^/]+/[^/]+$",
+      "description": "Full GitHub repository name (owner/repo)"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical HTTPS URL to the repository"
+    },
+    "stars": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Stargazer count at audit baseline"
+    },
+    "forks": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Fork count at audit baseline"
+    },
+    "language": {
+      "type": "string",
+      "description": "Primary programming language or 'Other'"
+    },
+    "category_id": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 55,
+      "description": "Assigned discipline category ID (1-55)"
+    },
+    "category_name": {
+      "type": "string",
+      "description": "Official title of the assigned discipline category"
+    },
+    "description": {
+      "type": "string",
+      "description": "Repository description or synopsis"
+    },
+    "architecture_workflow": {
+      "type": "string",
+      "minLength": 5,
+      "description": "Verified 1-line architectural workflow pipeline"
+    },
+    "quality_gate": {
+      "type": "string",
+      "enum": [
+        "PASSED",
+        "VERIFIED",
+        "CERTIFIED"
+      ],
+      "default": "VERIFIED",
+      "description": "Enterprise audit quality gate status"
+    }
+  }
+}

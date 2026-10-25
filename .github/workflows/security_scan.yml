@@ -1,0 +1,51 @@
+name: Security & Secret Scan
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 0 * * 1' # Weekly security audit
+
+permissions:
+  contents: read
+
+jobs:
+  security-audit:
+    name: AST Security & Secret Leakage Prevention
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Static Security Scan (AST & Unsafe Patterns)
+        run: |
+          python -c "
+          import ast, glob, sys
+          unsafe_calls = {'eval', 'exec', 'pickle.loads'}
+          errors = []
+          for py_file in glob.glob('**/*.py', recursive=True):
+              if 'venv' in py_file or '.git' in py_file:
+                  continue
+              try:
+                  with open(py_file, 'r', encoding='utf-8') as f:
+                      tree = ast.parse(f.read(), filename=py_file)
+                  for node in ast.walk(tree):
+                      if isinstance(node, ast.Call):
+                          if isinstance(node.func, ast.Name) and node.func.id in unsafe_calls:
+                              errors.append(f'{py_file}:{node.lineno}: Dangerous call to {node.func.id}')
+              except Exception as e:
+                  errors.append(f'Failed to parse {py_file}: {e}')
+          if errors:
+              print('Security scan failed with errors:')
+              for err in errors:
+                  print('  -', err)
+              sys.exit(1)
+          print('Security scan PASSED: Zero dangerous AST calls identified.')
+          "

@@ -1,0 +1,48 @@
+name: "🤖 New Repository / Agent Blueprint Submission"
+description: Propose a high-impact open source repository or autonomous agent blueprint
+title: "[SUBMIT]: "
+labels: ["catalog-addition"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please verify the repository adheres to our quality criteria (5,000+ stars or critical frontier architecture).
+  - type: input
+    id: repo_url
+    attributes:
+      label: Repository URL
+      description: Canonical HTTPS link to the GitHub repository.
+      placeholder: "https://github.com/owner/repository"
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Discipline Category (1-55)
+      options:
+        - "01 Curated Knowledge, Developer Guides & Awesome Collections"
+        - "02 Artificial Intelligence, Large Language Models & Quantization"
+        - "03 Multi-Agent Systems, Autonomous Swarms & MCP Tools"
+        - "04 Computer Vision, Multimodal AI & Neural Rendering"
+        - "05 Speech, Voice AI & Audio Processing"
+        - "06 Robotics, Humanoid Kinematics & Physics Sim"
+        - "07 Autonomous Vehicles & LiDAR SLAM"
+        - "08 Semiconductor & Silicon EDA"
+        - "09 Quantum Computing & Circuit Simulation"
+        - "37 Database Engines & Vector DBs"
+        - "38 Cloud-Native Infrastructure & Kubernetes"
+        - "39 Cybersecurity & Reverse Engineering"
+        - "42 Blockchain Protocols & Smart Contracts"
+        - "49 Modern Frontend Frameworks & Web Engines"
+        - "55 Python Ecosystem & Scientific Computing"
+        - "Other DeepTech Category"
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: 1-Line Operational Architecture Workflow
+      description: Specify the verified architectural flow (Format: Component A -> Component B -> Component C).
+      placeholder: "Input ingestion -> Feature extraction -> Model inference -> Post-processing validation."
+    validations:
+      required: true

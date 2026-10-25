@@ -1,0 +1,44 @@
+name: Enterprise CI Quality Gates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-test:
+    name: Schema Validation, Registry Integrity & Test Suite
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Validate Catalog Against JSON Schemas
+        run: |
+          python scripts/inventory/generate_inventory.py --validate-only
+
+      - name: Build and Verify SQLite FTS5 Registry
+        run: |
+          python scripts/inventory/build_sqlite_registry.py
+
+      - name: Execute Automated Unit & Integration Tests
+        run: |
+          python -m unittest discover tests -v
+
+      - name: Verify CLI Command Engine
+        run: |
+          python scripts/cli/ultimate_agent_cli.py stats
+          python scripts/cli/ultimate_agent_cli.py search "autonomous agent" --limit 3

@@ -1,0 +1,23 @@
+name: "💡 Feature Request"
+description: Propose an idea, new search capability, or architectural enhancement
+title: "[FEAT]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We welcome proposals to improve repository discoverability, agent orchestration, or CLI capabilities!
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Feature Proposal
+      description: Describe your proposed feature or enhancement.
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Motivation & Use Case
+      description: Why is this feature needed and who will benefit from it?
+    validations:
+      required: true

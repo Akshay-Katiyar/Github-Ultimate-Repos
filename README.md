@@ -17,6 +17,74 @@
 | **Master CSV Dataset** | Tabular dataset with repository metadata & workflow column | [starred_repos_master_catalog.csv](./starred_repos_master_catalog.csv) |
 | **Web Explorer** | Interactive client-side HTML search & filtering engine | [index.html](./index.html) |
 
+## 🏛️ System Architecture & Workflow Pipeline
+
+Github Ultimate Repos unifies open-source software discovery with multi-agent system execution capabilities:
+
+```mermaid
+flowchart TD
+    subgraph Discovery ["🔍 Ingestion & Discovery Layer"]
+        GH[("GitHub Public Graph<br/>11,730 Gold Repositories")] --> AUDIT["Forensic Multi-Agent Audit<br/>(20 Specialist LLM Auditing Subagents)"]
+        AUDIT --> WORKFLOW["Operational Architecture Extraction<br/>(100% 1-Line Pipelines)"]
+    end
+
+    subgraph DataEngine ["💾 High-Performance Storage & Search"]
+        WORKFLOW --> CSV[("Master CSV Dataset<br/>starred_repos_master_catalog.csv")]
+        WORKFLOW --> TXT[("Categorized TXT List<br/>STARRED_REPOSITORIES_CATEGORIZED_LIST.txt")]
+        CSV --> FTS5[("SQLite FTS5 Full-Text Engine<br/>agents_registry.db")]
+        CSV --> WEB["Interactive Web Explorer<br/>index.html"]
+    end
+
+    subgraph Interface ["🚀 Developer & Agent Execution"]
+        FTS5 --> CLI["Enterprise CLI Engine<br/>scripts/cli/ultimate_agent_cli.py"]
+        CLI --> AGENT["Autonomous Multi-Agent Swarms<br/>(10k - 200k Workers)"]
+        CLI --> DEV["Software Engineers & Researchers"]
+    end
+```
+
+---
+
+## ⚡ 5-Minute Quickstart & CLI Query Engine
+
+This repository includes a lightning-fast, zero-dependency CLI query engine powered by SQLite FTS5:
+
+```bash
+# 1. Clone repository
+git clone https://github.com/Akshay-Katiyar/Github-Ultimate-Repos.git
+cd Github-Ultimate-Repos
+
+# 2. View global statistics dashboard
+python scripts/cli/ultimate_agent_cli.py stats
+
+# 3. Full-text search across 11,730 repositories & workflows
+python scripts/cli/ultimate_agent_cli.py search "autonomous agent"
+
+# 4. Search with filters (stars & category)
+python scripts/cli/ultimate_agent_cli.py search "robotics" --min-stars 10000 --limit 5
+
+# 5. Inspect specific repository dossier
+python scripts/cli/ultimate_agent_cli.py get "Significant-Gravitas/AutoGPT"
+
+# 6. Export filtered subset to JSON or CSV
+python scripts/cli/ultimate_agent_cli.py export --category "Quantum" --format json --output quantum_repos.json
+```
+
+---
+
+## 📖 Enterprise Documentation Suite
+
+Detailed architectural, operational, and security specifications:
+
+- 🚀 [Getting Started Guide](docs/getting-started.md)
+- 🏛️ [System Architecture & Swarm Design](docs/architecture.md)
+- 📊 [Agent Catalog & Discipline Taxonomy](docs/agent-catalog.md)
+- ⚙️ [Configuration & Customization](docs/configuration.md)
+- 🛡️ [Security Architecture & Zero-Trust](docs/security.md)
+- 🧪 [Testing & Quality Engineering](docs/testing.md)
+- 🔧 [Troubleshooting Guide](docs/troubleshooting.md)
+
+---
+
 ## 📚 Browse by Discipline (55 Categories)
 
 | # | Category Discipline | Repositories | Stars | Browsable Link |

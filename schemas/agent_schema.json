@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AgentSpecification",
+  "description": "Schema definition for an autonomous agent capability blueprint",
+  "type": "object",
+  "required": [
+    "agent_id",
+    "name",
+    "category",
+    "role",
+    "capabilities",
+    "architecture_workflow",
+    "source_repository",
+    "status"
+  ],
+  "properties": {
+    "agent_id": {
+      "type": "string",
+      "pattern": "^AGENT-[0-9]{5}$",
+      "description": "Standardized enterprise agent slot identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Designated functional agent name"
+    },
+    "category": {
+      "type": "string",
+      "description": "Primary domain specialization"
+    },
+    "role": {
+      "type": "string",
+      "description": "Autonomous executive or specialist operational role"
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "description": "List of core competencies and tool capabilities"
+    },
+    "architecture_workflow": {
+      "type": "string",
+      "description": "Execution pipeline definition"
+    },
+    "source_repository": {
+      "type": "string",
+      "description": "Backing open-source framework or tool repository"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "ready",
+        "validated",
+        "prototype"
+      ],
+      "default": "ready"
+    }
+  }
+}
