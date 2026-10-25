@@ -1,64 +1,107 @@
 # [12] NUCLEAR FUSION, PLASMA PHYSICS, TOKAMAKS & PARTICLE ACCELERATORS
 
-**Total Repositories**: 11 | **Combined Stars**: 1,555★  
-
+**Total Repositories**: 11 &nbsp;|&nbsp; **Combined Stars**: 1,555★  
 [⬅️ Back to Master Directory](../README.md)
 
 ---
 
-```text
-1. openmc-dev/openmc                                       | ⭐   1,128★ | 🍴    691 forks | 💻 Python      
-         🔗 URL      : https://github.com/openmc-dev/openmc
-         📝 DESC     : OpenMC Monte Carlo Code
-         ⚙️ WORKFLOW : Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.
+### 1. [openmc-dev/openmc](https://github.com/openmc-dev/openmc)
 
-       2. hiddenSymmetries/simsopt                                | ⭐     171★ | 🍴     91 forks | 💻 Python      
-         🔗 URL      : https://github.com/hiddenSymmetries/simsopt
-         📝 DESC     : Simons Stellarator Optimizer Code
-         ⚙️ WORKFLOW : Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.
+- ⭐ **Stars**: 1,128★ &nbsp;|&nbsp; 🍴 **Forks**: 691 &nbsp;|&nbsp; 💻 **Language**: `Python`
+- 🔗 **Repository URL**: [https://github.com/openmc-dev/openmc](https://github.com/openmc-dev/openmc)
+- 📝 **Description**: OpenMC Monte Carlo Code
+- ⚙️ **Operational Architecture Workflow**: `Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.`
 
-       3. PlasmaControl/DESC                                      | ⭐     170★ | 🍴     62 forks | 💻 Python      
-         🔗 URL      : https://github.com/PlasmaControl/DESC
-         📝 DESC     : Stellarator Equilibrium and Optimization Suite
-         ⚙️ WORKFLOW : Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.
+---
 
-       4. natesales/openreactor                                   | ⭐      67★ | 🍴      9 forks | 💻 Go          
-         🔗 URL      : https://github.com/natesales/openreactor
-         📝 DESC     : Open-source IEC nuclear fusion reactor: control, monitoring, and data logging system
-         ⚙️ WORKFLOW : Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.
+### 2. [hiddenSymmetries/simsopt](https://github.com/hiddenSymmetries/simsopt)
 
-       5. iraola/Q2DmhdFoam                                       | ⭐       5★ | 🍴      1 forks | 💻 C++         
-         🔗 URL      : https://github.com/iraola/Q2DmhdFoam
-         📝 DESC     : A fast magnetohydrodynamic solver with buoyancy for OpenFOAM
-         ⚙️ WORKFLOW : Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.
+- ⭐ **Stars**: 171★ &nbsp;|&nbsp; 🍴 **Forks**: 91 &nbsp;|&nbsp; 💻 **Language**: `Python`
+- 🔗 **Repository URL**: [https://github.com/hiddenSymmetries/simsopt](https://github.com/hiddenSymmetries/simsopt)
+- 📝 **Description**: Simons Stellarator Optimizer Code
+- ⚙️ **Operational Architecture Workflow**: `Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.`
 
-       6. CFDBY/Ga75In25-3D-MHD-UDF                               | ⭐       4★ | 🍴      0 forks | 💻 C           
-         🔗 URL      : https://github.com/CFDBY/Ga75In25-3D-MHD-UDF
-         📝 DESC     : 3D numerical simulation of liquid metal flow under RMF. Features a comparative study between a custom analytical Lorentz force UDF and ANSYS Fluent's built-in MHD module.
-         ⚙️ WORKFLOW : Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.
+---
 
-       7. aurora-multiphysics/LM-MHD-Toolbox                      | ⭐       4★ | 🍴      2 forks | 💻 Python      
-         🔗 URL      : https://github.com/aurora-multiphysics/LM-MHD-Toolbox
-         📝 DESC     : A package for validation of liquid-metal magnetohydrodynamics codes against known solutions
-         ⚙️ WORKFLOW : Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.
+### 3. [PlasmaControl/DESC](https://github.com/PlasmaControl/DESC)
 
-       8. Lo20xl/magnetide                                        | ⭐       2★ | 🍴      0 forks | 💻 Python      
-         🔗 URL      : https://github.com/Lo20xl/magnetide
-         📝 DESC     : Zero-dependency analytic screen model + OpenFOAM hydraulics validation for a benchtop MHD (magnetohydrodynamic) seawater conduction pump. Pure Python stdlib, no numpy.
-         ⚙️ WORKFLOW : Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.
+- ⭐ **Stars**: 170★ &nbsp;|&nbsp; 🍴 **Forks**: 62 &nbsp;|&nbsp; 💻 **Language**: `Python`
+- 🔗 **Repository URL**: [https://github.com/PlasmaControl/DESC](https://github.com/PlasmaControl/DESC)
+- 📝 **Description**: Stellarator Equilibrium and Optimization Suite
+- ⚙️ **Operational Architecture Workflow**: `Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.`
 
-       9. bluearrow98/mhdturbFoam                                 | ⭐       2★ | 🍴      0 forks | 💻 C           
-         🔗 URL      : https://github.com/bluearrow98/mhdturbFoam
-         📝 DESC     : An incompressible, turbulent OpenFOAM solver for magnetohydrodynamic flows
-         ⚙️ WORKFLOW : Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.
+---
 
-      10. iamtiteuf/effects_of_HartmannCst_on_2DFluid             | ⭐       1★ | 🍴      0 forks | 💻 C++         
-         🔗 URL      : https://github.com/iamtiteuf/effects_of_HartmannCst_on_2DFluid
-         📝 DESC     : Simulation on Hartmann flow. Hartmann flow in magnetohydrodynamics refers to the flow of electrically conductive fluids under the influence of a magnetic field, characterized by the Hartmann number, which quantifies the balance between electromagnetic forces and viscous forces within the fluid.
-         ⚙️ WORKFLOW : Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.
+### 4. [natesales/openreactor](https://github.com/natesales/openreactor)
 
-      11. didzis-berenis/OpenFOAM-solvers-and-tools               | ⭐       1★ | 🍴      0 forks | 💻 Other       
-         🔗 URL      : https://github.com/didzis-berenis/OpenFOAM-solvers-and-tools
-         📝 DESC     : Magnetohydrodynamics solvers for use with EOF-Library. Tools for field post-processing.
-         ⚙️ WORKFLOW : Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.
-```
+- ⭐ **Stars**: 67★ &nbsp;|&nbsp; 🍴 **Forks**: 9 &nbsp;|&nbsp; 💻 **Language**: `Go`
+- 🔗 **Repository URL**: [https://github.com/natesales/openreactor](https://github.com/natesales/openreactor)
+- 📝 **Description**: Open-source IEC nuclear fusion reactor: control, monitoring, and data logging system
+- ⚙️ **Operational Architecture Workflow**: `Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.`
+
+---
+
+### 5. [iraola/Q2DmhdFoam](https://github.com/iraola/Q2DmhdFoam)
+
+- ⭐ **Stars**: 5★ &nbsp;|&nbsp; 🍴 **Forks**: 1 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/iraola/Q2DmhdFoam](https://github.com/iraola/Q2DmhdFoam)
+- 📝 **Description**: A fast magnetohydrodynamic solver with buoyancy for OpenFOAM
+- ⚙️ **Operational Architecture Workflow**: `Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.`
+
+---
+
+### 6. [CFDBY/Ga75In25-3D-MHD-UDF](https://github.com/CFDBY/Ga75In25-3D-MHD-UDF)
+
+- ⭐ **Stars**: 4★ &nbsp;|&nbsp; 🍴 **Forks**: 0 &nbsp;|&nbsp; 💻 **Language**: `C`
+- 🔗 **Repository URL**: [https://github.com/CFDBY/Ga75In25-3D-MHD-UDF](https://github.com/CFDBY/Ga75In25-3D-MHD-UDF)
+- 📝 **Description**: 3D numerical simulation of liquid metal flow under RMF. Features a comparative study between a custom analytical Lorentz force UDF and ANSYS Fluent's built-in MHD module.
+- ⚙️ **Operational Architecture Workflow**: `Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.`
+
+---
+
+### 7. [aurora-multiphysics/LM-MHD-Toolbox](https://github.com/aurora-multiphysics/LM-MHD-Toolbox)
+
+- ⭐ **Stars**: 4★ &nbsp;|&nbsp; 🍴 **Forks**: 2 &nbsp;|&nbsp; 💻 **Language**: `Python`
+- 🔗 **Repository URL**: [https://github.com/aurora-multiphysics/LM-MHD-Toolbox](https://github.com/aurora-multiphysics/LM-MHD-Toolbox)
+- 📝 **Description**: A package for validation of liquid-metal magnetohydrodynamics codes against known solutions
+- ⚙️ **Operational Architecture Workflow**: `Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.`
+
+---
+
+### 8. [Lo20xl/magnetide](https://github.com/Lo20xl/magnetide)
+
+- ⭐ **Stars**: 2★ &nbsp;|&nbsp; 🍴 **Forks**: 0 &nbsp;|&nbsp; 💻 **Language**: `Python`
+- 🔗 **Repository URL**: [https://github.com/Lo20xl/magnetide](https://github.com/Lo20xl/magnetide)
+- 📝 **Description**: Zero-dependency analytic screen model + OpenFOAM hydraulics validation for a benchtop MHD (magnetohydrodynamic) seawater conduction pump. Pure Python stdlib, no numpy.
+- ⚙️ **Operational Architecture Workflow**: `Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.`
+
+---
+
+### 9. [bluearrow98/mhdturbFoam](https://github.com/bluearrow98/mhdturbFoam)
+
+- ⭐ **Stars**: 2★ &nbsp;|&nbsp; 🍴 **Forks**: 0 &nbsp;|&nbsp; 💻 **Language**: `C`
+- 🔗 **Repository URL**: [https://github.com/bluearrow98/mhdturbFoam](https://github.com/bluearrow98/mhdturbFoam)
+- 📝 **Description**: An incompressible, turbulent OpenFOAM solver for magnetohydrodynamic flows
+- ⚙️ **Operational Architecture Workflow**: `Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.`
+
+---
+
+### 10. [iamtiteuf/effects_of_HartmannCst_on_2DFluid](https://github.com/iamtiteuf/effects_of_HartmannCst_on_2DFluid)
+
+- ⭐ **Stars**: 1★ &nbsp;|&nbsp; 🍴 **Forks**: 0 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/iamtiteuf/effects_of_HartmannCst_on_2DFluid](https://github.com/iamtiteuf/effects_of_HartmannCst_on_2DFluid)
+- 📝 **Description**: Simulation on Hartmann flow. Hartmann flow in magnetohydrodynamics refers to the flow of electrically conductive fluids under the influence of a magnetic field, characterized by the Hartmann number, which quantifies the balance between electromagnetic forces and viscous forces within the fluid.
+- ⚙️ **Operational Architecture Workflow**: `Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.`
+
+---
+
+### 11. [didzis-berenis/OpenFOAM-solvers-and-tools](https://github.com/didzis-berenis/OpenFOAM-solvers-and-tools)
+
+- ⭐ **Stars**: 1★ &nbsp;|&nbsp; 🍴 **Forks**: 0 &nbsp;|&nbsp; 💻 **Language**: `Other`
+- 🔗 **Repository URL**: [https://github.com/didzis-berenis/OpenFOAM-solvers-and-tools](https://github.com/didzis-berenis/OpenFOAM-solvers-and-tools)
+- 📝 **Description**: Magnetohydrodynamics solvers for use with EOF-Library. Tools for field post-processing.
+- ⚙️ **Operational Architecture Workflow**: `Tokamak axisymmetric flux grid generation -> Grad-Shafranov MHD equilibrium solver -> poloidal magnetic flux q-profile calculation -> Lawson criterion fusion gain evaluation.`
+
+---
+
+[⬅️ Back to Master Directory](../README.md)

@@ -1,709 +1,1268 @@
 # [48] GAME DEVELOPMENT ENGINES, 2D/3D GRAPHICS APIS & SHADERS (WEBGL/VULKAN)
 
-**Total Repositories**: 140 | **Combined Stars**: 1,720,397★  
-
+**Total Repositories**: 140 &nbsp;|&nbsp; **Combined Stars**: 1,720,397★  
 [⬅️ Back to Master Directory](../README.md)
 
 ---
 
-```text
-1. godotengine/godot                                       | ⭐ 119,031★ | 🍴 27,198 forks | 💻 C++         
-         🔗 URL      : https://github.com/godotengine/godot
-         📝 DESC     : Godot Engine – Multi-platform 2D and 3D game engine
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-       2. mrdoob/three.js                                         | ⭐ 116,893★ | 🍴 36,717 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/mrdoob/three.js
-         📝 DESC     : JavaScript 3D Library.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-       3. bilawalsidhu/gods-eye-view                              | ⭐  59,813★ | 🍴 11,650 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/bilawalsidhu/gods-eye-view
-         📝 DESC     : A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-       4. bevyengine/bevy                                         | ⭐  49,257★ | 🍴  4,971 forks | 💻 Rust        
-         🔗 URL      : https://github.com/bevyengine/bevy
-         📝 DESC     : A refreshingly simple data-driven game engine built in Rust
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-       5. pixijs/pixijs                                           | ⭐  48,459★ | 🍴  5,105 forks | 💻 TypeScript  
-         🔗 URL      : https://github.com/pixijs/pixijs
-         📝 DESC     : The HTML5 Creation Engine: Create beautiful digital content with the fastest, most flexible 2D WebGL renderer.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-       6. boykopovar/AnyPS5                                       | ⭐  48,024★ | 🍴  4,511 forks | 💻 C++         
-         🔗 URL      : https://github.com/boykopovar/AnyPS5
-         📝 DESC     : Tool for automatic PS5 executables porting to Linux and Windows
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-       7. phaserjs/phaser                                         | ⭐  40,557★ | 🍴  7,184 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/phaserjs/phaser
-         📝 DESC     : Phaser is a fun, free and fast 2D game framework for making HTML5 games for desktop and mobile web browsers, supporting Canvas and WebGL rendering.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-       8. kovidgoyal/kitty                                        | ⭐  35,420★ | 🍴  1,573 forks | 💻 Python      
-         🔗 URL      : https://github.com/kovidgoyal/kitty
-         📝 DESC     : If you live in the terminal, kitty is made for you! Cross-platform, fast, feature-rich, GPU based.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-       9. op7418/guizang-ppt-skill                                | ⭐  28,604★ | 🍴  1,975 forks | 💻 HTML        
-         🔗 URL      : https://github.com/op7418/guizang-ppt-skill
-         📝 DESC     : AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image prompts, social covers, and a WebGL/low-power presentation runtime.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      10. 4ian/GDevelop                                           | ⭐  28,014★ | 🍴  1,620 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/4ian/GDevelop
-         📝 DESC     : 🎮 Open-source, cross-platform 2D/3D/multiplayer game engine designed for everyone.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      11. BabylonJS/Babylon.js                                    | ⭐  26,224★ | 🍴  3,711 forks | 💻 TypeScript  
-         🔗 URL      : https://github.com/BabylonJS/Babylon.js
-         📝 DESC     : Babylon.js is a powerful, beautiful, simple, and open game and rendering engine packed into a friendly JavaScript framework.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      12. ssloy/tinyrenderer                                      | ⭐  24,450★ | 🍴  2,311 forks | 💻 C++         
-         🔗 URL      : https://github.com/ssloy/tinyrenderer
-         📝 DESC     : A brief computer graphics / rendering course
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      13. k4yt3x/video2x                                          | ⭐  22,397★ | 🍴  1,954 forks | 💻 C++         
-         🔗 URL      : https://github.com/k4yt3x/video2x
-         📝 DESC     : A machine learning-based video super resolution and frame interpolation framework. Est. Hack the Valley II, 2018.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      14. xtermjs/xterm.js                                        | ⭐  21,296★ | 🍴  2,025 forks | 💻 TypeScript  
-         🔗 URL      : https://github.com/xtermjs/xterm.js
-         📝 DESC     : A terminal for the web
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      15. wheresryan22/anatomy                                    | ⭐  20,316★ | 🍴  1,609 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/wheresryan22/anatomy
-         📝 DESC     : An agent skill for creating detailed, interactive isometric illustrations of real-world machines and complex systems. Generates polished SVGs with optional WebGL shaders and 3D effects.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      16. lettier/3d-game-shaders-for-beginners                   | ⭐  19,987★ | 🍴  1,484 forks | 💻 C++         
-         🔗 URL      : https://github.com/lettier/3d-game-shaders-for-beginners
-         📝 DESC     : 🎮 A step-by-step guide to implementing SSAO, depth of field, lighting, normal mapping, and more for your 3D game.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      17. Unity-Technologies/ml-agents                            | ⭐  19,793★ | 🍴  4,515 forks | 💻 C#          
-         🔗 URL      : https://github.com/Unity-Technologies/ml-agents
-         📝 DESC     : The Unity Machine Learning Agents Toolkit (ML-Agents) is an open-source project that enables games and simulations to serve as environments for training intelligent agents using deep reinforcement learning and imitation learning.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      18. img2threejs/img2threejs                                 | ⭐  19,203★ | 🍴  1,609 forks | 💻 Python      
-         🔗 URL      : https://github.com/img2threejs/img2threejs
-         📝 DESC     : Rebuild the object in a reference image as a code-only, procedural, quality-gated, animation-ready Three.js model. Token-efficient image-to-3D.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      19. plotly/plotly.py                                        | ⭐  18,853★ | 🍴  2,882 forks | 💻 Python      
-         🔗 URL      : https://github.com/plotly/plotly.py
-         📝 DESC     : The interactive graphing library for Python :sparkles:
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      20. gfx-rs/wgpu                                             | ⭐  18,373★ | 🍴  1,570 forks | 💻 Rust        
-         🔗 URL      : https://github.com/gfx-rs/wgpu
-         📝 DESC     : A cross-platform, safe, pure-Rust graphics API.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      21. plotly/plotly.js                                        | ⭐  18,369★ | 🍴  2,052 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/plotly/plotly.js
-         📝 DESC     : Open-source JavaScript charting library behind Plotly and Dash
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      22. doitsujin/dxvk                                          | ⭐  18,362★ | 🍴  1,312 forks | 💻 C++         
-         🔗 URL      : https://github.com/doitsujin/dxvk
-         📝 DESC     : Vulkan-based implementation of D3D8, 9, 10 and 11 for Linux / Wine
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      23. aframevr/aframe                                         | ⭐  17,671★ | 🍴  4,405 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/aframevr/aframe
-         📝 DESC     : :a: Web framework for building virtual reality experiences.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      24. OpenRA/OpenRA                                           | ⭐  17,644★ | 🍴  3,093 forks | 💻 C#          
-         🔗 URL      : https://github.com/OpenRA/OpenRA
-         📝 DESC     : Open Source real-time strategy game engine for early Westwood games such as Command & Conquer: Red Alert written in C# using SDL and OpenGL. Runs on Windows, Linux, *BSD and Mac OS X.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      25. bkaradzic/bgfx                                          | ⭐  17,588★ | 🍴  2,155 forks | 💻 C++         
-         🔗 URL      : https://github.com/bkaradzic/bgfx
-         📝 DESC     : Cross-platform, graphics API agnostic, "Bring Your Own Engine/Framework" style rendering library.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      26. playcanvas/engine                                       | ⭐  17,133★ | 🍴  2,045 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/playcanvas/engine
-         📝 DESC     : Powerful web graphics runtime built on WebGL, WebGPU, WebXR and glTF
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      27. OpenRCT2/OpenRCT2                                       | ⭐  16,498★ | 🍴  1,958 forks | 💻 C++         
-         🔗 URL      : https://github.com/OpenRCT2/OpenRCT2
-         📝 DESC     : An open source re-implementation of RollerCoaster Tycoon 2 🎢
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      28. CesiumGS/cesium                                         | ⭐  15,881★ | 🍴  3,892 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/CesiumGS/cesium
-         📝 DESC     : An open-source JavaScript library for world-class 3D globes and maps :earth_americas:
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      29. Perfare/AssetStudio                                     | ⭐  15,588★ | 🍴  2,995 forks | 💻 C#          
-         🔗 URL      : https://github.com/Perfare/AssetStudio
-         📝 DESC     : AssetStudio is a tool for exploring, extracting and exporting assets and assetbundles.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      30. gpujs/gpu.js                                            | ⭐  15,517★ | 🍴    666 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/gpujs/gpu.js
-         📝 DESC     : GPU Accelerated JavaScript
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      31. glfw/glfw                                               | ⭐  15,412★ | 🍴  5,952 forks | 💻 C           
-         🔗 URL      : https://github.com/glfw/glfw
-         📝 DESC     : A multi-platform library for OpenGL, OpenGL ES, Vulkan, window and input
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      32. visgl/deck.gl                                           | ⭐  14,698★ | 🍴  2,290 forks | 💻 TypeScript  
-         🔗 URL      : https://github.com/visgl/deck.gl
-         📝 DESC     : WebGL2 powered visualization framework
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      33. SFTtech/openage                                         | ⭐  14,548★ | 🍴  1,280 forks | 💻 Python      
-         🔗 URL      : https://github.com/SFTtech/openage
-         📝 DESC     : Clone of the Age of Empires II engine 🚀
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      34. heroiclabs/nakama                                       | ⭐  13,581★ | 🍴  1,510 forks | 💻 Go          
-         🔗 URL      : https://github.com/heroiclabs/nakama
-         📝 DESC     : Scalable open-source game backend server: multiplayer, matchmaking, leaderboards, chat, and social features for games.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      35. hajimehoshi/ebiten                                      | ⭐  13,579★ | 🍴    801 forks | 💻 Go          
-         🔗 URL      : https://github.com/hajimehoshi/ebiten
-         📝 DESC     : A dead simple 2D game engine for Go
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      36. Unity-Technologies/UnityCsReference                     | ⭐  13,047★ | 🍴  2,550 forks | 💻 C#          
-         🔗 URL      : https://github.com/Unity-Technologies/UnityCsReference
-         📝 DESC     : Unity C# reference source code.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      37. JoeyDeVries/LearnOpenGL                                 | ⭐  12,673★ | 🍴  2,975 forks | 💻 C++         
-         🔗 URL      : https://github.com/JoeyDeVries/LearnOpenGL
-         📝 DESC     : Code repository of all OpenGL chapters from the book and its accompanying website https://learnopengl.com
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      38. antvis/G2                                               | ⭐  12,644★ | 🍴  1,662 forks | 💻 TypeScript  
-         🔗 URL      : https://github.com/antvis/G2
-         📝 DESC     : 📊 The concise and progressive visualization grammar.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      39. mapbox/mapbox-gl-js                                     | ⭐  12,453★ | 🍴  2,380 forks | 💻 TypeScript  
-         🔗 URL      : https://github.com/mapbox/mapbox-gl-js
-         📝 DESC     : Interactive, thoroughly customizable maps in the browser, powered by vector tiles and WebGL
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      40. Cysharp/UniTask                                         | ⭐  11,266★ | 🍴  1,009 forks | 💻 C#          
-         🔗 URL      : https://github.com/Cysharp/UniTask
-         📝 DESC     : Provides an efficient allocation free async/await integration for Unity.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      41. baldurk/renderdoc                                       | ⭐  11,225★ | 🍴  1,819 forks | 💻 C++         
-         🔗 URL      : https://github.com/baldurk/renderdoc
-         📝 DESC     : RenderDoc is a stand-alone graphics debugging tool.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      42. Orama-Interactive/Pixelorama                            | ⭐  10,823★ | 🍴    586 forks | 💻 GDScript    
-         🔗 URL      : https://github.com/Orama-Interactive/Pixelorama
-         📝 DESC     : Unleash your creativity with Pixelorama, a powerful and accessible open-source pixel art multitool. Whether you want to create sprites, tiles, animations, or just express yourself in the language of pixel art, this software will realize your pixel-perfect dreams with a vast toolbox of features. Available on Windows, Linux, macOS and the Web!
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      43. flame-engine/flame                                      | ⭐  10,800★ | 🍴  1,056 forks | 💻 Dart        
-         🔗 URL      : https://github.com/flame-engine/flame
-         📝 DESC     : A Flutter based game engine.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      44. openscad/openscad                                       | ⭐  10,505★ | 🍴  1,773 forks | 💻 C++         
-         🔗 URL      : https://github.com/openscad/openscad
-         📝 DESC     : OpenSCAD - The Programmers Solid 3D CAD Modeller
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      45. playcanvas/supersplat                                   | ⭐  10,458★ | 🍴  1,193 forks | 💻 TypeScript  
-         🔗 URL      : https://github.com/playcanvas/supersplat
-         📝 DESC     : 3D Gaussian Splat Editor
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      46. Tencent/xLua                                            | ⭐  10,208★ | 🍴  2,485 forks | 💻 C           
-         🔗 URL      : https://github.com/Tencent/xLua
-         📝 DESC     : xLua is a lua programming solution for  C# ( Unity, .Net, Mono) , it supports android, ios, windows, linux, osx, etc.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      47. cocos/cocos-engine                                      | ⭐   9,884★ | 🍴  2,144 forks | 💻 C++         
-         🔗 URL      : https://github.com/cocos/cocos-engine
-         📝 DESC     : Cocos simplifies game creation and distribution with Cocos Creator, a free, open-source, cross-platform game engine. Empowering millions of developers to create high-performance, engaging 2D/3D games and instant web entertainment.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      48. KytyPS5/KytyPS5                                         | ⭐   9,779★ | 🍴  1,241 forks | 💻 C++         
-         🔗 URL      : https://github.com/KytyPS5/KytyPS5
-         📝 DESC     : PlayStation 5 translation layer for Windows, Linux and macOS
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      49. NVIDIA/cuda-samples                                     | ⭐   9,724★ | 🍴  2,440 forks | 💻 C++         
-         🔗 URL      : https://github.com/NVIDIA/cuda-samples
-         📝 DESC     : Samples for CUDA Developers which demonstrates features in CUDA Toolkit
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      50. godotengine/godot-demo-projects                         | ⭐   9,706★ | 🍴  2,270 forks | 💻 GDScript    
-         🔗 URL      : https://github.com/godotengine/godot-demo-projects
-         📝 DESC     : Demonstration and Template Projects
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      51. Perfare/Il2CppDumper                                    | ⭐   9,552★ | 🍴  1,954 forks | 💻 C#          
-         🔗 URL      : https://github.com/Perfare/Il2CppDumper
-         📝 DESC     : Unity il2cpp reverse engineer
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      52. crynta/terax-ai                                         | ⭐   9,360★ | 🍴  1,034 forks | 💻 TypeScript  
-         🔗 URL      : https://github.com/crynta/terax-ai
-         📝 DESC     : Lightweight (7MB) terminal-first AI-native development environment
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      53. open-pencil/open-pencil                                 | ⭐   9,255★ | 🍴    963 forks | 💻 TypeScript  
-         🔗 URL      : https://github.com/open-pencil/open-pencil
-         📝 DESC     : AI-native design editor. Open-source Figma alternative.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      54. flightlessmango/MangoHud                                | ⭐   9,182★ | 🍴    440 forks | 💻 C           
-         🔗 URL      : https://github.com/flightlessmango/MangoHud
-         📝 DESC     : A Vulkan and OpenGL overlay for monitoring FPS, temperatures, CPU/GPU load and more.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      55. wasabeef/android-gpuimage                               | ⭐   9,155★ | 🍴  2,296 forks | 💻 Java        
-         🔗 URL      : https://github.com/wasabeef/android-gpuimage
-         📝 DESC     : Android filters based on OpenGL (idea from GPUImage for iOS)
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      56. olive-editor/olive                                      | ⭐   9,143★ | 🍴    625 forks | 💻 C++         
-         🔗 URL      : https://github.com/olive-editor/olive
-         📝 DESC     : Free open-source non-linear video editor
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      57. pygame/pygame                                           | ⭐   8,989★ | 🍴  4,263 forks | 💻 C           
-         🔗 URL      : https://github.com/pygame/pygame
-         📝 DESC     : 🐍🎮 pygame (the library) is a Free and Open Source python programming language library for making multimedia applications like games built on top of the excellent SDL library. C, Python, Native, OpenGL.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      58. jynew/jynew                                             | ⭐   8,988★ | 🍴  1,892 forks | 💻 C#          
-         🔗 URL      : https://github.com/jynew/jynew
-         📝 DESC     : JinYongLegend-like RPG Game Framework with full Modding support and 10+ hours playable samples of game.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      59. sebastianstarke/AI4Animation                            | ⭐   8,907★ | 🍴  1,139 forks | 💻 C++         
-         🔗 URL      : https://github.com/sebastianstarke/AI4Animation
-         📝 DESC     : Bringing Characters to Life with Computer Brains in Unity
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      60. BepInEx/BepInEx                                         | ⭐   8,901★ | 🍴    929 forks | 💻 C#          
-         🔗 URL      : https://github.com/BepInEx/BepInEx
-         📝 DESC     : Unity / XNA game patcher and plugin framework
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      61. love2d/love                                             | ⭐   8,875★ | 🍴    660 forks | 💻 C++         
-         🔗 URL      : https://github.com/love2d/love
-         📝 DESC     : LÖVE is an awesome 2D game framework for Lua.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      62. stride3d/stride                                         | ⭐   7,919★ | 🍴  1,181 forks | 💻 C#          
-         🔗 URL      : https://github.com/stride3d/stride
-         📝 DESC     : Stride (formerly Xenko), a free and open-source cross-platform C# game engine.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      63. ColinLeung-NiloCat/UnityURPToonLitShaderExample         | ⭐   7,828★ | 🍴  1,877 forks | 💻 ShaderLab   
-         🔗 URL      : https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample
-         📝 DESC     : A very simple toon lit shader example, for you to learn writing custom lit shader in Unity URP
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      64. hooke007/mpv_PlayKit                                    | ⭐   7,750★ | 🍴    234 forks | 💻 GLSL        
-         🔗 URL      : https://github.com/hooke007/mpv_PlayKit
-         📝 DESC     : 🔄 mpv player 播放器折腾记录 Windows conf | 中文注释配置 汉化文档 快速帮助入门 | mpv-lazy 懒人包 Win11 x64 config | 着色器 shader 滤镜 filter 整合方案
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      65. mob-sakai/UIEffect                                      | ⭐   7,696★ | 🍴    954 forks | 💻 C#          
-         🔗 URL      : https://github.com/mob-sakai/UIEffect
-         📝 DESC     : UIEffect is an open-source package that allows you to intuitively apply rich UI effects directly from the Inspector or via code. Combine various filters, such as grayscale, blur, and dissolve, to decorate your UI with a unique visual style!
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      66. sschmid/Entitas                                         | ⭐   7,679★ | 🍴  1,126 forks | 💻 C#          
-         🔗 URL      : https://github.com/sschmid/Entitas
-         📝 DESC     : Entitas is a super fast Entity Component System (ECS) Framework specifically made for C# and Unity
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      67. endless-sky/endless-sky                                 | ⭐   7,658★ | 🍴  1,342 forks | 💻 C++         
-         🔗 URL      : https://github.com/endless-sky/endless-sky
-         📝 DESC     : Space exploration, trading, and combat game.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      68. EmbarkStudios/rust-gpu                                  | ⭐   7,555★ | 🍴    246 forks | 💻 Rust        
-         🔗 URL      : https://github.com/EmbarkStudios/rust-gpu
-         📝 DESC     : 🐉 Making Rust a first-class language and ecosystem for GPU shaders 🚧
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      69. neuecc/UniRx                                            | ⭐   7,322★ | 🍴    874 forks | 💻 C#          
-         🔗 URL      : https://github.com/neuecc/UniRx
-         📝 DESC     : Reactive Extensions for Unity
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      70. turanszkij/WickedEngine                                 | ⭐   7,316★ | 🍴    796 forks | 💻 C++         
-         🔗 URL      : https://github.com/turanszkij/WickedEngine
-         📝 DESC     : 3D engine with modern graphics
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      71. htdt/godogen                                            | ⭐   7,206★ | 🍴    665 forks | 💻 Python      
-         🔗 URL      : https://github.com/htdt/godogen
-         📝 DESC     : Autonomous game development with Claude Code and Codex
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      72. MengTo/threeui                                          | ⭐   6,834★ | 🍴    646 forks | 💻 HTML        
-         🔗 URL      : https://github.com/MengTo/threeui
-         📝 DESC     : Open-source ThreeUI Community catalog with live interactive components and complete Community source.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      73. Facepunch/sbox-public                                   | ⭐   6,501★ | 🍴    693 forks | 💻 C#          
-         🔗 URL      : https://github.com/Facepunch/sbox-public
-         📝 DESC     : s&box is a modern game engine, built on Valve's Source 2 and the latest .NET technology, it provides a modern intuitive editor for creating games
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      74. karlstav/cava                                           | ⭐   6,497★ | 🍴    300 forks | 💻 C           
-         🔗 URL      : https://github.com/karlstav/cava
-         📝 DESC     : Cross-platform Audio Visualizer
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      75. vasturiano/3d-force-graph                               | ⭐   6,491★ | 🍴  1,027 forks | 💻 HTML        
-         🔗 URL      : https://github.com/vasturiano/3d-force-graph
-         📝 DESC     : 3D force-directed graph component using ThreeJS/WebGL
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      76. koharu-rs/koharu                                        | ⭐   6,488★ | 🍴    466 forks | 💻 Rust        
-         🔗 URL      : https://github.com/koharu-rs/koharu
-         📝 DESC     : ML-powered manga translator, written in Rust.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      77. melonjs/melonJS                                         | ⭐   6,420★ | 🍴    663 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/melonjs/melonJS
-         📝 DESC     : A modern & fully featured HTML5 game engine (2D & 3D) for JavaScript/TypeScript, with WebGL/WebGPU rendering, built-in physics, Tiled map & glTF support and WebAudio.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      78. defold/defold                                           | ⭐   6,417★ | 🍴    465 forks | 💻 C++         
-         🔗 URL      : https://github.com/defold/defold
-         📝 DESC     : Defold is a completely free to use game engine for development of desktop, console, mobile and web games.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      79. michidk/Unity-Script-Collection                         | ⭐   6,391★ | 🍴    652 forks | 💻 CSS         
-         🔗 URL      : https://github.com/michidk/Unity-Script-Collection
-         📝 DESC     : A maintained collection of useful & free unity scripts / library's / plugins and extensions
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      80. MirrorNetworking/Mirror                                 | ⭐   6,374★ | 🍴    871 forks | 💻 C#          
-         🔗 URL      : https://github.com/MirrorNetworking/Mirror
-         📝 DESC     : #1 Open Source Unity Networking Library
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      81. Tencent/puerts                                          | ⭐   6,239★ | 🍴    869 forks | 💻 C++         
-         🔗 URL      : https://github.com/Tencent/puerts
-         📝 DESC     : PUER(普洱) Typescript. Let's write your game in UE or Unity with TypeScript.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      82. Redot-Engine/redot-engine                               | ⭐   6,148★ | 🍴    352 forks | 💻 C++         
-         🔗 URL      : https://github.com/Redot-Engine/redot-engine
-         📝 DESC     : Redot Engine – Multi-platform 2D and 3D game engine
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      83. fschutt/azul                                            | ⭐   6,131★ | 🍴    228 forks | 💻 Rust        
-         🔗 URL      : https://github.com/fschutt/azul
-         📝 DESC     : Desktop GUI Framework
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      84. candycat1992/Unity_Shaders_Book                         | ⭐   6,124★ | 🍴  1,658 forks | 💻 ShaderLab   
-         🔗 URL      : https://github.com/candycat1992/Unity_Shaders_Book
-         📝 DESC     : :book: 书籍《Unity Shader入门精要》源代码
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      85. dialogic-godot/dialogic                                 | ⭐   6,114★ | 🍴    365 forks | 💻 GDScript    
-         🔗 URL      : https://github.com/dialogic-godot/dialogic
-         📝 DESC     : 💬 Create Dialogs, Visual Novels, RPGs, and manage Characters with Godot to create your Game!
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      86. UnityTechnologies/open-project-1                        | ⭐   6,111★ | 🍴  2,055 forks | 💻 C#          
-         🔗 URL      : https://github.com/UnityTechnologies/open-project-1
-         📝 DESC     : Unity Open Project #1: Chop Chop
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      87. microsoft/MixedRealityToolkit-Unity                     | ⭐   6,077★ | 🍴  2,077 forks | 💻 C#          
-         🔗 URL      : https://github.com/microsoft/MixedRealityToolkit-Unity
-         📝 DESC     : This repository is for the legacy Mixed Reality Toolkit (MRTK) v2.  For the latest version of the MRTK please visit https://github.com/MixedRealityToolkit/MixedRealityToolkit-Unity
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      88. mob-sakai/ParticleEffectForUGUI                         | ⭐   6,028★ | 🍴    770 forks | 💻 C#          
-         🔗 URL      : https://github.com/mob-sakai/ParticleEffectForUGUI
-         📝 DESC     : Render particle effect in UnityUI(uGUI). Maskable, sortable, and no extra Camera/RenderTexture/Canvas.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      89. RodZill4/material-maker                                 | ⭐   6,020★ | 🍴    392 forks | 💻 GDScript    
-         🔗 URL      : https://github.com/RodZill4/material-maker
-         📝 DESC     : A procedural textures authoring and 3D model painting tool based on the Godot game engine
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      90. shuding/cobe                                            | ⭐   6,003★ | 🍴    354 forks | 💻 TypeScript  
-         🔗 URL      : https://github.com/shuding/cobe
-         📝 DESC     : 5KB WebGL globe lib.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      91. tranek/GASDocumentation                                 | ⭐   5,980★ | 🍴  1,005 forks | 💻 C++         
-         🔗 URL      : https://github.com/tranek/GASDocumentation
-         📝 DESC     : My understanding of Unreal Engine 5's GameplayAbilitySystem plugin with a simple multiplayer sample project.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      92. hiloteam/Hilo                                           | ⭐   5,938★ | 🍴    845 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/hiloteam/Hilo
-         📝 DESC     : A Cross-end HTML5 Game development solution
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      93. KhronosGroup/MoltenVK                                   | ⭐   5,905★ | 🍴    596 forks | 💻 Objective-C++
-         🔗 URL      : https://github.com/KhronosGroup/MoltenVK
-         📝 DESC     : MoltenVK is a Vulkan Portability implementation. It layers a subset of the high-performance, industry-standard Vulkan graphics and compute API over Apple's Metal graphics framework, enabling Vulkan applications to run on macOS, iOS and tvOS.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      94. galacean/engine                                         | ⭐   5,905★ | 🍴    411 forks | 💻 TypeScript  
-         🔗 URL      : https://github.com/galacean/engine
-         📝 DESC     : A typescript interactive engine, support 2D, 3D, animation, physics, built on WebGL and glTF.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      95. godotengine/godot-docs                                  | ⭐   5,850★ | 🍴  3,794 forks | 💻 reStructuredText
-         🔗 URL      : https://github.com/godotengine/godot-docs
-         📝 DESC     : Godot Engine official documentation
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      96. shader-slang/slang                                      | ⭐   5,760★ | 🍴    516 forks | 💻 C++         
-         🔗 URL      : https://github.com/shader-slang/slang
-         📝 DESC     : Making it easier to work with shaders
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      97. memononen/nanovg                                        | ⭐   5,730★ | 🍴    809 forks | 💻 C           
-         🔗 URL      : https://github.com/memononen/nanovg
-         📝 DESC     : Antialiased 2D vector drawing library on top of OpenGL for UI and visualizations.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      98. toji/gl-matrix                                          | ⭐   5,702★ | 🍴    731 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/toji/gl-matrix
-         📝 DESC     : Javascript Matrix and Vector library for High Performance WebGL apps
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-      99. ConfettiFX/The-Forge                                    | ⭐   5,699★ | 🍴    581 forks | 💻 C++         
-         🔗 URL      : https://github.com/ConfettiFX/The-Forge
-         📝 DESC     : The Forge Cross-Platform Framework PC Windows, Steamdeck (native), Ray Tracing, macOS / iOS, Android, XBOX, PS4, PS5, Switch, Quest 2
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     100. potree/potree                                           | ⭐   5,651★ | 🍴  1,364 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/potree/potree
-         📝 DESC     : WebGL point cloud viewer for large datasets
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     101. regl-project/regl                                       | ⭐   5,589★ | 🍴    326 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/regl-project/regl
-         📝 DESC     : 👑 Functional WebGL
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     102. xfangfang/wiliwili                                      | ⭐   5,588★ | 🍴    281 forks | 💻 C++         
-         🔗 URL      : https://github.com/xfangfang/wiliwili
-         📝 DESC     : 第三方B站客户端，目前可以运行在PC全平台、PSVita、PS4 、Xbox 和 Nintendo Switch上
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     103. gpuweb/gpuweb                                           | ⭐   5,518★ | 🍴    387 forks | 💻 Bikeshed    
-         🔗 URL      : https://github.com/gpuweb/gpuweb
-         📝 DESC     : Where the GPU for the Web work happens!
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     104. liangxiegame/QFramework                                 | ⭐   5,492★ | 🍴    863 forks | 💻 C#          
-         🔗 URL      : https://github.com/liangxiegame/QFramework
-         📝 DESC     : Godot/Unity3D System Design Architecture
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     105. LWJGL/lwjgl3                                            | ⭐   5,479★ | 🍴    722 forks | 💻 Java        
-         🔗 URL      : https://github.com/LWJGL/lwjgl3
-         📝 DESC     : LWJGL is a Java library that enables cross-platform access to popular native APIs useful in the development of graphics (OpenGL, Vulkan, bgfx), audio (OpenAL, Opus), parallel computing (OpenCL, CUDA) and XR (OpenVR, LibOVR, OpenXR) applications.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     106. shader-effects-inc/shaders                              | ⭐   5,432★ | 🍴    248 forks | 💻 TypeScript  
-         🔗 URL      : https://github.com/shader-effects-inc/shaders
-         📝 DESC     : WebGPU components for React, Vue, Svelte, Solid, JS & Framer
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     107. ThrowTheSwitch/Unity                                    | ⭐   5,430★ | 🍴  1,139 forks | 💻 C           
-         🔗 URL      : https://github.com/ThrowTheSwitch/Unity
-         📝 DESC     : Simple unit testing for C
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     108. CharlesPikachu/Games                                    | ⭐   5,423★ | 🍴  2,299 forks | 💻 Python      
-         🔗 URL      : https://github.com/CharlesPikachu/Games
-         📝 DESC     : Games: Create interesting games in pure python.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     109. KhronosGroup/Vulkan-Samples                             | ⭐   5,404★ | 🍴    844 forks | 💻 C++         
-         🔗 URL      : https://github.com/KhronosGroup/Vulkan-Samples
-         📝 DESC     : One stop solution for all Vulkan samples
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     110. gfx-rs/gfx                                              | ⭐   5,395★ | 🍴    528 forks | 💻 Rust        
-         🔗 URL      : https://github.com/gfx-rs/gfx
-         📝 DESC     : [maintenance mode] A low-overhead Vulkan-like GPU API for Rust.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     111. spritejs/spritejs                                       | ⭐   5,391★ | 🍴    325 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/spritejs/spritejs
-         📝 DESC     : A cross platform high-performance graphics system.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     112. ssloy/tinyraytracer                                     | ⭐   5,389★ | 🍴    354 forks | 💻 C++         
-         🔗 URL      : https://github.com/ssloy/tinyraytracer
-         📝 DESC     : A brief computer graphics / rendering course
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     113. patriciogonzalezvivo/glslViewer                         | ⭐   5,348★ | 🍴    374 forks | 💻 C++         
-         🔗 URL      : https://github.com/patriciogonzalezvivo/glslViewer
-         📝 DESC     : Console-based GLSL Sandbox for 2D/3D shaders
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     114. Doikki/DKVideoPlayer                                    | ⭐   5,334★ | 🍴  1,071 forks | 💻 Java        
-         🔗 URL      : https://github.com/Doikki/DKVideoPlayer
-         📝 DESC     : Android Video Player. 安卓视频播放器，封装MediaPlayer、ExoPlayer、IjkPlayer。模仿抖音并实现预加载，列表播放，悬浮播放，广告播放，弹幕，视频水印，视频滤镜
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     115. jagenjo/webglstudio.js                                  | ⭐   5,329★ | 🍴    616 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/jagenjo/webglstudio.js
-         📝 DESC     : A full open source 3D graphics editor in the browser, with scene editor, coding pad, graph editor, virtual file system, and many features more.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     116. godot-rust/gdext                                        | ⭐   5,324★ | 🍴    324 forks | 💻 Rust        
-         🔗 URL      : https://github.com/godot-rust/gdext
-         📝 DESC     : Rust bindings for Godot 4
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     117. OpenSC2K/OpenSC2K                                       | ⭐   5,320★ | 🍴    124 forks | 💻 Rust        
-         🔗 URL      : https://github.com/OpenSC2K/OpenSC2K
-         📝 DESC     : OpenSC2K - Open Source remake of Sim City 2000 using rust and godot. Available for macOS, Windows and Linux
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     118. Cysharp/ZLinq                                           | ⭐   5,294★ | 🍴    217 forks | 💻 C#          
-         🔗 URL      : https://github.com/Cysharp/ZLinq
-         📝 DESC     : Zero allocation LINQ with LINQ to Span, LINQ to SIMD, and LINQ to Tree (FileSystem, JSON, GameObject, etc.) for all .NET platforms and Unity, Godot.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     119. panda3d/panda3d                                         | ⭐   5,260★ | 🍴    899 forks | 💻 C++         
-         🔗 URL      : https://github.com/panda3d/panda3d
-         📝 DESC     : Powerful, mature open-source cross-platform game engine for Python and C++, developed by Disney and CMU
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     120. dotnet/Silk.NET                                         | ⭐   5,246★ | 🍴    482 forks | 💻 C#          
-         🔗 URL      : https://github.com/dotnet/Silk.NET
-         📝 DESC     : The high-speed OpenGL, OpenCL, OpenAL, OpenXR, GLFW, SDL, Vulkan, Assimp, WebGPU, and DirectX bindings library your mother warned you about.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     121. raysan5/raygui                                          | ⭐   5,236★ | 🍴    405 forks | 💻 C           
-         🔗 URL      : https://github.com/raysan5/raygui
-         📝 DESC     : A simple and easy-to-use immediate-mode gui library
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     122. dbrizov/NaughtyAttributes                               | ⭐   5,228★ | 🍴    506 forks | 💻 C#          
-         🔗 URL      : https://github.com/dbrizov/NaughtyAttributes
-         📝 DESC     : Attribute Extensions for Unity
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     123. Orillusion/orillusion                                   | ⭐   5,223★ | 🍴    599 forks | 💻 TypeScript  
-         🔗 URL      : https://github.com/Orillusion/orillusion
-         📝 DESC     : Orillusion is a pure Web3D rendering engine which is fully developed based on the WebGPU standard.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     124. vulkano-rs/vulkano                                      | ⭐   5,178★ | 🍴    475 forks | 💻 Rust        
-         🔗 URL      : https://github.com/vulkano-rs/vulkano
-         📝 DESC     : Safe and rich Rust wrapper around the Vulkan API
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     125. Unity-Technologies/FPSSample                            | ⭐   5,139★ | 🍴  1,870 forks | 💻 C#          
-         🔗 URL      : https://github.com/Unity-Technologies/FPSSample
-         📝 DESC     : A first person multiplayer shooter example project in Unity
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     126. natario1/CameraView                                     | ⭐   5,135★ | 🍴    985 forks | 💻 Java        
-         🔗 URL      : https://github.com/natario1/CameraView
-         📝 DESC     : 📸 A well documented, high-level Android interface that makes capturing pictures and videos easy, addressing all of the common issues and needs. Real-time filters, gestures, watermarks, frame processing, RAW, output of any size.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     127. turbulenz/turbulenz_engine                              | ⭐   5,122★ | 🍴    521 forks | 💻 TypeScript  
-         🔗 URL      : https://github.com/turbulenz/turbulenz_engine
-         📝 DESC     : Turbulenz is a modular 3D and 2D game framework for making HTML5 powered games for browsers, desktops and mobile devices.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     128. RandyGaul/cute_headers                                  | ⭐   5,093★ | 🍴    315 forks | 💻 C           
-         🔗 URL      : https://github.com/RandyGaul/cute_headers
-         📝 DESC     : Collection of cross-platform one-file C/C++ libraries with no dependencies, primarily used for games
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     129. DavidHDev/canvas-ui                                     | ⭐   5,083★ | 🍴    257 forks | 💻 TypeScript  
-         🔗 URL      : https://github.com/DavidHDev/canvas-ui
-         📝 DESC     : A library of creative canvas components. Real HTML with WebGL effects running over it. React, Vue, Svelte, vanilla.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     130. ultralight-ux/Ultralight                                | ⭐   5,027★ | 🍴    204 forks | 💻 CMake       
-         🔗 URL      : https://github.com/ultralight-ux/Ultralight
-         📝 DESC     : Lightweight, high-performance HTML renderer for game and app developers.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     131. gfxfundamentals/webgl-fundamentals                      | ⭐   5,026★ | 🍴    687 forks | 💻 HTML        
-         🔗 URL      : https://github.com/gfxfundamentals/webgl-fundamentals
-         📝 DESC     : WebGL lessons that start with the basics
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     132. spring/spring                                           | ⭐   4,027★ | 🍴    865 forks | 💻 C++         
-         🔗 URL      : https://github.com/spring/spring
-         📝 DESC     : A powerful free cross-platform RTS game engine. - Report issues at https://springrts.com/mantis/
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     133. cjcliffe/CubicSDR                                       | ⭐   2,300★ | 🍴    268 forks | 💻 C++         
-         🔗 URL      : https://github.com/cjcliffe/CubicSDR
-         📝 DESC     : Cross-Platform Software-Defined Radio Application
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     134. google/neuroglancer                                     | ⭐   1,567★ | 🍴    404 forks | 💻 TypeScript  
-         🔗 URL      : https://github.com/google/neuroglancer
-         📝 DESC     : WebGL-based viewer for volumetric data
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     135. 3dmol/3Dmol.js                                          | ⭐   1,031★ | 🍴    230 forks | 💻 Jupyter Notebook
-         🔗 URL      : https://github.com/3dmol/3Dmol.js
-         📝 DESC     : WebGL accelerated JavaScript molecular graphics library
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     136. Noniv/snowflow_demo                                     | ⭐     595★ | 🍴    156 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/Noniv/snowflow_demo
-         📝 DESC     : A real-time procedural snow rendering demo built with WebGPU, Babylon.js and hand-written WGSL. Features GPU-generated terrain, snow deformation, procedural characters, cloth, surf wakes, water spells, atmosphere and post-processing—without textures, meshes, HDRIs or animation assets.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     137. tuzhechen2005/opus-video-skills                         | ⭐     327★ | 🍴     28 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/tuzhechen2005/opus-video-skills
-         📝 DESC     : Video-making skills for Claude Opus 5.5 in Claude Code — every frame and note generated in code, one skill per style: hand-painted animation, kinetic-typography reels | 用 Claude Opus 5.5 以代码制作视频的技能合集
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     138. wheresryan22/anatomy-community                          | ⭐      78★ | 🍴     45 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/wheresryan22/anatomy-community
-         📝 DESC     : Figures the community made with Anatomy, each rebuilt from source in a locked sandbox. Submit yours through your agent or a Gist.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     139. Rodneymondela/ventilation-simulator                     | ⭐       4★ | 🍴      1 forks | 💻 TypeScript  
-         🔗 URL      : https://github.com/Rodneymondela/ventilation-simulator
-         📝 DESC     : Interactive mine ventilation network simulator (Ventsim-inspired): Atkinson resistance + Hardy Cross solver with a 2D/3D editor, staging, fans, regulators, NVP and contaminant transport.
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-
-     140. Akshay-Katiyar/UI-and-UX-1st                            | ⭐       1★ | 🍴      0 forks | 💻 JavaScript  
-         🔗 URL      : https://github.com/Akshay-Katiyar/UI-and-UX-1st
-         📝 DESC     : UI and UX 1st - High-performance interactive 3D WebGL, scrollytelling and design system experience
-         ⚙️ WORKFLOW : Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.
-```
+### 1. [godotengine/godot](https://github.com/godotengine/godot)
+
+- ⭐ **Stars**: 119,031★ &nbsp;|&nbsp; 🍴 **Forks**: 27,198 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/godotengine/godot](https://github.com/godotengine/godot)
+- 📝 **Description**: Godot Engine – Multi-platform 2D and 3D game engine
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 2. [mrdoob/three.js](https://github.com/mrdoob/three.js)
+
+- ⭐ **Stars**: 116,893★ &nbsp;|&nbsp; 🍴 **Forks**: 36,717 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/mrdoob/three.js](https://github.com/mrdoob/three.js)
+- 📝 **Description**: JavaScript 3D Library.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 3. [bilawalsidhu/gods-eye-view](https://github.com/bilawalsidhu/gods-eye-view)
+
+- ⭐ **Stars**: 59,813★ &nbsp;|&nbsp; 🍴 **Forks**: 11,650 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/bilawalsidhu/gods-eye-view](https://github.com/bilawalsidhu/gods-eye-view)
+- 📝 **Description**: A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 4. [bevyengine/bevy](https://github.com/bevyengine/bevy)
+
+- ⭐ **Stars**: 49,257★ &nbsp;|&nbsp; 🍴 **Forks**: 4,971 &nbsp;|&nbsp; 💻 **Language**: `Rust`
+- 🔗 **Repository URL**: [https://github.com/bevyengine/bevy](https://github.com/bevyengine/bevy)
+- 📝 **Description**: A refreshingly simple data-driven game engine built in Rust
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 5. [pixijs/pixijs](https://github.com/pixijs/pixijs)
+
+- ⭐ **Stars**: 48,459★ &nbsp;|&nbsp; 🍴 **Forks**: 5,105 &nbsp;|&nbsp; 💻 **Language**: `TypeScript`
+- 🔗 **Repository URL**: [https://github.com/pixijs/pixijs](https://github.com/pixijs/pixijs)
+- 📝 **Description**: The HTML5 Creation Engine: Create beautiful digital content with the fastest, most flexible 2D WebGL renderer.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 6. [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5)
+
+- ⭐ **Stars**: 48,024★ &nbsp;|&nbsp; 🍴 **Forks**: 4,511 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5)
+- 📝 **Description**: Tool for automatic PS5 executables porting to Linux and Windows
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 7. [phaserjs/phaser](https://github.com/phaserjs/phaser)
+
+- ⭐ **Stars**: 40,557★ &nbsp;|&nbsp; 🍴 **Forks**: 7,184 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/phaserjs/phaser](https://github.com/phaserjs/phaser)
+- 📝 **Description**: Phaser is a fun, free and fast 2D game framework for making HTML5 games for desktop and mobile web browsers, supporting Canvas and WebGL rendering.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 8. [kovidgoyal/kitty](https://github.com/kovidgoyal/kitty)
+
+- ⭐ **Stars**: 35,420★ &nbsp;|&nbsp; 🍴 **Forks**: 1,573 &nbsp;|&nbsp; 💻 **Language**: `Python`
+- 🔗 **Repository URL**: [https://github.com/kovidgoyal/kitty](https://github.com/kovidgoyal/kitty)
+- 📝 **Description**: If you live in the terminal, kitty is made for you! Cross-platform, fast, feature-rich, GPU based.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 9. [op7418/guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill)
+
+- ⭐ **Stars**: 28,604★ &nbsp;|&nbsp; 🍴 **Forks**: 1,975 &nbsp;|&nbsp; 💻 **Language**: `HTML`
+- 🔗 **Repository URL**: [https://github.com/op7418/guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill)
+- 📝 **Description**: AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image prompts, social covers, and a WebGL/low-power presentation runtime.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 10. [4ian/GDevelop](https://github.com/4ian/GDevelop)
+
+- ⭐ **Stars**: 28,014★ &nbsp;|&nbsp; 🍴 **Forks**: 1,620 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/4ian/GDevelop](https://github.com/4ian/GDevelop)
+- 📝 **Description**: 🎮 Open-source, cross-platform 2D/3D/multiplayer game engine designed for everyone.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 11. [BabylonJS/Babylon.js](https://github.com/BabylonJS/Babylon.js)
+
+- ⭐ **Stars**: 26,224★ &nbsp;|&nbsp; 🍴 **Forks**: 3,711 &nbsp;|&nbsp; 💻 **Language**: `TypeScript`
+- 🔗 **Repository URL**: [https://github.com/BabylonJS/Babylon.js](https://github.com/BabylonJS/Babylon.js)
+- 📝 **Description**: Babylon.js is a powerful, beautiful, simple, and open game and rendering engine packed into a friendly JavaScript framework.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 12. [ssloy/tinyrenderer](https://github.com/ssloy/tinyrenderer)
+
+- ⭐ **Stars**: 24,450★ &nbsp;|&nbsp; 🍴 **Forks**: 2,311 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/ssloy/tinyrenderer](https://github.com/ssloy/tinyrenderer)
+- 📝 **Description**: A brief computer graphics / rendering course
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 13. [k4yt3x/video2x](https://github.com/k4yt3x/video2x)
+
+- ⭐ **Stars**: 22,397★ &nbsp;|&nbsp; 🍴 **Forks**: 1,954 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/k4yt3x/video2x](https://github.com/k4yt3x/video2x)
+- 📝 **Description**: A machine learning-based video super resolution and frame interpolation framework. Est. Hack the Valley II, 2018.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 14. [xtermjs/xterm.js](https://github.com/xtermjs/xterm.js)
+
+- ⭐ **Stars**: 21,296★ &nbsp;|&nbsp; 🍴 **Forks**: 2,025 &nbsp;|&nbsp; 💻 **Language**: `TypeScript`
+- 🔗 **Repository URL**: [https://github.com/xtermjs/xterm.js](https://github.com/xtermjs/xterm.js)
+- 📝 **Description**: A terminal for the web
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 15. [wheresryan22/anatomy](https://github.com/wheresryan22/anatomy)
+
+- ⭐ **Stars**: 20,316★ &nbsp;|&nbsp; 🍴 **Forks**: 1,609 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/wheresryan22/anatomy](https://github.com/wheresryan22/anatomy)
+- 📝 **Description**: An agent skill for creating detailed, interactive isometric illustrations of real-world machines and complex systems. Generates polished SVGs with optional WebGL shaders and 3D effects.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 16. [lettier/3d-game-shaders-for-beginners](https://github.com/lettier/3d-game-shaders-for-beginners)
+
+- ⭐ **Stars**: 19,987★ &nbsp;|&nbsp; 🍴 **Forks**: 1,484 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/lettier/3d-game-shaders-for-beginners](https://github.com/lettier/3d-game-shaders-for-beginners)
+- 📝 **Description**: 🎮 A step-by-step guide to implementing SSAO, depth of field, lighting, normal mapping, and more for your 3D game.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 17. [Unity-Technologies/ml-agents](https://github.com/Unity-Technologies/ml-agents)
+
+- ⭐ **Stars**: 19,793★ &nbsp;|&nbsp; 🍴 **Forks**: 4,515 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/Unity-Technologies/ml-agents](https://github.com/Unity-Technologies/ml-agents)
+- 📝 **Description**: The Unity Machine Learning Agents Toolkit (ML-Agents) is an open-source project that enables games and simulations to serve as environments for training intelligent agents using deep reinforcement learning and imitation learning.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 18. [img2threejs/img2threejs](https://github.com/img2threejs/img2threejs)
+
+- ⭐ **Stars**: 19,203★ &nbsp;|&nbsp; 🍴 **Forks**: 1,609 &nbsp;|&nbsp; 💻 **Language**: `Python`
+- 🔗 **Repository URL**: [https://github.com/img2threejs/img2threejs](https://github.com/img2threejs/img2threejs)
+- 📝 **Description**: Rebuild the object in a reference image as a code-only, procedural, quality-gated, animation-ready Three.js model. Token-efficient image-to-3D.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 19. [plotly/plotly.py](https://github.com/plotly/plotly.py)
+
+- ⭐ **Stars**: 18,853★ &nbsp;|&nbsp; 🍴 **Forks**: 2,882 &nbsp;|&nbsp; 💻 **Language**: `Python`
+- 🔗 **Repository URL**: [https://github.com/plotly/plotly.py](https://github.com/plotly/plotly.py)
+- 📝 **Description**: The interactive graphing library for Python :sparkles:
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 20. [gfx-rs/wgpu](https://github.com/gfx-rs/wgpu)
+
+- ⭐ **Stars**: 18,373★ &nbsp;|&nbsp; 🍴 **Forks**: 1,570 &nbsp;|&nbsp; 💻 **Language**: `Rust`
+- 🔗 **Repository URL**: [https://github.com/gfx-rs/wgpu](https://github.com/gfx-rs/wgpu)
+- 📝 **Description**: A cross-platform, safe, pure-Rust graphics API.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 21. [plotly/plotly.js](https://github.com/plotly/plotly.js)
+
+- ⭐ **Stars**: 18,369★ &nbsp;|&nbsp; 🍴 **Forks**: 2,052 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/plotly/plotly.js](https://github.com/plotly/plotly.js)
+- 📝 **Description**: Open-source JavaScript charting library behind Plotly and Dash
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 22. [doitsujin/dxvk](https://github.com/doitsujin/dxvk)
+
+- ⭐ **Stars**: 18,362★ &nbsp;|&nbsp; 🍴 **Forks**: 1,312 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/doitsujin/dxvk](https://github.com/doitsujin/dxvk)
+- 📝 **Description**: Vulkan-based implementation of D3D8, 9, 10 and 11 for Linux / Wine
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 23. [aframevr/aframe](https://github.com/aframevr/aframe)
+
+- ⭐ **Stars**: 17,671★ &nbsp;|&nbsp; 🍴 **Forks**: 4,405 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/aframevr/aframe](https://github.com/aframevr/aframe)
+- 📝 **Description**: :a: Web framework for building virtual reality experiences.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 24. [OpenRA/OpenRA](https://github.com/OpenRA/OpenRA)
+
+- ⭐ **Stars**: 17,644★ &nbsp;|&nbsp; 🍴 **Forks**: 3,093 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/OpenRA/OpenRA](https://github.com/OpenRA/OpenRA)
+- 📝 **Description**: Open Source real-time strategy game engine for early Westwood games such as Command & Conquer: Red Alert written in C# using SDL and OpenGL. Runs on Windows, Linux, *BSD and Mac OS X.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 25. [bkaradzic/bgfx](https://github.com/bkaradzic/bgfx)
+
+- ⭐ **Stars**: 17,588★ &nbsp;|&nbsp; 🍴 **Forks**: 2,155 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/bkaradzic/bgfx](https://github.com/bkaradzic/bgfx)
+- 📝 **Description**: Cross-platform, graphics API agnostic, "Bring Your Own Engine/Framework" style rendering library.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 26. [playcanvas/engine](https://github.com/playcanvas/engine)
+
+- ⭐ **Stars**: 17,133★ &nbsp;|&nbsp; 🍴 **Forks**: 2,045 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/playcanvas/engine](https://github.com/playcanvas/engine)
+- 📝 **Description**: Powerful web graphics runtime built on WebGL, WebGPU, WebXR and glTF
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 27. [OpenRCT2/OpenRCT2](https://github.com/OpenRCT2/OpenRCT2)
+
+- ⭐ **Stars**: 16,498★ &nbsp;|&nbsp; 🍴 **Forks**: 1,958 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/OpenRCT2/OpenRCT2](https://github.com/OpenRCT2/OpenRCT2)
+- 📝 **Description**: An open source re-implementation of RollerCoaster Tycoon 2 🎢
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 28. [CesiumGS/cesium](https://github.com/CesiumGS/cesium)
+
+- ⭐ **Stars**: 15,881★ &nbsp;|&nbsp; 🍴 **Forks**: 3,892 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/CesiumGS/cesium](https://github.com/CesiumGS/cesium)
+- 📝 **Description**: An open-source JavaScript library for world-class 3D globes and maps :earth_americas:
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 29. [Perfare/AssetStudio](https://github.com/Perfare/AssetStudio)
+
+- ⭐ **Stars**: 15,588★ &nbsp;|&nbsp; 🍴 **Forks**: 2,995 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/Perfare/AssetStudio](https://github.com/Perfare/AssetStudio)
+- 📝 **Description**: AssetStudio is a tool for exploring, extracting and exporting assets and assetbundles.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 30. [gpujs/gpu.js](https://github.com/gpujs/gpu.js)
+
+- ⭐ **Stars**: 15,517★ &nbsp;|&nbsp; 🍴 **Forks**: 666 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/gpujs/gpu.js](https://github.com/gpujs/gpu.js)
+- 📝 **Description**: GPU Accelerated JavaScript
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 31. [glfw/glfw](https://github.com/glfw/glfw)
+
+- ⭐ **Stars**: 15,412★ &nbsp;|&nbsp; 🍴 **Forks**: 5,952 &nbsp;|&nbsp; 💻 **Language**: `C`
+- 🔗 **Repository URL**: [https://github.com/glfw/glfw](https://github.com/glfw/glfw)
+- 📝 **Description**: A multi-platform library for OpenGL, OpenGL ES, Vulkan, window and input
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 32. [visgl/deck.gl](https://github.com/visgl/deck.gl)
+
+- ⭐ **Stars**: 14,698★ &nbsp;|&nbsp; 🍴 **Forks**: 2,290 &nbsp;|&nbsp; 💻 **Language**: `TypeScript`
+- 🔗 **Repository URL**: [https://github.com/visgl/deck.gl](https://github.com/visgl/deck.gl)
+- 📝 **Description**: WebGL2 powered visualization framework
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 33. [SFTtech/openage](https://github.com/SFTtech/openage)
+
+- ⭐ **Stars**: 14,548★ &nbsp;|&nbsp; 🍴 **Forks**: 1,280 &nbsp;|&nbsp; 💻 **Language**: `Python`
+- 🔗 **Repository URL**: [https://github.com/SFTtech/openage](https://github.com/SFTtech/openage)
+- 📝 **Description**: Clone of the Age of Empires II engine 🚀
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 34. [heroiclabs/nakama](https://github.com/heroiclabs/nakama)
+
+- ⭐ **Stars**: 13,581★ &nbsp;|&nbsp; 🍴 **Forks**: 1,510 &nbsp;|&nbsp; 💻 **Language**: `Go`
+- 🔗 **Repository URL**: [https://github.com/heroiclabs/nakama](https://github.com/heroiclabs/nakama)
+- 📝 **Description**: Scalable open-source game backend server: multiplayer, matchmaking, leaderboards, chat, and social features for games.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 35. [hajimehoshi/ebiten](https://github.com/hajimehoshi/ebiten)
+
+- ⭐ **Stars**: 13,579★ &nbsp;|&nbsp; 🍴 **Forks**: 801 &nbsp;|&nbsp; 💻 **Language**: `Go`
+- 🔗 **Repository URL**: [https://github.com/hajimehoshi/ebiten](https://github.com/hajimehoshi/ebiten)
+- 📝 **Description**: A dead simple 2D game engine for Go
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 36. [Unity-Technologies/UnityCsReference](https://github.com/Unity-Technologies/UnityCsReference)
+
+- ⭐ **Stars**: 13,047★ &nbsp;|&nbsp; 🍴 **Forks**: 2,550 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/Unity-Technologies/UnityCsReference](https://github.com/Unity-Technologies/UnityCsReference)
+- 📝 **Description**: Unity C# reference source code.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 37. [JoeyDeVries/LearnOpenGL](https://github.com/JoeyDeVries/LearnOpenGL)
+
+- ⭐ **Stars**: 12,673★ &nbsp;|&nbsp; 🍴 **Forks**: 2,975 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/JoeyDeVries/LearnOpenGL](https://github.com/JoeyDeVries/LearnOpenGL)
+- 📝 **Description**: Code repository of all OpenGL chapters from the book and its accompanying website https://learnopengl.com
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 38. [antvis/G2](https://github.com/antvis/G2)
+
+- ⭐ **Stars**: 12,644★ &nbsp;|&nbsp; 🍴 **Forks**: 1,662 &nbsp;|&nbsp; 💻 **Language**: `TypeScript`
+- 🔗 **Repository URL**: [https://github.com/antvis/G2](https://github.com/antvis/G2)
+- 📝 **Description**: 📊 The concise and progressive visualization grammar.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 39. [mapbox/mapbox-gl-js](https://github.com/mapbox/mapbox-gl-js)
+
+- ⭐ **Stars**: 12,453★ &nbsp;|&nbsp; 🍴 **Forks**: 2,380 &nbsp;|&nbsp; 💻 **Language**: `TypeScript`
+- 🔗 **Repository URL**: [https://github.com/mapbox/mapbox-gl-js](https://github.com/mapbox/mapbox-gl-js)
+- 📝 **Description**: Interactive, thoroughly customizable maps in the browser, powered by vector tiles and WebGL
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 40. [Cysharp/UniTask](https://github.com/Cysharp/UniTask)
+
+- ⭐ **Stars**: 11,266★ &nbsp;|&nbsp; 🍴 **Forks**: 1,009 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/Cysharp/UniTask](https://github.com/Cysharp/UniTask)
+- 📝 **Description**: Provides an efficient allocation free async/await integration for Unity.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 41. [baldurk/renderdoc](https://github.com/baldurk/renderdoc)
+
+- ⭐ **Stars**: 11,225★ &nbsp;|&nbsp; 🍴 **Forks**: 1,819 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/baldurk/renderdoc](https://github.com/baldurk/renderdoc)
+- 📝 **Description**: RenderDoc is a stand-alone graphics debugging tool.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 42. [Orama-Interactive/Pixelorama](https://github.com/Orama-Interactive/Pixelorama)
+
+- ⭐ **Stars**: 10,823★ &nbsp;|&nbsp; 🍴 **Forks**: 586 &nbsp;|&nbsp; 💻 **Language**: `GDScript`
+- 🔗 **Repository URL**: [https://github.com/Orama-Interactive/Pixelorama](https://github.com/Orama-Interactive/Pixelorama)
+- 📝 **Description**: Unleash your creativity with Pixelorama, a powerful and accessible open-source pixel art multitool. Whether you want to create sprites, tiles, animations, or just express yourself in the language of pixel art, this software will realize your pixel-perfect dreams with a vast toolbox of features. Available on Windows, Linux, macOS and the Web!
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 43. [flame-engine/flame](https://github.com/flame-engine/flame)
+
+- ⭐ **Stars**: 10,800★ &nbsp;|&nbsp; 🍴 **Forks**: 1,056 &nbsp;|&nbsp; 💻 **Language**: `Dart`
+- 🔗 **Repository URL**: [https://github.com/flame-engine/flame](https://github.com/flame-engine/flame)
+- 📝 **Description**: A Flutter based game engine.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 44. [openscad/openscad](https://github.com/openscad/openscad)
+
+- ⭐ **Stars**: 10,505★ &nbsp;|&nbsp; 🍴 **Forks**: 1,773 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/openscad/openscad](https://github.com/openscad/openscad)
+- 📝 **Description**: OpenSCAD - The Programmers Solid 3D CAD Modeller
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 45. [playcanvas/supersplat](https://github.com/playcanvas/supersplat)
+
+- ⭐ **Stars**: 10,458★ &nbsp;|&nbsp; 🍴 **Forks**: 1,193 &nbsp;|&nbsp; 💻 **Language**: `TypeScript`
+- 🔗 **Repository URL**: [https://github.com/playcanvas/supersplat](https://github.com/playcanvas/supersplat)
+- 📝 **Description**: 3D Gaussian Splat Editor
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 46. [Tencent/xLua](https://github.com/Tencent/xLua)
+
+- ⭐ **Stars**: 10,208★ &nbsp;|&nbsp; 🍴 **Forks**: 2,485 &nbsp;|&nbsp; 💻 **Language**: `C`
+- 🔗 **Repository URL**: [https://github.com/Tencent/xLua](https://github.com/Tencent/xLua)
+- 📝 **Description**: xLua is a lua programming solution for  C# ( Unity, .Net, Mono) , it supports android, ios, windows, linux, osx, etc.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 47. [cocos/cocos-engine](https://github.com/cocos/cocos-engine)
+
+- ⭐ **Stars**: 9,884★ &nbsp;|&nbsp; 🍴 **Forks**: 2,144 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/cocos/cocos-engine](https://github.com/cocos/cocos-engine)
+- 📝 **Description**: Cocos simplifies game creation and distribution with Cocos Creator, a free, open-source, cross-platform game engine. Empowering millions of developers to create high-performance, engaging 2D/3D games and instant web entertainment.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 48. [KytyPS5/KytyPS5](https://github.com/KytyPS5/KytyPS5)
+
+- ⭐ **Stars**: 9,779★ &nbsp;|&nbsp; 🍴 **Forks**: 1,241 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/KytyPS5/KytyPS5](https://github.com/KytyPS5/KytyPS5)
+- 📝 **Description**: PlayStation 5 translation layer for Windows, Linux and macOS
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 49. [NVIDIA/cuda-samples](https://github.com/NVIDIA/cuda-samples)
+
+- ⭐ **Stars**: 9,724★ &nbsp;|&nbsp; 🍴 **Forks**: 2,440 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/NVIDIA/cuda-samples](https://github.com/NVIDIA/cuda-samples)
+- 📝 **Description**: Samples for CUDA Developers which demonstrates features in CUDA Toolkit
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 50. [godotengine/godot-demo-projects](https://github.com/godotengine/godot-demo-projects)
+
+- ⭐ **Stars**: 9,706★ &nbsp;|&nbsp; 🍴 **Forks**: 2,270 &nbsp;|&nbsp; 💻 **Language**: `GDScript`
+- 🔗 **Repository URL**: [https://github.com/godotengine/godot-demo-projects](https://github.com/godotengine/godot-demo-projects)
+- 📝 **Description**: Demonstration and Template Projects
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 51. [Perfare/Il2CppDumper](https://github.com/Perfare/Il2CppDumper)
+
+- ⭐ **Stars**: 9,552★ &nbsp;|&nbsp; 🍴 **Forks**: 1,954 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/Perfare/Il2CppDumper](https://github.com/Perfare/Il2CppDumper)
+- 📝 **Description**: Unity il2cpp reverse engineer
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 52. [crynta/terax-ai](https://github.com/crynta/terax-ai)
+
+- ⭐ **Stars**: 9,360★ &nbsp;|&nbsp; 🍴 **Forks**: 1,034 &nbsp;|&nbsp; 💻 **Language**: `TypeScript`
+- 🔗 **Repository URL**: [https://github.com/crynta/terax-ai](https://github.com/crynta/terax-ai)
+- 📝 **Description**: Lightweight (7MB) terminal-first AI-native development environment
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 53. [open-pencil/open-pencil](https://github.com/open-pencil/open-pencil)
+
+- ⭐ **Stars**: 9,255★ &nbsp;|&nbsp; 🍴 **Forks**: 963 &nbsp;|&nbsp; 💻 **Language**: `TypeScript`
+- 🔗 **Repository URL**: [https://github.com/open-pencil/open-pencil](https://github.com/open-pencil/open-pencil)
+- 📝 **Description**: AI-native design editor. Open-source Figma alternative.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 54. [flightlessmango/MangoHud](https://github.com/flightlessmango/MangoHud)
+
+- ⭐ **Stars**: 9,182★ &nbsp;|&nbsp; 🍴 **Forks**: 440 &nbsp;|&nbsp; 💻 **Language**: `C`
+- 🔗 **Repository URL**: [https://github.com/flightlessmango/MangoHud](https://github.com/flightlessmango/MangoHud)
+- 📝 **Description**: A Vulkan and OpenGL overlay for monitoring FPS, temperatures, CPU/GPU load and more.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 55. [wasabeef/android-gpuimage](https://github.com/wasabeef/android-gpuimage)
+
+- ⭐ **Stars**: 9,155★ &nbsp;|&nbsp; 🍴 **Forks**: 2,296 &nbsp;|&nbsp; 💻 **Language**: `Java`
+- 🔗 **Repository URL**: [https://github.com/wasabeef/android-gpuimage](https://github.com/wasabeef/android-gpuimage)
+- 📝 **Description**: Android filters based on OpenGL (idea from GPUImage for iOS)
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 56. [olive-editor/olive](https://github.com/olive-editor/olive)
+
+- ⭐ **Stars**: 9,143★ &nbsp;|&nbsp; 🍴 **Forks**: 625 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/olive-editor/olive](https://github.com/olive-editor/olive)
+- 📝 **Description**: Free open-source non-linear video editor
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 57. [pygame/pygame](https://github.com/pygame/pygame)
+
+- ⭐ **Stars**: 8,989★ &nbsp;|&nbsp; 🍴 **Forks**: 4,263 &nbsp;|&nbsp; 💻 **Language**: `C`
+- 🔗 **Repository URL**: [https://github.com/pygame/pygame](https://github.com/pygame/pygame)
+- 📝 **Description**: 🐍🎮 pygame (the library) is a Free and Open Source python programming language library for making multimedia applications like games built on top of the excellent SDL library. C, Python, Native, OpenGL.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 58. [jynew/jynew](https://github.com/jynew/jynew)
+
+- ⭐ **Stars**: 8,988★ &nbsp;|&nbsp; 🍴 **Forks**: 1,892 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/jynew/jynew](https://github.com/jynew/jynew)
+- 📝 **Description**: JinYongLegend-like RPG Game Framework with full Modding support and 10+ hours playable samples of game.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 59. [sebastianstarke/AI4Animation](https://github.com/sebastianstarke/AI4Animation)
+
+- ⭐ **Stars**: 8,907★ &nbsp;|&nbsp; 🍴 **Forks**: 1,139 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/sebastianstarke/AI4Animation](https://github.com/sebastianstarke/AI4Animation)
+- 📝 **Description**: Bringing Characters to Life with Computer Brains in Unity
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 60. [BepInEx/BepInEx](https://github.com/BepInEx/BepInEx)
+
+- ⭐ **Stars**: 8,901★ &nbsp;|&nbsp; 🍴 **Forks**: 929 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/BepInEx/BepInEx](https://github.com/BepInEx/BepInEx)
+- 📝 **Description**: Unity / XNA game patcher and plugin framework
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 61. [love2d/love](https://github.com/love2d/love)
+
+- ⭐ **Stars**: 8,875★ &nbsp;|&nbsp; 🍴 **Forks**: 660 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/love2d/love](https://github.com/love2d/love)
+- 📝 **Description**: LÖVE is an awesome 2D game framework for Lua.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 62. [stride3d/stride](https://github.com/stride3d/stride)
+
+- ⭐ **Stars**: 7,919★ &nbsp;|&nbsp; 🍴 **Forks**: 1,181 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/stride3d/stride](https://github.com/stride3d/stride)
+- 📝 **Description**: Stride (formerly Xenko), a free and open-source cross-platform C# game engine.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 63. [ColinLeung-NiloCat/UnityURPToonLitShaderExample](https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample)
+
+- ⭐ **Stars**: 7,828★ &nbsp;|&nbsp; 🍴 **Forks**: 1,877 &nbsp;|&nbsp; 💻 **Language**: `ShaderLab`
+- 🔗 **Repository URL**: [https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample](https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample)
+- 📝 **Description**: A very simple toon lit shader example, for you to learn writing custom lit shader in Unity URP
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 64. [hooke007/mpv_PlayKit](https://github.com/hooke007/mpv_PlayKit)
+
+- ⭐ **Stars**: 7,750★ &nbsp;|&nbsp; 🍴 **Forks**: 234 &nbsp;|&nbsp; 💻 **Language**: `GLSL`
+- 🔗 **Repository URL**: [https://github.com/hooke007/mpv_PlayKit](https://github.com/hooke007/mpv_PlayKit)
+- 📝 **Description**: 🔄 mpv player 播放器折腾记录 Windows conf | 中文注释配置 汉化文档 快速帮助入门 | mpv-lazy 懒人包 Win11 x64 config | 着色器 shader 滤镜 filter 整合方案
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 65. [mob-sakai/UIEffect](https://github.com/mob-sakai/UIEffect)
+
+- ⭐ **Stars**: 7,696★ &nbsp;|&nbsp; 🍴 **Forks**: 954 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/mob-sakai/UIEffect](https://github.com/mob-sakai/UIEffect)
+- 📝 **Description**: UIEffect is an open-source package that allows you to intuitively apply rich UI effects directly from the Inspector or via code. Combine various filters, such as grayscale, blur, and dissolve, to decorate your UI with a unique visual style!
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 66. [sschmid/Entitas](https://github.com/sschmid/Entitas)
+
+- ⭐ **Stars**: 7,679★ &nbsp;|&nbsp; 🍴 **Forks**: 1,126 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/sschmid/Entitas](https://github.com/sschmid/Entitas)
+- 📝 **Description**: Entitas is a super fast Entity Component System (ECS) Framework specifically made for C# and Unity
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 67. [endless-sky/endless-sky](https://github.com/endless-sky/endless-sky)
+
+- ⭐ **Stars**: 7,658★ &nbsp;|&nbsp; 🍴 **Forks**: 1,342 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/endless-sky/endless-sky](https://github.com/endless-sky/endless-sky)
+- 📝 **Description**: Space exploration, trading, and combat game.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 68. [EmbarkStudios/rust-gpu](https://github.com/EmbarkStudios/rust-gpu)
+
+- ⭐ **Stars**: 7,555★ &nbsp;|&nbsp; 🍴 **Forks**: 246 &nbsp;|&nbsp; 💻 **Language**: `Rust`
+- 🔗 **Repository URL**: [https://github.com/EmbarkStudios/rust-gpu](https://github.com/EmbarkStudios/rust-gpu)
+- 📝 **Description**: 🐉 Making Rust a first-class language and ecosystem for GPU shaders 🚧
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 69. [neuecc/UniRx](https://github.com/neuecc/UniRx)
+
+- ⭐ **Stars**: 7,322★ &nbsp;|&nbsp; 🍴 **Forks**: 874 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/neuecc/UniRx](https://github.com/neuecc/UniRx)
+- 📝 **Description**: Reactive Extensions for Unity
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 70. [turanszkij/WickedEngine](https://github.com/turanszkij/WickedEngine)
+
+- ⭐ **Stars**: 7,316★ &nbsp;|&nbsp; 🍴 **Forks**: 796 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/turanszkij/WickedEngine](https://github.com/turanszkij/WickedEngine)
+- 📝 **Description**: 3D engine with modern graphics
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 71. [htdt/godogen](https://github.com/htdt/godogen)
+
+- ⭐ **Stars**: 7,206★ &nbsp;|&nbsp; 🍴 **Forks**: 665 &nbsp;|&nbsp; 💻 **Language**: `Python`
+- 🔗 **Repository URL**: [https://github.com/htdt/godogen](https://github.com/htdt/godogen)
+- 📝 **Description**: Autonomous game development with Claude Code and Codex
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 72. [MengTo/threeui](https://github.com/MengTo/threeui)
+
+- ⭐ **Stars**: 6,834★ &nbsp;|&nbsp; 🍴 **Forks**: 646 &nbsp;|&nbsp; 💻 **Language**: `HTML`
+- 🔗 **Repository URL**: [https://github.com/MengTo/threeui](https://github.com/MengTo/threeui)
+- 📝 **Description**: Open-source ThreeUI Community catalog with live interactive components and complete Community source.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 73. [Facepunch/sbox-public](https://github.com/Facepunch/sbox-public)
+
+- ⭐ **Stars**: 6,501★ &nbsp;|&nbsp; 🍴 **Forks**: 693 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/Facepunch/sbox-public](https://github.com/Facepunch/sbox-public)
+- 📝 **Description**: s&box is a modern game engine, built on Valve's Source 2 and the latest .NET technology, it provides a modern intuitive editor for creating games
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 74. [karlstav/cava](https://github.com/karlstav/cava)
+
+- ⭐ **Stars**: 6,497★ &nbsp;|&nbsp; 🍴 **Forks**: 300 &nbsp;|&nbsp; 💻 **Language**: `C`
+- 🔗 **Repository URL**: [https://github.com/karlstav/cava](https://github.com/karlstav/cava)
+- 📝 **Description**: Cross-platform Audio Visualizer
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 75. [vasturiano/3d-force-graph](https://github.com/vasturiano/3d-force-graph)
+
+- ⭐ **Stars**: 6,491★ &nbsp;|&nbsp; 🍴 **Forks**: 1,027 &nbsp;|&nbsp; 💻 **Language**: `HTML`
+- 🔗 **Repository URL**: [https://github.com/vasturiano/3d-force-graph](https://github.com/vasturiano/3d-force-graph)
+- 📝 **Description**: 3D force-directed graph component using ThreeJS/WebGL
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 76. [koharu-rs/koharu](https://github.com/koharu-rs/koharu)
+
+- ⭐ **Stars**: 6,488★ &nbsp;|&nbsp; 🍴 **Forks**: 466 &nbsp;|&nbsp; 💻 **Language**: `Rust`
+- 🔗 **Repository URL**: [https://github.com/koharu-rs/koharu](https://github.com/koharu-rs/koharu)
+- 📝 **Description**: ML-powered manga translator, written in Rust.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 77. [melonjs/melonJS](https://github.com/melonjs/melonJS)
+
+- ⭐ **Stars**: 6,420★ &nbsp;|&nbsp; 🍴 **Forks**: 663 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/melonjs/melonJS](https://github.com/melonjs/melonJS)
+- 📝 **Description**: A modern & fully featured HTML5 game engine (2D & 3D) for JavaScript/TypeScript, with WebGL/WebGPU rendering, built-in physics, Tiled map & glTF support and WebAudio.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 78. [defold/defold](https://github.com/defold/defold)
+
+- ⭐ **Stars**: 6,417★ &nbsp;|&nbsp; 🍴 **Forks**: 465 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/defold/defold](https://github.com/defold/defold)
+- 📝 **Description**: Defold is a completely free to use game engine for development of desktop, console, mobile and web games.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 79. [michidk/Unity-Script-Collection](https://github.com/michidk/Unity-Script-Collection)
+
+- ⭐ **Stars**: 6,391★ &nbsp;|&nbsp; 🍴 **Forks**: 652 &nbsp;|&nbsp; 💻 **Language**: `CSS`
+- 🔗 **Repository URL**: [https://github.com/michidk/Unity-Script-Collection](https://github.com/michidk/Unity-Script-Collection)
+- 📝 **Description**: A maintained collection of useful & free unity scripts / library's / plugins and extensions
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 80. [MirrorNetworking/Mirror](https://github.com/MirrorNetworking/Mirror)
+
+- ⭐ **Stars**: 6,374★ &nbsp;|&nbsp; 🍴 **Forks**: 871 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/MirrorNetworking/Mirror](https://github.com/MirrorNetworking/Mirror)
+- 📝 **Description**: #1 Open Source Unity Networking Library
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 81. [Tencent/puerts](https://github.com/Tencent/puerts)
+
+- ⭐ **Stars**: 6,239★ &nbsp;|&nbsp; 🍴 **Forks**: 869 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/Tencent/puerts](https://github.com/Tencent/puerts)
+- 📝 **Description**: PUER(普洱) Typescript. Let's write your game in UE or Unity with TypeScript.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 82. [Redot-Engine/redot-engine](https://github.com/Redot-Engine/redot-engine)
+
+- ⭐ **Stars**: 6,148★ &nbsp;|&nbsp; 🍴 **Forks**: 352 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/Redot-Engine/redot-engine](https://github.com/Redot-Engine/redot-engine)
+- 📝 **Description**: Redot Engine – Multi-platform 2D and 3D game engine
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 83. [fschutt/azul](https://github.com/fschutt/azul)
+
+- ⭐ **Stars**: 6,131★ &nbsp;|&nbsp; 🍴 **Forks**: 228 &nbsp;|&nbsp; 💻 **Language**: `Rust`
+- 🔗 **Repository URL**: [https://github.com/fschutt/azul](https://github.com/fschutt/azul)
+- 📝 **Description**: Desktop GUI Framework
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 84. [candycat1992/Unity_Shaders_Book](https://github.com/candycat1992/Unity_Shaders_Book)
+
+- ⭐ **Stars**: 6,124★ &nbsp;|&nbsp; 🍴 **Forks**: 1,658 &nbsp;|&nbsp; 💻 **Language**: `ShaderLab`
+- 🔗 **Repository URL**: [https://github.com/candycat1992/Unity_Shaders_Book](https://github.com/candycat1992/Unity_Shaders_Book)
+- 📝 **Description**: :book: 书籍《Unity Shader入门精要》源代码
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 85. [dialogic-godot/dialogic](https://github.com/dialogic-godot/dialogic)
+
+- ⭐ **Stars**: 6,114★ &nbsp;|&nbsp; 🍴 **Forks**: 365 &nbsp;|&nbsp; 💻 **Language**: `GDScript`
+- 🔗 **Repository URL**: [https://github.com/dialogic-godot/dialogic](https://github.com/dialogic-godot/dialogic)
+- 📝 **Description**: 💬 Create Dialogs, Visual Novels, RPGs, and manage Characters with Godot to create your Game!
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 86. [UnityTechnologies/open-project-1](https://github.com/UnityTechnologies/open-project-1)
+
+- ⭐ **Stars**: 6,111★ &nbsp;|&nbsp; 🍴 **Forks**: 2,055 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/UnityTechnologies/open-project-1](https://github.com/UnityTechnologies/open-project-1)
+- 📝 **Description**: Unity Open Project #1: Chop Chop
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 87. [microsoft/MixedRealityToolkit-Unity](https://github.com/microsoft/MixedRealityToolkit-Unity)
+
+- ⭐ **Stars**: 6,077★ &nbsp;|&nbsp; 🍴 **Forks**: 2,077 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/microsoft/MixedRealityToolkit-Unity](https://github.com/microsoft/MixedRealityToolkit-Unity)
+- 📝 **Description**: This repository is for the legacy Mixed Reality Toolkit (MRTK) v2.  For the latest version of the MRTK please visit https://github.com/MixedRealityToolkit/MixedRealityToolkit-Unity
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 88. [mob-sakai/ParticleEffectForUGUI](https://github.com/mob-sakai/ParticleEffectForUGUI)
+
+- ⭐ **Stars**: 6,028★ &nbsp;|&nbsp; 🍴 **Forks**: 770 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/mob-sakai/ParticleEffectForUGUI](https://github.com/mob-sakai/ParticleEffectForUGUI)
+- 📝 **Description**: Render particle effect in UnityUI(uGUI). Maskable, sortable, and no extra Camera/RenderTexture/Canvas.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 89. [RodZill4/material-maker](https://github.com/RodZill4/material-maker)
+
+- ⭐ **Stars**: 6,020★ &nbsp;|&nbsp; 🍴 **Forks**: 392 &nbsp;|&nbsp; 💻 **Language**: `GDScript`
+- 🔗 **Repository URL**: [https://github.com/RodZill4/material-maker](https://github.com/RodZill4/material-maker)
+- 📝 **Description**: A procedural textures authoring and 3D model painting tool based on the Godot game engine
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 90. [shuding/cobe](https://github.com/shuding/cobe)
+
+- ⭐ **Stars**: 6,003★ &nbsp;|&nbsp; 🍴 **Forks**: 354 &nbsp;|&nbsp; 💻 **Language**: `TypeScript`
+- 🔗 **Repository URL**: [https://github.com/shuding/cobe](https://github.com/shuding/cobe)
+- 📝 **Description**: 5KB WebGL globe lib.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 91. [tranek/GASDocumentation](https://github.com/tranek/GASDocumentation)
+
+- ⭐ **Stars**: 5,980★ &nbsp;|&nbsp; 🍴 **Forks**: 1,005 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/tranek/GASDocumentation](https://github.com/tranek/GASDocumentation)
+- 📝 **Description**: My understanding of Unreal Engine 5's GameplayAbilitySystem plugin with a simple multiplayer sample project.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 92. [hiloteam/Hilo](https://github.com/hiloteam/Hilo)
+
+- ⭐ **Stars**: 5,938★ &nbsp;|&nbsp; 🍴 **Forks**: 845 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/hiloteam/Hilo](https://github.com/hiloteam/Hilo)
+- 📝 **Description**: A Cross-end HTML5 Game development solution
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 93. [KhronosGroup/MoltenVK](https://github.com/KhronosGroup/MoltenVK)
+
+- ⭐ **Stars**: 5,905★ &nbsp;|&nbsp; 🍴 **Forks**: 596 &nbsp;|&nbsp; 💻 **Language**: `Objective-C++`
+- 🔗 **Repository URL**: [https://github.com/KhronosGroup/MoltenVK](https://github.com/KhronosGroup/MoltenVK)
+- 📝 **Description**: MoltenVK is a Vulkan Portability implementation. It layers a subset of the high-performance, industry-standard Vulkan graphics and compute API over Apple's Metal graphics framework, enabling Vulkan applications to run on macOS, iOS and tvOS.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 94. [galacean/engine](https://github.com/galacean/engine)
+
+- ⭐ **Stars**: 5,905★ &nbsp;|&nbsp; 🍴 **Forks**: 411 &nbsp;|&nbsp; 💻 **Language**: `TypeScript`
+- 🔗 **Repository URL**: [https://github.com/galacean/engine](https://github.com/galacean/engine)
+- 📝 **Description**: A typescript interactive engine, support 2D, 3D, animation, physics, built on WebGL and glTF.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 95. [godotengine/godot-docs](https://github.com/godotengine/godot-docs)
+
+- ⭐ **Stars**: 5,850★ &nbsp;|&nbsp; 🍴 **Forks**: 3,794 &nbsp;|&nbsp; 💻 **Language**: `reStructuredText`
+- 🔗 **Repository URL**: [https://github.com/godotengine/godot-docs](https://github.com/godotengine/godot-docs)
+- 📝 **Description**: Godot Engine official documentation
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 96. [shader-slang/slang](https://github.com/shader-slang/slang)
+
+- ⭐ **Stars**: 5,760★ &nbsp;|&nbsp; 🍴 **Forks**: 516 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/shader-slang/slang](https://github.com/shader-slang/slang)
+- 📝 **Description**: Making it easier to work with shaders
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 97. [memononen/nanovg](https://github.com/memononen/nanovg)
+
+- ⭐ **Stars**: 5,730★ &nbsp;|&nbsp; 🍴 **Forks**: 809 &nbsp;|&nbsp; 💻 **Language**: `C`
+- 🔗 **Repository URL**: [https://github.com/memononen/nanovg](https://github.com/memononen/nanovg)
+- 📝 **Description**: Antialiased 2D vector drawing library on top of OpenGL for UI and visualizations.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 98. [toji/gl-matrix](https://github.com/toji/gl-matrix)
+
+- ⭐ **Stars**: 5,702★ &nbsp;|&nbsp; 🍴 **Forks**: 731 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/toji/gl-matrix](https://github.com/toji/gl-matrix)
+- 📝 **Description**: Javascript Matrix and Vector library for High Performance WebGL apps
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 99. [ConfettiFX/The-Forge](https://github.com/ConfettiFX/The-Forge)
+
+- ⭐ **Stars**: 5,699★ &nbsp;|&nbsp; 🍴 **Forks**: 581 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/ConfettiFX/The-Forge](https://github.com/ConfettiFX/The-Forge)
+- 📝 **Description**: The Forge Cross-Platform Framework PC Windows, Steamdeck (native), Ray Tracing, macOS / iOS, Android, XBOX, PS4, PS5, Switch, Quest 2
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 100. [potree/potree](https://github.com/potree/potree)
+
+- ⭐ **Stars**: 5,651★ &nbsp;|&nbsp; 🍴 **Forks**: 1,364 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/potree/potree](https://github.com/potree/potree)
+- 📝 **Description**: WebGL point cloud viewer for large datasets
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 101. [regl-project/regl](https://github.com/regl-project/regl)
+
+- ⭐ **Stars**: 5,589★ &nbsp;|&nbsp; 🍴 **Forks**: 326 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/regl-project/regl](https://github.com/regl-project/regl)
+- 📝 **Description**: 👑 Functional WebGL
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 102. [xfangfang/wiliwili](https://github.com/xfangfang/wiliwili)
+
+- ⭐ **Stars**: 5,588★ &nbsp;|&nbsp; 🍴 **Forks**: 281 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/xfangfang/wiliwili](https://github.com/xfangfang/wiliwili)
+- 📝 **Description**: 第三方B站客户端，目前可以运行在PC全平台、PSVita、PS4 、Xbox 和 Nintendo Switch上
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 103. [gpuweb/gpuweb](https://github.com/gpuweb/gpuweb)
+
+- ⭐ **Stars**: 5,518★ &nbsp;|&nbsp; 🍴 **Forks**: 387 &nbsp;|&nbsp; 💻 **Language**: `Bikeshed`
+- 🔗 **Repository URL**: [https://github.com/gpuweb/gpuweb](https://github.com/gpuweb/gpuweb)
+- 📝 **Description**: Where the GPU for the Web work happens!
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 104. [liangxiegame/QFramework](https://github.com/liangxiegame/QFramework)
+
+- ⭐ **Stars**: 5,492★ &nbsp;|&nbsp; 🍴 **Forks**: 863 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/liangxiegame/QFramework](https://github.com/liangxiegame/QFramework)
+- 📝 **Description**: Godot/Unity3D System Design Architecture
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 105. [LWJGL/lwjgl3](https://github.com/LWJGL/lwjgl3)
+
+- ⭐ **Stars**: 5,479★ &nbsp;|&nbsp; 🍴 **Forks**: 722 &nbsp;|&nbsp; 💻 **Language**: `Java`
+- 🔗 **Repository URL**: [https://github.com/LWJGL/lwjgl3](https://github.com/LWJGL/lwjgl3)
+- 📝 **Description**: LWJGL is a Java library that enables cross-platform access to popular native APIs useful in the development of graphics (OpenGL, Vulkan, bgfx), audio (OpenAL, Opus), parallel computing (OpenCL, CUDA) and XR (OpenVR, LibOVR, OpenXR) applications.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 106. [shader-effects-inc/shaders](https://github.com/shader-effects-inc/shaders)
+
+- ⭐ **Stars**: 5,432★ &nbsp;|&nbsp; 🍴 **Forks**: 248 &nbsp;|&nbsp; 💻 **Language**: `TypeScript`
+- 🔗 **Repository URL**: [https://github.com/shader-effects-inc/shaders](https://github.com/shader-effects-inc/shaders)
+- 📝 **Description**: WebGPU components for React, Vue, Svelte, Solid, JS & Framer
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 107. [ThrowTheSwitch/Unity](https://github.com/ThrowTheSwitch/Unity)
+
+- ⭐ **Stars**: 5,430★ &nbsp;|&nbsp; 🍴 **Forks**: 1,139 &nbsp;|&nbsp; 💻 **Language**: `C`
+- 🔗 **Repository URL**: [https://github.com/ThrowTheSwitch/Unity](https://github.com/ThrowTheSwitch/Unity)
+- 📝 **Description**: Simple unit testing for C
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 108. [CharlesPikachu/Games](https://github.com/CharlesPikachu/Games)
+
+- ⭐ **Stars**: 5,423★ &nbsp;|&nbsp; 🍴 **Forks**: 2,299 &nbsp;|&nbsp; 💻 **Language**: `Python`
+- 🔗 **Repository URL**: [https://github.com/CharlesPikachu/Games](https://github.com/CharlesPikachu/Games)
+- 📝 **Description**: Games: Create interesting games in pure python.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 109. [KhronosGroup/Vulkan-Samples](https://github.com/KhronosGroup/Vulkan-Samples)
+
+- ⭐ **Stars**: 5,404★ &nbsp;|&nbsp; 🍴 **Forks**: 844 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/KhronosGroup/Vulkan-Samples](https://github.com/KhronosGroup/Vulkan-Samples)
+- 📝 **Description**: One stop solution for all Vulkan samples
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 110. [gfx-rs/gfx](https://github.com/gfx-rs/gfx)
+
+- ⭐ **Stars**: 5,395★ &nbsp;|&nbsp; 🍴 **Forks**: 528 &nbsp;|&nbsp; 💻 **Language**: `Rust`
+- 🔗 **Repository URL**: [https://github.com/gfx-rs/gfx](https://github.com/gfx-rs/gfx)
+- 📝 **Description**: [maintenance mode] A low-overhead Vulkan-like GPU API for Rust.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 111. [spritejs/spritejs](https://github.com/spritejs/spritejs)
+
+- ⭐ **Stars**: 5,391★ &nbsp;|&nbsp; 🍴 **Forks**: 325 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/spritejs/spritejs](https://github.com/spritejs/spritejs)
+- 📝 **Description**: A cross platform high-performance graphics system.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 112. [ssloy/tinyraytracer](https://github.com/ssloy/tinyraytracer)
+
+- ⭐ **Stars**: 5,389★ &nbsp;|&nbsp; 🍴 **Forks**: 354 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/ssloy/tinyraytracer](https://github.com/ssloy/tinyraytracer)
+- 📝 **Description**: A brief computer graphics / rendering course
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 113. [patriciogonzalezvivo/glslViewer](https://github.com/patriciogonzalezvivo/glslViewer)
+
+- ⭐ **Stars**: 5,348★ &nbsp;|&nbsp; 🍴 **Forks**: 374 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/patriciogonzalezvivo/glslViewer](https://github.com/patriciogonzalezvivo/glslViewer)
+- 📝 **Description**: Console-based GLSL Sandbox for 2D/3D shaders
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 114. [Doikki/DKVideoPlayer](https://github.com/Doikki/DKVideoPlayer)
+
+- ⭐ **Stars**: 5,334★ &nbsp;|&nbsp; 🍴 **Forks**: 1,071 &nbsp;|&nbsp; 💻 **Language**: `Java`
+- 🔗 **Repository URL**: [https://github.com/Doikki/DKVideoPlayer](https://github.com/Doikki/DKVideoPlayer)
+- 📝 **Description**: Android Video Player. 安卓视频播放器，封装MediaPlayer、ExoPlayer、IjkPlayer。模仿抖音并实现预加载，列表播放，悬浮播放，广告播放，弹幕，视频水印，视频滤镜
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 115. [jagenjo/webglstudio.js](https://github.com/jagenjo/webglstudio.js)
+
+- ⭐ **Stars**: 5,329★ &nbsp;|&nbsp; 🍴 **Forks**: 616 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/jagenjo/webglstudio.js](https://github.com/jagenjo/webglstudio.js)
+- 📝 **Description**: A full open source 3D graphics editor in the browser, with scene editor, coding pad, graph editor, virtual file system, and many features more.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 116. [godot-rust/gdext](https://github.com/godot-rust/gdext)
+
+- ⭐ **Stars**: 5,324★ &nbsp;|&nbsp; 🍴 **Forks**: 324 &nbsp;|&nbsp; 💻 **Language**: `Rust`
+- 🔗 **Repository URL**: [https://github.com/godot-rust/gdext](https://github.com/godot-rust/gdext)
+- 📝 **Description**: Rust bindings for Godot 4
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 117. [OpenSC2K/OpenSC2K](https://github.com/OpenSC2K/OpenSC2K)
+
+- ⭐ **Stars**: 5,320★ &nbsp;|&nbsp; 🍴 **Forks**: 124 &nbsp;|&nbsp; 💻 **Language**: `Rust`
+- 🔗 **Repository URL**: [https://github.com/OpenSC2K/OpenSC2K](https://github.com/OpenSC2K/OpenSC2K)
+- 📝 **Description**: OpenSC2K - Open Source remake of Sim City 2000 using rust and godot. Available for macOS, Windows and Linux
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 118. [Cysharp/ZLinq](https://github.com/Cysharp/ZLinq)
+
+- ⭐ **Stars**: 5,294★ &nbsp;|&nbsp; 🍴 **Forks**: 217 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/Cysharp/ZLinq](https://github.com/Cysharp/ZLinq)
+- 📝 **Description**: Zero allocation LINQ with LINQ to Span, LINQ to SIMD, and LINQ to Tree (FileSystem, JSON, GameObject, etc.) for all .NET platforms and Unity, Godot.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 119. [panda3d/panda3d](https://github.com/panda3d/panda3d)
+
+- ⭐ **Stars**: 5,260★ &nbsp;|&nbsp; 🍴 **Forks**: 899 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/panda3d/panda3d](https://github.com/panda3d/panda3d)
+- 📝 **Description**: Powerful, mature open-source cross-platform game engine for Python and C++, developed by Disney and CMU
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 120. [dotnet/Silk.NET](https://github.com/dotnet/Silk.NET)
+
+- ⭐ **Stars**: 5,246★ &nbsp;|&nbsp; 🍴 **Forks**: 482 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/dotnet/Silk.NET](https://github.com/dotnet/Silk.NET)
+- 📝 **Description**: The high-speed OpenGL, OpenCL, OpenAL, OpenXR, GLFW, SDL, Vulkan, Assimp, WebGPU, and DirectX bindings library your mother warned you about.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 121. [raysan5/raygui](https://github.com/raysan5/raygui)
+
+- ⭐ **Stars**: 5,236★ &nbsp;|&nbsp; 🍴 **Forks**: 405 &nbsp;|&nbsp; 💻 **Language**: `C`
+- 🔗 **Repository URL**: [https://github.com/raysan5/raygui](https://github.com/raysan5/raygui)
+- 📝 **Description**: A simple and easy-to-use immediate-mode gui library
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 122. [dbrizov/NaughtyAttributes](https://github.com/dbrizov/NaughtyAttributes)
+
+- ⭐ **Stars**: 5,228★ &nbsp;|&nbsp; 🍴 **Forks**: 506 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/dbrizov/NaughtyAttributes](https://github.com/dbrizov/NaughtyAttributes)
+- 📝 **Description**: Attribute Extensions for Unity
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 123. [Orillusion/orillusion](https://github.com/Orillusion/orillusion)
+
+- ⭐ **Stars**: 5,223★ &nbsp;|&nbsp; 🍴 **Forks**: 599 &nbsp;|&nbsp; 💻 **Language**: `TypeScript`
+- 🔗 **Repository URL**: [https://github.com/Orillusion/orillusion](https://github.com/Orillusion/orillusion)
+- 📝 **Description**: Orillusion is a pure Web3D rendering engine which is fully developed based on the WebGPU standard.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 124. [vulkano-rs/vulkano](https://github.com/vulkano-rs/vulkano)
+
+- ⭐ **Stars**: 5,178★ &nbsp;|&nbsp; 🍴 **Forks**: 475 &nbsp;|&nbsp; 💻 **Language**: `Rust`
+- 🔗 **Repository URL**: [https://github.com/vulkano-rs/vulkano](https://github.com/vulkano-rs/vulkano)
+- 📝 **Description**: Safe and rich Rust wrapper around the Vulkan API
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 125. [Unity-Technologies/FPSSample](https://github.com/Unity-Technologies/FPSSample)
+
+- ⭐ **Stars**: 5,139★ &nbsp;|&nbsp; 🍴 **Forks**: 1,870 &nbsp;|&nbsp; 💻 **Language**: `C#`
+- 🔗 **Repository URL**: [https://github.com/Unity-Technologies/FPSSample](https://github.com/Unity-Technologies/FPSSample)
+- 📝 **Description**: A first person multiplayer shooter example project in Unity
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 126. [natario1/CameraView](https://github.com/natario1/CameraView)
+
+- ⭐ **Stars**: 5,135★ &nbsp;|&nbsp; 🍴 **Forks**: 985 &nbsp;|&nbsp; 💻 **Language**: `Java`
+- 🔗 **Repository URL**: [https://github.com/natario1/CameraView](https://github.com/natario1/CameraView)
+- 📝 **Description**: 📸 A well documented, high-level Android interface that makes capturing pictures and videos easy, addressing all of the common issues and needs. Real-time filters, gestures, watermarks, frame processing, RAW, output of any size.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 127. [turbulenz/turbulenz_engine](https://github.com/turbulenz/turbulenz_engine)
+
+- ⭐ **Stars**: 5,122★ &nbsp;|&nbsp; 🍴 **Forks**: 521 &nbsp;|&nbsp; 💻 **Language**: `TypeScript`
+- 🔗 **Repository URL**: [https://github.com/turbulenz/turbulenz_engine](https://github.com/turbulenz/turbulenz_engine)
+- 📝 **Description**: Turbulenz is a modular 3D and 2D game framework for making HTML5 powered games for browsers, desktops and mobile devices.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 128. [RandyGaul/cute_headers](https://github.com/RandyGaul/cute_headers)
+
+- ⭐ **Stars**: 5,093★ &nbsp;|&nbsp; 🍴 **Forks**: 315 &nbsp;|&nbsp; 💻 **Language**: `C`
+- 🔗 **Repository URL**: [https://github.com/RandyGaul/cute_headers](https://github.com/RandyGaul/cute_headers)
+- 📝 **Description**: Collection of cross-platform one-file C/C++ libraries with no dependencies, primarily used for games
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 129. [DavidHDev/canvas-ui](https://github.com/DavidHDev/canvas-ui)
+
+- ⭐ **Stars**: 5,083★ &nbsp;|&nbsp; 🍴 **Forks**: 257 &nbsp;|&nbsp; 💻 **Language**: `TypeScript`
+- 🔗 **Repository URL**: [https://github.com/DavidHDev/canvas-ui](https://github.com/DavidHDev/canvas-ui)
+- 📝 **Description**: A library of creative canvas components. Real HTML with WebGL effects running over it. React, Vue, Svelte, vanilla.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 130. [ultralight-ux/Ultralight](https://github.com/ultralight-ux/Ultralight)
+
+- ⭐ **Stars**: 5,027★ &nbsp;|&nbsp; 🍴 **Forks**: 204 &nbsp;|&nbsp; 💻 **Language**: `CMake`
+- 🔗 **Repository URL**: [https://github.com/ultralight-ux/Ultralight](https://github.com/ultralight-ux/Ultralight)
+- 📝 **Description**: Lightweight, high-performance HTML renderer for game and app developers.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 131. [gfxfundamentals/webgl-fundamentals](https://github.com/gfxfundamentals/webgl-fundamentals)
+
+- ⭐ **Stars**: 5,026★ &nbsp;|&nbsp; 🍴 **Forks**: 687 &nbsp;|&nbsp; 💻 **Language**: `HTML`
+- 🔗 **Repository URL**: [https://github.com/gfxfundamentals/webgl-fundamentals](https://github.com/gfxfundamentals/webgl-fundamentals)
+- 📝 **Description**: WebGL lessons that start with the basics
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 132. [spring/spring](https://github.com/spring/spring)
+
+- ⭐ **Stars**: 4,027★ &nbsp;|&nbsp; 🍴 **Forks**: 865 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/spring/spring](https://github.com/spring/spring)
+- 📝 **Description**: A powerful free cross-platform RTS game engine. - Report issues at https://springrts.com/mantis/
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 133. [cjcliffe/CubicSDR](https://github.com/cjcliffe/CubicSDR)
+
+- ⭐ **Stars**: 2,300★ &nbsp;|&nbsp; 🍴 **Forks**: 268 &nbsp;|&nbsp; 💻 **Language**: `C++`
+- 🔗 **Repository URL**: [https://github.com/cjcliffe/CubicSDR](https://github.com/cjcliffe/CubicSDR)
+- 📝 **Description**: Cross-Platform Software-Defined Radio Application
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 134. [google/neuroglancer](https://github.com/google/neuroglancer)
+
+- ⭐ **Stars**: 1,567★ &nbsp;|&nbsp; 🍴 **Forks**: 404 &nbsp;|&nbsp; 💻 **Language**: `TypeScript`
+- 🔗 **Repository URL**: [https://github.com/google/neuroglancer](https://github.com/google/neuroglancer)
+- 📝 **Description**: WebGL-based viewer for volumetric data
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 135. [3dmol/3Dmol.js](https://github.com/3dmol/3Dmol.js)
+
+- ⭐ **Stars**: 1,031★ &nbsp;|&nbsp; 🍴 **Forks**: 230 &nbsp;|&nbsp; 💻 **Language**: `Jupyter Notebook`
+- 🔗 **Repository URL**: [https://github.com/3dmol/3Dmol.js](https://github.com/3dmol/3Dmol.js)
+- 📝 **Description**: WebGL accelerated JavaScript molecular graphics library
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 136. [Noniv/snowflow_demo](https://github.com/Noniv/snowflow_demo)
+
+- ⭐ **Stars**: 595★ &nbsp;|&nbsp; 🍴 **Forks**: 156 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/Noniv/snowflow_demo](https://github.com/Noniv/snowflow_demo)
+- 📝 **Description**: A real-time procedural snow rendering demo built with WebGPU, Babylon.js and hand-written WGSL. Features GPU-generated terrain, snow deformation, procedural characters, cloth, surf wakes, water spells, atmosphere and post-processing—without textures, meshes, HDRIs or animation assets.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 137. [tuzhechen2005/opus-video-skills](https://github.com/tuzhechen2005/opus-video-skills)
+
+- ⭐ **Stars**: 327★ &nbsp;|&nbsp; 🍴 **Forks**: 28 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/tuzhechen2005/opus-video-skills](https://github.com/tuzhechen2005/opus-video-skills)
+- 📝 **Description**: Video-making skills for Claude Opus 5.5 in Claude Code — every frame and note generated in code, one skill per style: hand-painted animation, kinetic-typography reels | 用 Claude Opus 5.5 以代码制作视频的技能合集
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 138. [wheresryan22/anatomy-community](https://github.com/wheresryan22/anatomy-community)
+
+- ⭐ **Stars**: 78★ &nbsp;|&nbsp; 🍴 **Forks**: 45 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/wheresryan22/anatomy-community](https://github.com/wheresryan22/anatomy-community)
+- 📝 **Description**: Figures the community made with Anatomy, each rebuilt from source in a locked sandbox. Submit yours through your agent or a Gist.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 139. [Rodneymondela/ventilation-simulator](https://github.com/Rodneymondela/ventilation-simulator)
+
+- ⭐ **Stars**: 4★ &nbsp;|&nbsp; 🍴 **Forks**: 1 &nbsp;|&nbsp; 💻 **Language**: `TypeScript`
+- 🔗 **Repository URL**: [https://github.com/Rodneymondela/ventilation-simulator](https://github.com/Rodneymondela/ventilation-simulator)
+- 📝 **Description**: Interactive mine ventilation network simulator (Ventsim-inspired): Atkinson resistance + Hardy Cross solver with a 2D/3D editor, staging, fans, regulators, NVP and contaminant transport.
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+### 140. [Akshay-Katiyar/UI-and-UX-1st](https://github.com/Akshay-Katiyar/UI-and-UX-1st)
+
+- ⭐ **Stars**: 1★ &nbsp;|&nbsp; 🍴 **Forks**: 0 &nbsp;|&nbsp; 💻 **Language**: `JavaScript`
+- 🔗 **Repository URL**: [https://github.com/Akshay-Katiyar/UI-and-UX-1st](https://github.com/Akshay-Katiyar/UI-and-UX-1st)
+- 📝 **Description**: UI and UX 1st - High-performance interactive 3D WebGL, scrollytelling and design system experience
+- ⚙️ **Operational Architecture Workflow**: `Deterministic game loop: input capture -> physics tick & collision broadphase/narrowphase -> scene graph spatial tree traversal -> Vulkan/WebGL render pass command submission.`
+
+---
+
+[⬅️ Back to Master Directory](../README.md)
