@@ -2,6 +2,13 @@
 
 # 🌟 Github Ultimate Repos — Master Catalog of 11,730 Starred Repositories
 
+<div align="center">
+  <img src="assets/cosmic-agent.gif" alt="Github Ultimate Repos Cosmic Agent Entity" width="160" style="max-width: 100%; height: auto; filter: drop-shadow(0 8px 24px rgba(56, 189, 248, 0.28));" />
+  <br/>
+  <sub><b>The Cosmic Discovery & Autonomous Multi-Agent Intelligence Entity</b></sub>
+  <br/><br/>
+</div>
+
 [![Total Repositories](https://img.shields.io/badge/Total%20Repositories-11%2C730-blue?style=for-the-badge&logo=github)](https://github.com/Akshay-Katiyar?tab=stars)
 [![Disciplines](https://img.shields.io/badge/Disciplines-55%20DeepTech%20Categories-purple?style=for-the-badge)](./STARRED_REPOSITORIES_CATEGORIZED_LIST.txt)
 [![Architecture Workflows](https://img.shields.io/badge/Workflows-100%25%20Verified-success?style=for-the-badge)](./starred_repos_master_catalog.csv)
